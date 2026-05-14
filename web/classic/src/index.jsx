@@ -33,6 +33,22 @@ import { useTranslation } from 'react-i18next';
 import zh_CN from '@douyinfe/semi-ui/lib/es/locale/source/zh_CN';
 import en_GB from '@douyinfe/semi-ui/lib/es/locale/source/en_GB';
 
+if (import.meta.env.DEV) {
+  const ignoredWarningPatterns = [
+    'Warning: findDOMNode is deprecated',
+    'Warning: An update (setState, replaceState, or forceUpdate) was scheduled from inside an update function',
+  ];
+
+  const originalConsoleError = console.error;
+  console.error = (...args) => {
+    const message = args.map(String).join(' ');
+    if (ignoredWarningPatterns.some((pattern) => message.includes(pattern))) {
+      return;
+    }
+    originalConsoleError(...args);
+  };
+}
+
 // 欢迎信息（二次开发者未经允许不准将此移除）
 // Welcome message (Do not remove this without permission from the original developer)
 if (typeof window !== 'undefined') {

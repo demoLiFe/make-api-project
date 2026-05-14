@@ -107,7 +107,7 @@ export default function SettingsGeneralPayment(props) {
         },
       ];
 
-      if (inputs.CustomCallbackAddress !== '') {
+      if (originInputs.CustomCallbackAddress !== inputs.CustomCallbackAddress) {
         options.push({
           key: 'CustomCallbackAddress',
           value: removeTrailingSlash(inputs.CustomCallbackAddress),

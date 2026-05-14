@@ -206,6 +206,8 @@ func SyncOptions(frequency int) {
 }
 
 func UpdateOption(key string, value string) error {
+	value = normalizeOptionValue(key, value)
+
 	// Save to database first
 	option := Option{
 		Key: key,
@@ -221,7 +223,16 @@ func UpdateOption(key string, value string) error {
 	return updateOptionMap(key, value)
 }
 
+func normalizeOptionValue(key string, value string) string {
+	if key == "general_setting.docs_link" && value == "https://docs.newapi.pro" {
+		return "https://api.make1688.com/docs"
+	}
+	return value
+}
+
 func updateOptionMap(key string, value string) (err error) {
+	value = normalizeOptionValue(key, value)
+
 	common.OptionMapRWMutex.Lock()
 	defer common.OptionMapRWMutex.Unlock()
 	common.OptionMap[key] = value

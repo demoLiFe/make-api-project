@@ -1,0 +1,53 @@
+
+> react-template@0.1.0 dev
+> vite --host 127.0.0.1 --port 5175
+
+Forced re-optimization of dependencies
+Port 5175 is in use, trying another one...
+Port 5176 is in use, trying another one...
+Port 5177 is in use, trying another one...
+Port 5178 is in use, trying another one...
+
+  [32m[1mVITE[22m v5.4.11[39m  [2mready in [0m[1m1717[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5179[22m/[39m
+[2m11:23:16[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m11:28:32[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m11:34:14[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m11:37:27[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m11:41:13[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m11:43:24[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m11:44:31[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m11:47:01[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m11:50:46[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m11:54:59[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m13:37:10[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m13:37:10[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m13:48:47[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m14:59:39[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Setting/Operation/SettingsHeaderNavModules.jsx, /src/index.css[22m
+[2m15:03:16[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/SiderBar.jsx, /src/index.css[22m
+[2m15:04:48[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/headerbar/LanguageSelector.jsx, /src/index.css[22m
+[2m15:10:34[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/table/channels/ChannelsActions.jsx, /src/index.css[22m
+[2m15:12:15[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/table/channels/ChannelsActions.jsx, /src/index.css[22m
+[2m15:18:42[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/common/ui/CardPro.jsx, /src/index.css[22m
+[2m15:21:03[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/headerbar/UserArea.jsx, /src/index.css[22m
+[2m15:21:13[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/SiderBar.jsx, /src/index.css[22m
+[2m16:07:31[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/Footer.jsx, /src/index.css[22m
+[2m16:08:33[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Setting/Operation/SettingsGeneral.jsx, /src/index.css[22m
+[2m16:11:22[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Setting/Operation/SettingsHeaderNavModules.jsx, /src/index.css[22m
+[2m16:18:46[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/playground/CustomInputRender.jsx, /src/index.css[22m
+[2m16:21:34[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/playground/CustomInputRender.jsx, /src/index.css[22m
+[2m16:21:34[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/playground/CustomInputRender.jsx, /src/index.css[22m
+[2m16:25:47[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/common/ui/SelectableButtonGroup.jsx, /src/index.css[22m
+[2m16:29:55[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/table/model-pricing/modal/ModelDetailSideSheet.jsx, /src/index.css[22m
+[2m16:30:06[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/table/model-pricing/layout/header/PricingVendorIntro.jsx, /src/index.css[22m
+[2m16:32:51[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/table/model-pricing/layout/header/PricingVendorIntro.jsx, /src/index.css[22m
+[2m16:38:57[22m [36m[1m[vite][22m[39m [32mvite.config.js changed, restarting server...[39m
+Forced re-optimization of dependencies
+[2m16:39:01[22m [36m[1m[vite][22m[39m server restarted.
+[2m09:12:46[22m [36m[1m[vite][22m[39m [32mvite.config.js changed, restarting server...[39m
+Forced re-optimization of dependencies
+[2m09:12:46[22m [36m[1m[vite][22m[39m server restarted.
+[2m09:22:25[22m [36m[1m[vite][22m[39m [32mvite.config.js changed, restarting server...[39m
+Forced re-optimization of dependencies
+[2m09:22:27[22m [36m[1m[vite][22m[39m server restarted.
