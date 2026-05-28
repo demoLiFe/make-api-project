@@ -10,7 +10,7 @@ type AuthLayoutProps = {
 export function AuthLayout({ children }: AuthLayoutProps) {
   const { t } = useTranslation()
   const { systemName, logo, loading } = useSystemConfig()
-  const displayName = systemName || 'New API'
+  const displayName = systemName || 'Make API Private'
 
   return (
     <div className='from-background via-slate-950/5 to-background relative grid h-svh max-w-none overflow-hidden bg-gradient-to-br dark:via-cyan-950/10'>
@@ -48,3 +48,4 @@ export function AuthLayout({ children }: AuthLayoutProps) {
     </div>
   )
 }
+

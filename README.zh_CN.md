@@ -1,70 +1,62 @@
 <div align="center">
 
-![new-api](/web/default/public/logo.png)
+![make-api-private](/web/default/public/logo.png)
 
-# New API
+# Make API Private
 
-🍥 **新一代大模型网关与AI资产管理系统**
+馃崶 **鏂颁竴浠ｅぇ妯″瀷缃戝叧涓嶢I璧勪骇绠＄悊绯荤粺**
 
 <p align="center">
-  简体中文 |
-  <a href="./README.zh_TW.md">繁體中文</a> |
+  绠€浣撲腑鏂?|
+  <a href="./README.zh_TW.md">绻侀珨涓枃</a> |
   <a href="./README.md">English</a> |
-  <a href="./README.fr.md">Français</a> |
-  <a href="./README.ja.md">日本語</a>
+  <a href="./README.fr.md">Fran莽ais</a> |
+  <a href="./README.ja.md">鏃ユ湰瑾?/a>
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Calcium-Ion/new-api/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Calcium-Ion/new-api?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/Calcium-Ion/make-api-private/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Calcium-Ion/make-api-private?color=brightgreen" alt="license">
   </a><!--
-  --><a href="https://github.com/Calcium-Ion/new-api/releases/latest">
-    <img src="https://img.shields.io/github/v/release/Calcium-Ion/new-api?color=brightgreen&include_prereleases" alt="release">
+  --><a href="https://github.com/Calcium-Ion/make-api-private/releases/latest">
+    <img src="https://img.shields.io/github/v/release/Calcium-Ion/make-api-private?color=brightgreen&include_prereleases" alt="release">
   </a><!--
-  --><a href="https://hub.docker.com/r/CalciumIon/new-api">
+  --><a href="https://hub.docker.com/r/CalciumIon/make-api-private">
     <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
   </a><!--
-  --><a href="https://goreportcard.com/report/github.com/Calcium-Ion/new-api">
-    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/new-api" alt="GoReportCard">
+  --><a href="https://goreportcard.com/report/github.com/Calcium-Ion/make-api-private">
+    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/make-api-private" alt="GoReportCard">
   </a>
 </p>
 
 <p align="center">
   <a href="https://trendshift.io/repositories/20180" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QuantumNous%2Fnew-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QuantumNous%2Fmake-api-private | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
   </a>
   <br>
-  <a href="https://hellogithub.com/repository/QuantumNous/new-api" target="_blank">
-    <img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=539ac4217e69431684ad4a0bab768811&claim_uid=tbFPfKIDHpc4TzR" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" />
+  <a href="https://hellogithub.com/repository/QuantumNous/make-api-private" target="_blank">
+    <img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=539ac4217e69431684ad4a0bab768811&claim_uid=tbFPfKIDHpc4TzR" alt="Featured锝淗elloGitHub" style="width: 250px; height: 54px;" width="250" height="54" />
   </a><!--
-  --><a href="https://www.producthunt.com/products/new-api/launches/new-api?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-new-api" target="_blank" rel="noopener noreferrer">
-    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047693&theme=light&t=1769577875005" alt="New API - All-in-one AI asset management gateway. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+  --><a href="https://www.producthunt.com/products/make-api-private/launches/make-api-private?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-make-api-private" target="_blank" rel="noopener noreferrer">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047693&theme=light&t=1769577875005" alt="Make API Private - All-in-one AI asset management gateway. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
   </a>
 </p>
 
 <p align="center">
-  <a href="#-快速开始">快速开始</a> •
-  <a href="#-主要特性">主要特性</a> •
-  <a href="#-部署">部署</a> •
-  <a href="#-文档">文档</a> •
-  <a href="#-帮助支持">帮助</a>
+  <a href="#-蹇€熷紑濮?>蹇€熷紑濮?/a> 鈥?  <a href="#-涓昏鐗规€?>涓昏鐗规€?/a> 鈥?  <a href="#-閮ㄧ讲">閮ㄧ讲</a> 鈥?  <a href="#-鏂囨。">鏂囨。</a> 鈥?  <a href="#-甯姪鏀寔">甯姪</a>
 </p>
 
 </div>
 
-## 📝 项目说明
+## 馃摑 椤圭洰璇存槑
 
 > [!IMPORTANT]
-> - 本项目仅供个人学习使用，不保证稳定性，且不提供任何技术支持
-> - 使用者必须在遵循 OpenAI 的 [使用条款](https://openai.com/policies/terms-of-use) 以及**法律法规**的情况下使用，不得用于非法用途
-> - 根据 [《生成式人工智能服务管理暂行办法》](http://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm) 的要求，请勿对中国地区公众提供一切未经备案的生成式人工智能服务
-
+> - 鏈」鐩粎渚涗釜浜哄涔犱娇鐢紝涓嶄繚璇佺ǔ瀹氭€э紝涓斾笉鎻愪緵浠讳綍鎶€鏈敮鎸?> - 浣跨敤鑰呭繀椤诲湪閬靛惊 OpenAI 鐨?[浣跨敤鏉℃](https://openai.com/policies/terms-of-use) 浠ュ強**娉曞緥娉曡**鐨勬儏鍐典笅浣跨敤锛屼笉寰楃敤浜庨潪娉曠敤閫?> - 鏍规嵁 [銆婄敓鎴愬紡浜哄伐鏅鸿兘鏈嶅姟绠＄悊鏆傝鍔炴硶銆媇(http://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm) 鐨勮姹傦紝璇峰嬁瀵逛腑鍥藉湴鍖哄叕浼楁彁渚涗竴鍒囨湭缁忓妗堢殑鐢熸垚寮忎汉宸ユ櫤鑳芥湇鍔?
 ---
 
-## 🤝 我们信任的合作伙伴
-
+## 馃 鎴戜滑淇′换鐨勫悎浣滀紮浼?
 <p align="center">
-  <em>排名不分先后</em>
+  <em>鎺掑悕涓嶅垎鍏堝悗</em>
 </p>
 
 <p align="center">
@@ -75,13 +67,13 @@
     <img src="./docs/images/aionui.png" alt="Aion UI" height="80" />
   </a><!--
   --><a href="https://bda.pku.edu.cn/" target="_blank">
-    <img src="./docs/images/pku.png" alt="北京大学" height="80" />
+    <img src="./docs/images/pku.png" alt="鍖椾含澶у" height="80" />
   </a><!--
-  --><a href="https://www.compshare.cn/?ytag=GPU_yy_gh_newapi" target="_blank">
-    <img src="./docs/images/ucloud.png" alt="UCloud 优刻得" height="80" />
+  --><a href="https://www.compshare.cn/?ytag=GPU_yy_gh_make-api-private" target="_blank">
+    <img src="./docs/images/ucloud.png" alt="UCloud 浼樺埢寰? height="80" />
   </a><!--
   --><a href="https://www.aliyun.com/" target="_blank">
-    <img src="./docs/images/aliyun.png" alt="阿里云" height="80" />
+    <img src="./docs/images/aliyun.png" alt="闃块噷浜? height="80" />
   </a><!--
   --><a href="https://io.net/" target="_blank">
     <img src="./docs/images/io-net.png" alt="IO.NET" height="80" />
@@ -90,147 +82,134 @@
 
 ---
 
-## 🙏 特别鸣谢
+## 馃檹 鐗瑰埆楦ｈ阿
 
 <p align="center">
-  <a href="https://www.jetbrains.com/?from=new-api" target="_blank">
+  <a href="https://www.jetbrains.com/?from=make-api-private" target="_blank">
     <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo" width="120" />
   </a>
 </p>
 
 <p align="center">
-  <strong>感谢 <a href="https://www.jetbrains.com/?from=new-api">JetBrains</a> 为本项目提供免费的开源开发许可证</strong>
+  <strong>鎰熻阿 <a href="https://www.jetbrains.com/?from=make-api-private">JetBrains</a> 涓烘湰椤圭洰鎻愪緵鍏嶈垂鐨勫紑婧愬紑鍙戣鍙瘉</strong>
 </p>
 
 ---
 
-## 🚀 快速开始
-
-### 使用 Docker Compose（推荐）
+## 馃殌 蹇€熷紑濮?
+### 浣跨敤 Docker Compose锛堟帹鑽愶級
 
 ```bash
-# 克隆项目
-git clone https://github.com/QuantumNous/new-api.git
-cd new-api
+# 鍏嬮殕椤圭洰
+git clone https://github.com/QuantumNous/make-api-private.git
+cd make-api-private
 
-# 编辑 docker-compose.yml 配置
+# 缂栬緫 docker-compose.yml 閰嶇疆
 nano docker-compose.yml
 
-# 启动服务
+# 鍚姩鏈嶅姟
 docker-compose up -d
 ```
 
 <details>
-<summary><strong>使用 Docker 命令</strong></summary>
+<summary><strong>浣跨敤 Docker 鍛戒护</strong></summary>
 
 ```bash
-# 拉取最新镜像
-docker pull calciumion/new-api:latest
+# 鎷夊彇鏈€鏂伴暅鍍?docker pull calciumion/make-api-private:latest
 
-# 使用 SQLite（默认）
-docker run --name new-api -d --restart always \
+# 浣跨敤 SQLite锛堥粯璁わ級
+docker run --name make-api-private -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  calciumion/make-api-private:latest
 
-# 使用 MySQL
-docker run --name new-api -d --restart always \
+# 浣跨敤 MySQL
+docker run --name make-api-private -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  calciumion/make-api-private:latest
 ```
 
-> **💡 提示：** `-v ./data:/data` 会将数据保存在当前目录的 `data` 文件夹中，你也可以改为绝对路径如 `-v /your/custom/path:/data`
+> **馃挕 鎻愮ず锛?* `-v ./data:/data` 浼氬皢鏁版嵁淇濆瓨鍦ㄥ綋鍓嶇洰褰曠殑 `data` 鏂囦欢澶逛腑锛屼綘涔熷彲浠ユ敼涓虹粷瀵硅矾寰勫 `-v /your/custom/path:/data`
 
 </details>
 
 ---
 
-🎉 部署完成后，访问 `http://localhost:3000` 即可使用！
-
-📖 更多部署方式请参考 [部署指南](https://docs.newapi.pro/zh/docs/installation)
+馃帀 閮ㄧ讲瀹屾垚鍚庯紝璁块棶 `http://localhost:3000` 鍗冲彲浣跨敤锛?
+馃摉 鏇村閮ㄧ讲鏂瑰紡璇峰弬鑰?[閮ㄧ讲鎸囧崡](https://docs.make-api-private.pro/zh/docs/installation)
 
 ---
 
-## 📚 文档
+## 馃摎 鏂囨。
 
 <div align="center">
 
-### 📖 [官方文档](https://docs.newapi.pro/zh/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/new-api)
+### 馃摉 [瀹樻柟鏂囨。](https://docs.make-api-private.pro/zh/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/make-api-private)
 
 </div>
 
-**快速导航：**
+**蹇€熷鑸細**
 
-| 分类 | 链接 |
+| 鍒嗙被 | 閾炬帴 |
 |------|------|
-| 🚀 部署指南 | [安装文档](https://docs.newapi.pro/zh/docs/installation) |
-| ⚙️ 环境配置 | [环境变量](https://docs.newapi.pro/zh/docs/installation/config-maintenance/environment-variables) |
-| 📡 接口文档 | [API 文档](https://docs.newapi.pro/zh/docs/api) |
-| ❓ 常见问题 | [FAQ](https://docs.newapi.pro/zh/docs/support/faq) |
-| 💬 社区交流 | [交流渠道](https://docs.newapi.pro/zh/docs/support/community-interaction) |
+| 馃殌 閮ㄧ讲鎸囧崡 | [瀹夎鏂囨。](https://docs.make-api-private.pro/zh/docs/installation) |
+| 鈿欙笍 鐜閰嶇疆 | [鐜鍙橀噺](https://docs.make-api-private.pro/zh/docs/installation/config-maintenance/environment-variables) |
+| 馃摗 鎺ュ彛鏂囨。 | [API 鏂囨。](https://docs.make-api-private.pro/zh/docs/api) |
+| 鉂?甯歌闂 | [FAQ](https://docs.make-api-private.pro/zh/docs/support/faq) |
+| 馃挰 绀惧尯浜ゆ祦 | [浜ゆ祦娓犻亾](https://docs.make-api-private.pro/zh/docs/support/community-interaction) |
 
 ---
 
-## ✨ 主要特性
+## 鉁?涓昏鐗规€?
+> 璇︾粏鐗规€ц鍙傝€?[鐗规€ц鏄嶿(https://docs.make-api-private.pro/zh/docs/guide/wiki/basic-concepts/features-introduction)
 
-> 详细特性请参考 [特性说明](https://docs.newapi.pro/zh/docs/guide/wiki/basic-concepts/features-introduction)
+### 馃帹 鏍稿績鍔熻兘
 
-### 🎨 核心功能
-
-| 特性 | 说明 |
+| 鐗规€?| 璇存槑 |
 |------|------|
-| 🎨 全新 UI | 现代化的用户界面设计 |
-| 🌍 多语言 | 支持中文、英文、法语、日语 |
-| 🔄 数据兼容 | 完全兼容原版 One API 数据库 |
-| 📈 数据看板 | 可视化控制台与统计分析 |
-| 🔒 权限管理 | 令牌分组、模型限制、用户管理 |
+| 馃帹 鍏ㄦ柊 UI | 鐜颁唬鍖栫殑鐢ㄦ埛鐣岄潰璁捐 |
+| 馃實 澶氳瑷€ | 鏀寔涓枃銆佽嫳鏂囥€佹硶璇€佹棩璇?|
+| 馃攧 鏁版嵁鍏煎 | 瀹屽叏鍏煎鍘熺増 One API 鏁版嵁搴?|
+| 馃搱 鏁版嵁鐪嬫澘 | 鍙鍖栨帶鍒跺彴涓庣粺璁″垎鏋?|
+| 馃敀 鏉冮檺绠＄悊 | 浠ょ墝鍒嗙粍銆佹ā鍨嬮檺鍒躲€佺敤鎴风鐞?|
 
-### 💰 支付与计费
+### 馃挵 鏀粯涓庤璐?
+- 鉁?鍦ㄧ嚎鍏呭€硷紙鏄撴敮浠樸€丼tripe锛?- 鉁?妯″瀷鎸夋鏁版敹璐?- 鉁?缂撳瓨璁¤垂鏀寔锛圤penAI銆丄zure銆丏eepSeek銆丆laude銆丵wen绛夋墍鏈夋敮鎸佺殑妯″瀷锛?- 鉁?鐏垫椿鐨勮璐圭瓥鐣ラ厤缃?
+### 馃攼 鎺堟潈涓庡畨鍏?
+- 馃槇 Discord 鎺堟潈鐧诲綍
+- 馃 LinuxDO 鎺堟潈鐧诲綍
+- 馃摫 Telegram 鎺堟潈鐧诲綍
+- 馃攽 OIDC 缁熶竴璁よ瘉
+- 馃攳 Key 鏌ヨ浣跨敤棰濆害锛堥厤鍚?[neko-api-key-tool](https://github.com/Calcium-Ion/neko-api-key-tool)锛?
+### 馃殌 楂樼骇鍔熻兘
 
-- ✅ 在线充值（易支付、Stripe）
-- ✅ 模型按次数收费
-- ✅ 缓存计费支持（OpenAI、Azure、DeepSeek、Claude、Qwen等所有支持的模型）
-- ✅ 灵活的计费策略配置
+**API 鏍煎紡鏀寔锛?*
+- 鈿?[OpenAI Responses](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/openai/create-response)
+- 鈿?[OpenAI Realtime API](https://docs.make-api-private.pro/zh/docs/api/ai-model/realtime/create-realtime-session)锛堝惈 Azure锛?- 鈿?[Claude Messages](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/create-message)
+- 鈿?[Google Gemini](https://doc.make-api-private.pro/api/google-gemini-chat)
+- 馃攧 [Rerank 妯″瀷](https://docs.make-api-private.pro/zh/docs/api/ai-model/rerank/create-rerank)锛圕ohere銆丣ina锛?
+**鏅鸿兘璺敱锛?*
+- 鈿栵笍 娓犻亾鍔犳潈闅忔満
+- 馃攧 澶辫触鑷姩閲嶈瘯
+- 馃殾 鐢ㄦ埛绾у埆妯″瀷闄愭祦
 
-### 🔐 授权与安全
+**鏍煎紡杞崲锛?*
+- 馃攧 **OpenAI Compatible 鈬?Claude Messages**
+- 馃攧 **OpenAI Compatible 鈫?Google Gemini**
+- 馃攧 **Google Gemini 鈫?OpenAI Compatible** - 浠呮敮鎸佹枃鏈紝鏆備笉鏀寔鍑芥暟璋冪敤
+- 馃毀 **OpenAI Compatible 鈬?OpenAI Responses** - 寮€鍙戜腑
+- 馃攧 **鎬濊€冭浆鍐呭鍔熻兘**
 
-- 😈 Discord 授权登录
-- 🤖 LinuxDO 授权登录
-- 📱 Telegram 授权登录
-- 🔑 OIDC 统一认证
-- 🔍 Key 查询使用额度（配合 [neko-api-key-tool](https://github.com/Calcium-Ion/neko-api-key-tool)）
-
-### 🚀 高级功能
-
-**API 格式支持：**
-- ⚡ [OpenAI Responses](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/create-response)
-- ⚡ [OpenAI Realtime API](https://docs.newapi.pro/zh/docs/api/ai-model/realtime/create-realtime-session)（含 Azure）
-- ⚡ [Claude Messages](https://docs.newapi.pro/zh/docs/api/ai-model/chat/create-message)
-- ⚡ [Google Gemini](https://doc.newapi.pro/api/google-gemini-chat)
-- 🔄 [Rerank 模型](https://docs.newapi.pro/zh/docs/api/ai-model/rerank/create-rerank)（Cohere、Jina）
-
-**智能路由：**
-- ⚖️ 渠道加权随机
-- 🔄 失败自动重试
-- 🚦 用户级别模型限流
-
-**格式转换：**
-- 🔄 **OpenAI Compatible ⇄ Claude Messages**
-- 🔄 **OpenAI Compatible → Google Gemini**
-- 🔄 **Google Gemini → OpenAI Compatible** - 仅支持文本，暂不支持函数调用
-- 🚧 **OpenAI Compatible ⇄ OpenAI Responses** - 开发中
-- 🔄 **思考转内容功能**
-
-**Reasoning Effort 支持：**
+**Reasoning Effort 鏀寔锛?*
 
 <details>
-<summary>查看详细配置</summary>
+<summary>鏌ョ湅璇︾粏閰嶇疆</summary>
 
-**OpenAI 系列模型：**
+**OpenAI 绯诲垪妯″瀷锛?*
 - `o3-mini-high` - High reasoning effort
 - `o3-mini-medium` - Medium reasoning effort
 - `o3-mini-low` - Low reasoning effort
@@ -238,226 +217,210 @@ docker run --name new-api -d --restart always \
 - `gpt-5-medium` - Medium reasoning effort
 - `gpt-5-low` - Low reasoning effort
 
-**Claude 思考模型：**
-- `claude-3-7-sonnet-20250219-thinking` - 启用思考模式
-
-**Google Gemini 系列模型：**
-- `gemini-2.5-flash-thinking` - 启用思考模式
-- `gemini-2.5-flash-nothinking` - 禁用思考模式
-- `gemini-2.5-pro-thinking` - 启用思考模式
-- `gemini-2.5-pro-thinking-128` - 启用思考模式，并设置思考预算为128tokens
-- 也可以直接在 Gemini 模型名称后追加 `-low` / `-medium` / `-high` 来控制思考力度（无需再设置思考预算后缀）
-
+**Claude 鎬濊€冩ā鍨嬶細**
+- `claude-3-7-sonnet-20250219-thinking` - 鍚敤鎬濊€冩ā寮?
+**Google Gemini 绯诲垪妯″瀷锛?*
+- `gemini-2.5-flash-thinking` - 鍚敤鎬濊€冩ā寮?- `gemini-2.5-flash-nothinking` - 绂佺敤鎬濊€冩ā寮?- `gemini-2.5-pro-thinking` - 鍚敤鎬濊€冩ā寮?- `gemini-2.5-pro-thinking-128` - 鍚敤鎬濊€冩ā寮忥紝骞惰缃€濊€冮绠椾负128tokens
+- 涔熷彲浠ョ洿鎺ュ湪 Gemini 妯″瀷鍚嶇О鍚庤拷鍔?`-low` / `-medium` / `-high` 鏉ユ帶鍒舵€濊€冨姏搴︼紙鏃犻渶鍐嶈缃€濊€冮绠楀悗缂€锛?
 </details>
 
 ---
 
-## 🤖 模型支持
+## 馃 妯″瀷鏀寔
 
-> 详情请参考 [接口文档 - 中继接口](https://docs.newapi.pro/zh/docs/api)
+> 璇︽儏璇峰弬鑰?[鎺ュ彛鏂囨。 - 涓户鎺ュ彛](https://docs.make-api-private.pro/zh/docs/api)
 
-| 模型类型 | 说明 | 文档 |
+| 妯″瀷绫诲瀷 | 璇存槑 | 鏂囨。 |
 |---------|------|------|
-| 🤖 OpenAI-Compatible | OpenAI 兼容模型 | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/createchatcompletion) |
-| 🤖 OpenAI Responses | OpenAI Responses 格式 | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/createresponse) |
-| 🎨 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [文档](https://doc.newapi.pro/api/midjourney-proxy-image) |
-| 🎵 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [文档](https://doc.newapi.pro/api/suno-music) |
-| 🔄 Rerank | Cohere、Jina | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/rerank/create-rerank) |
-| 💬 Claude | Messages 格式 | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/chat/createmessage) |
-| 🌐 Gemini | Google Gemini 格式 | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/chat/gemini/geminirelayv1beta) |
-| 🔧 Dify | ChatFlow 模式 | - |
-| 🎯 自定义 | 支持完整调用地址 | - |
+| 馃 OpenAI-Compatible | OpenAI 鍏煎妯″瀷 | [鏂囨。](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/openai/createchatcompletion) |
+| 馃 OpenAI Responses | OpenAI Responses 鏍煎紡 | [鏂囨。](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/openai/createresponse) |
+| 馃帹 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [鏂囨。](https://doc.make-api-private.pro/api/midjourney-proxy-image) |
+| 馃幍 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [鏂囨。](https://doc.make-api-private.pro/api/suno-music) |
+| 馃攧 Rerank | Cohere銆丣ina | [鏂囨。](https://docs.make-api-private.pro/zh/docs/api/ai-model/rerank/create-rerank) |
+| 馃挰 Claude | Messages 鏍煎紡 | [鏂囨。](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/createmessage) |
+| 馃寪 Gemini | Google Gemini 鏍煎紡 | [鏂囨。](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/gemini/geminirelayv1beta) |
+| 馃敡 Dify | ChatFlow 妯″紡 | - |
+| 馃幆 鑷畾涔?| 鏀寔瀹屾暣璋冪敤鍦板潃 | - |
 
-### 📡 支持的接口
-
+### 馃摗 鏀寔鐨勬帴鍙?
 <details>
-<summary>查看完整接口列表</summary>
+<summary>鏌ョ湅瀹屾暣鎺ュ彛鍒楄〃</summary>
 
-- [聊天接口 (Chat Completions)](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/createchatcompletion)
-- [响应接口 (Responses)](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/createresponse)
-- [图像接口 (Image)](https://docs.newapi.pro/zh/docs/api/ai-model/images/openai/post-v1-images-generations)
-- [音频接口 (Audio)](https://docs.newapi.pro/zh/docs/api/ai-model/audio/openai/create-transcription)
-- [视频接口 (Video)](https://docs.newapi.pro/zh/docs/api/ai-model/audio/openai/createspeech)
-- [嵌入接口 (Embeddings)](https://docs.newapi.pro/zh/docs/api/ai-model/embeddings/createembedding)
-- [重排序接口 (Rerank)](https://docs.newapi.pro/zh/docs/api/ai-model/rerank/creatererank)
-- [实时对话 (Realtime)](https://docs.newapi.pro/zh/docs/api/ai-model/realtime/createrealtimesession)
-- [Claude 聊天](https://docs.newapi.pro/zh/docs/api/ai-model/chat/createmessage)
-- [Google Gemini 聊天](https://docs.newapi.pro/zh/docs/api/ai-model/chat/gemini/geminirelayv1beta)
+- [鑱婂ぉ鎺ュ彛 (Chat Completions)](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/openai/createchatcompletion)
+- [鍝嶅簲鎺ュ彛 (Responses)](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/openai/createresponse)
+- [鍥惧儚鎺ュ彛 (Image)](https://docs.make-api-private.pro/zh/docs/api/ai-model/images/openai/post-v1-images-generations)
+- [闊抽鎺ュ彛 (Audio)](https://docs.make-api-private.pro/zh/docs/api/ai-model/audio/openai/create-transcription)
+- [瑙嗛鎺ュ彛 (Video)](https://docs.make-api-private.pro/zh/docs/api/ai-model/audio/openai/createspeech)
+- [宓屽叆鎺ュ彛 (Embeddings)](https://docs.make-api-private.pro/zh/docs/api/ai-model/embeddings/createembedding)
+- [閲嶆帓搴忔帴鍙?(Rerank)](https://docs.make-api-private.pro/zh/docs/api/ai-model/rerank/creatererank)
+- [瀹炴椂瀵硅瘽 (Realtime)](https://docs.make-api-private.pro/zh/docs/api/ai-model/realtime/createrealtimesession)
+- [Claude 鑱婂ぉ](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/createmessage)
+- [Google Gemini 鑱婂ぉ](https://docs.make-api-private.pro/zh/docs/api/ai-model/chat/gemini/geminirelayv1beta)
 
 </details>
 
 ---
 
-## 🚢 部署
+## 馃殺 閮ㄧ讲
 
 > [!TIP]
-> **最新版 Docker 镜像：** `calciumion/new-api:latest`
+> **鏈€鏂扮増 Docker 闀滃儚锛?* `calciumion/make-api-private:latest`
 
-### 📋 部署要求
+### 馃搵 閮ㄧ讲瑕佹眰
 
-| 组件 | 要求 |
+| 缁勪欢 | 瑕佹眰 |
 |------|------|
-| **本地数据库** | SQLite（Docker 需挂载 `/data` 目录）|
-| **远程数据库** | MySQL ≥ 5.7.8 或 PostgreSQL ≥ 9.6 |
-| **容器引擎** | Docker / Docker Compose |
+| **鏈湴鏁版嵁搴?* | SQLite锛圖ocker 闇€鎸傝浇 `/data` 鐩綍锛墊
+| **杩滅▼鏁版嵁搴?* | MySQL 鈮?5.7.8 鎴?PostgreSQL 鈮?9.6 |
+| **瀹瑰櫒寮曟搸** | Docker / Docker Compose |
 
-### ⚙️ 环境变量配置
+### 鈿欙笍 鐜鍙橀噺閰嶇疆
 
 <details>
-<summary>常用环境变量配置</summary>
+<summary>甯哥敤鐜鍙橀噺閰嶇疆</summary>
 
-| 变量名 | 说明                                                           | 默认值 |
+| 鍙橀噺鍚?| 璇存槑                                                           | 榛樿鍊?|
 |--------|--------------------------------------------------------------|--------|
-| `SESSION_SECRET` | 会话密钥（多机部署必须）                                                 | - |
-| `CRYPTO_SECRET` | 加密密钥（Redis 必须）                                               | - |
-| `SQL_DSN` | 数据库连接字符串                                                     | - |
-| `REDIS_CONN_STRING` | Redis 连接字符串                                                  | - |
-| `STREAMING_TIMEOUT` | 流式超时时间（秒）                                                    | `300` |
-| `STREAM_SCANNER_MAX_BUFFER_MB` | 流式扫描器单行最大缓冲（MB），图像生成等超大 `data:` 片段（如 4K 图片 base64）需适当调大 | `64` |
-| `MAX_REQUEST_BODY_MB` | 请求体最大大小（MB，**解压后**计；防止超大请求/zip bomb 导致内存暴涨），超过将返回 `413` | `32` |
-| `AZURE_DEFAULT_API_VERSION` | Azure API 版本                                                 | `2025-04-01-preview` |
-| `ERROR_LOG_ENABLED` | 错误日志开关                                                       | `false` |
-| `PYROSCOPE_URL` | Pyroscope 服务地址                                            | - |
-| `PYROSCOPE_APP_NAME` | Pyroscope 应用名                                        | `new-api` |
-| `PYROSCOPE_BASIC_AUTH_USER` | Pyroscope Basic Auth 用户名                        | - |
-| `PYROSCOPE_BASIC_AUTH_PASSWORD` | Pyroscope Basic Auth 密码                  | - |
-| `PYROSCOPE_MUTEX_RATE` | Pyroscope mutex 采样率                               | `5` |
-| `PYROSCOPE_BLOCK_RATE` | Pyroscope block 采样率                               | `5` |
-| `HOSTNAME` | Pyroscope 标签里的主机名                                          | `new-api` |
+| `SESSION_SECRET` | 浼氳瘽瀵嗛挜锛堝鏈洪儴缃插繀椤伙級                                                 | - |
+| `CRYPTO_SECRET` | 鍔犲瘑瀵嗛挜锛圧edis 蹇呴』锛?                                              | - |
+| `SQL_DSN` | 鏁版嵁搴撹繛鎺ュ瓧绗︿覆                                                     | - |
+| `REDIS_CONN_STRING` | Redis 杩炴帴瀛楃涓?                                                 | - |
+| `STREAMING_TIMEOUT` | 娴佸紡瓒呮椂鏃堕棿锛堢锛?                                                   | `300` |
+| `STREAM_SCANNER_MAX_BUFFER_MB` | 娴佸紡鎵弿鍣ㄥ崟琛屾渶澶х紦鍐诧紙MB锛夛紝鍥惧儚鐢熸垚绛夎秴澶?`data:` 鐗囨锛堝 4K 鍥剧墖 base64锛夐渶閫傚綋璋冨ぇ | `64` |
+| `MAX_REQUEST_BODY_MB` | 璇锋眰浣撴渶澶уぇ灏忥紙MB锛?*瑙ｅ帇鍚?*璁★紱闃叉瓒呭ぇ璇锋眰/zip bomb 瀵艰嚧鍐呭瓨鏆存定锛夛紝瓒呰繃灏嗚繑鍥?`413` | `32` |
+| `AZURE_DEFAULT_API_VERSION` | Azure API 鐗堟湰                                                 | `2025-04-01-preview` |
+| `ERROR_LOG_ENABLED` | 閿欒鏃ュ織寮€鍏?                                                      | `false` |
+| `PYROSCOPE_URL` | Pyroscope 鏈嶅姟鍦板潃                                            | - |
+| `PYROSCOPE_APP_NAME` | Pyroscope 搴旂敤鍚?                                       | `make-api-private` |
+| `PYROSCOPE_BASIC_AUTH_USER` | Pyroscope Basic Auth 鐢ㄦ埛鍚?                       | - |
+| `PYROSCOPE_BASIC_AUTH_PASSWORD` | Pyroscope Basic Auth 瀵嗙爜                  | - |
+| `PYROSCOPE_MUTEX_RATE` | Pyroscope mutex 閲囨牱鐜?                              | `5` |
+| `PYROSCOPE_BLOCK_RATE` | Pyroscope block 閲囨牱鐜?                              | `5` |
+| `HOSTNAME` | Pyroscope 鏍囩閲岀殑涓绘満鍚?                                         | `make-api-private` |
 
-📖 **完整配置：** [环境变量文档](https://docs.newapi.pro/zh/docs/installation/config-maintenance/environment-variables)
+馃摉 **瀹屾暣閰嶇疆锛?* [鐜鍙橀噺鏂囨。](https://docs.make-api-private.pro/zh/docs/installation/config-maintenance/environment-variables)
 
 </details>
 
-### 🔧 部署方式
+### 馃敡 閮ㄧ讲鏂瑰紡
 
 <details>
-<summary><strong>方式 1：Docker Compose（推荐）</strong></summary>
+<summary><strong>鏂瑰紡 1锛欴ocker Compose锛堟帹鑽愶級</strong></summary>
 
 ```bash
-# 克隆项目
-git clone https://github.com/QuantumNous/new-api.git
-cd new-api
+# 鍏嬮殕椤圭洰
+git clone https://github.com/QuantumNous/make-api-private.git
+cd make-api-private
 
-# 编辑配置
+# 缂栬緫閰嶇疆
 nano docker-compose.yml
 
-# 启动服务
+# 鍚姩鏈嶅姟
 docker-compose up -d
 ```
 
 </details>
 
 <details>
-<summary><strong>方式 2：Docker 命令</strong></summary>
+<summary><strong>鏂瑰紡 2锛欴ocker 鍛戒护</strong></summary>
 
-**使用 SQLite：**
+**浣跨敤 SQLite锛?*
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name make-api-private -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  calciumion/make-api-private:latest
 ```
 
-**使用 MySQL：**
+**浣跨敤 MySQL锛?*
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name make-api-private -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  calciumion/make-api-private:latest
 ```
 
-> **💡 路径说明：**
-> - `./data:/data` - 相对路径，数据保存在当前目录的 data 文件夹
-> - 也可使用绝对路径，如：`/your/custom/path:/data`
+> **馃挕 璺緞璇存槑锛?*
+> - `./data:/data` - 鐩稿璺緞锛屾暟鎹繚瀛樺湪褰撳墠鐩綍鐨?data 鏂囦欢澶?> - 涔熷彲浣跨敤缁濆璺緞锛屽锛歚/your/custom/path:/data`
 
 </details>
 
 <details>
-<summary><strong>方式 3：宝塔面板</strong></summary>
+<summary><strong>鏂瑰紡 3锛氬疂濉旈潰鏉?/strong></summary>
 
-1. 安装宝塔面板（≥ 9.2.0 版本）
-2. 在应用商店搜索 **New-API**
-3. 一键安装
-
-📖 [图文教程](./docs/installation/BT.md)
+1. 瀹夎瀹濆闈㈡澘锛堚墺 9.2.0 鐗堟湰锛?2. 鍦ㄥ簲鐢ㄥ晢搴楁悳绱?**New-API**
+3. 涓€閿畨瑁?
+馃摉 [鍥炬枃鏁欑▼](./docs/installation/BT.md)
 
 </details>
 
-### ⚠️ 多机部署注意事项
+### 鈿狅笍 澶氭満閮ㄧ讲娉ㄦ剰浜嬮」
 
 > [!WARNING]
-> - **必须设置** `SESSION_SECRET` - 否则登录状态不一致
-> - **公用 Redis 必须设置** `CRYPTO_SECRET` - 否则数据无法解密
+> - **蹇呴』璁剧疆** `SESSION_SECRET` - 鍚﹀垯鐧诲綍鐘舵€佷笉涓€鑷?> - **鍏敤 Redis 蹇呴』璁剧疆** `CRYPTO_SECRET` - 鍚﹀垯鏁版嵁鏃犳硶瑙ｅ瘑
 
-### 🔄 渠道重试与缓存
+### 馃攧 娓犻亾閲嶈瘯涓庣紦瀛?
+**閲嶈瘯閰嶇疆锛?* `璁剧疆 鈫?杩愯惀璁剧疆 鈫?閫氱敤璁剧疆 鈫?澶辫触閲嶈瘯娆℃暟`
 
-**重试配置：** `设置 → 运营设置 → 通用设置 → 失败重试次数`
-
-**缓存配置：**
-- `REDIS_CONN_STRING`：Redis 缓存（推荐）
-- `MEMORY_CACHE_ENABLED`：内存缓存
-
+**缂撳瓨閰嶇疆锛?*
+- `REDIS_CONN_STRING`锛歊edis 缂撳瓨锛堟帹鑽愶級
+- `MEMORY_CACHE_ENABLED`锛氬唴瀛樼紦瀛?
 ---
 
-## 🔗 相关项目
+## 馃敆 鐩稿叧椤圭洰
 
-### 上游项目
+### 涓婃父椤圭洰
 
-| 项目 | 说明 |
+| 椤圭洰 | 璇存槑 |
 |------|------|
-| [One API](https://github.com/songquanpeng/one-api) | 原版项目基础 |
-| [Midjourney-Proxy](https://github.com/novicezk/midjourney-proxy) | Midjourney 接口支持 |
+| [One API](https://github.com/songquanpeng/one-api) | 鍘熺増椤圭洰鍩虹 |
+| [Midjourney-Proxy](https://github.com/novicezk/midjourney-proxy) | Midjourney 鎺ュ彛鏀寔 |
 
-### 配套工具
+### 閰嶅宸ュ叿
 
-| 项目 | 说明 |
+| 椤圭洰 | 璇存槑 |
 |------|------|
-| [neko-api-key-tool](https://github.com/Calcium-Ion/neko-api-key-tool) | Key 额度查询工具 |
-| [new-api-horizon](https://github.com/Calcium-Ion/new-api-horizon) | New API 高性能优化版 |
+| [neko-api-key-tool](https://github.com/Calcium-Ion/neko-api-key-tool) | Key 棰濆害鏌ヨ宸ュ叿 |
+| [make-api-private-horizon](https://github.com/Calcium-Ion/make-api-private-horizon) | Make API Private 楂樻€ц兘浼樺寲鐗?|
 
 ---
 
-## 💬 帮助支持
+## 馃挰 甯姪鏀寔
 
-### 📖 文档资源
+### 馃摉 鏂囨。璧勬簮
 
-| 资源 | 链接 |
+| 璧勬簮 | 閾炬帴 |
 |------|------|
-| 📘 常见问题 | [FAQ](https://docs.newapi.pro/zh/docs/support/faq) |
-| 💬 社区交流 | [交流渠道](https://docs.newapi.pro/zh/docs/support/community-interaction) |
-| 🐛 反馈问题 | [问题反馈](https://docs.newapi.pro/zh/docs/support/feedback-issues) |
-| 📚 完整文档 | [官方文档](https://docs.newapi.pro/zh/docs) |
+| 馃摌 甯歌闂 | [FAQ](https://docs.make-api-private.pro/zh/docs/support/faq) |
+| 馃挰 绀惧尯浜ゆ祦 | [浜ゆ祦娓犻亾](https://docs.make-api-private.pro/zh/docs/support/community-interaction) |
+| 馃悰 鍙嶉闂 | [闂鍙嶉](https://docs.make-api-private.pro/zh/docs/support/feedback-issues) |
+| 馃摎 瀹屾暣鏂囨。 | [瀹樻柟鏂囨。](https://docs.make-api-private.pro/zh/docs) |
 
-### 🤝 贡献指南
+### 馃 璐＄尞鎸囧崡
 
-欢迎各种形式的贡献！
+娆㈣繋鍚勭褰㈠紡鐨勮础鐚紒
 
-- 🐛 报告 Bug
-- 💡 提出新功能
-- 📝 改进文档
-- 🔧 提交代码
-
----
-
-## 📜 许可证
-
-本项目采用 [GNU Affero 通用公共许可证 v3.0 (AGPLv3)](./LICENSE) 授权。
-
-本项目为开源项目，在 [One API](https://github.com/songquanpeng/one-api)（MIT 许可证）的基础上进行二次开发。
-
-如果您所在的组织政策不允许使用 AGPLv3 许可的软件，或您希望规避 AGPLv3 的开源义务，请发送邮件至：[support@quantumnous.com](mailto:support@quantumnous.com)
+- 馃悰 鎶ュ憡 Bug
+- 馃挕 鎻愬嚭鏂板姛鑳?- 馃摑 鏀硅繘鏂囨。
+- 馃敡 鎻愪氦浠ｇ爜
 
 ---
 
-## 🌟 Star History
+## 馃摐 璁稿彲璇?
+鏈」鐩噰鐢?[GNU Affero 閫氱敤鍏叡璁稿彲璇?v3.0 (AGPLv3)](./LICENSE) 鎺堟潈銆?
+鏈」鐩负寮€婧愰」鐩紝鍦?[One API](https://github.com/songquanpeng/one-api)锛圡IT 璁稿彲璇侊級鐨勫熀纭€涓婅繘琛屼簩娆″紑鍙戙€?
+濡傛灉鎮ㄦ墍鍦ㄧ殑缁勭粐鏀跨瓥涓嶅厑璁镐娇鐢?AGPLv3 璁稿彲鐨勮蒋浠讹紝鎴栨偍甯屾湜瑙勯伩 AGPLv3 鐨勫紑婧愪箟鍔★紝璇峰彂閫侀偖浠惰嚦锛歔support@quantumnous.com](mailto:support@quantumnous.com)
+
+---
+
+## 馃専 Star History
 
 <div align="center">
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Calcium-Ion/new-api&type=Date)](https://star-history.com/#Calcium-Ion/new-api&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Calcium-Ion/make-api-private&type=Date)](https://star-history.com/#Calcium-Ion/make-api-private&Date)
 
 </div>
 
@@ -465,12 +428,12 @@ docker run --name new-api -d --restart always \
 
 <div align="center">
 
-### 💖 感谢使用 New API
+### 馃挅 鎰熻阿浣跨敤 Make API Private
 
-如果这个项目对你有帮助，欢迎给我们一个 ⭐️ Star！
+濡傛灉杩欎釜椤圭洰瀵逛綘鏈夊府鍔╋紝娆㈣繋缁欐垜浠竴涓?猸愶笍 Star锛?
+**[瀹樻柟鏂囨。](https://docs.make-api-private.pro/zh/docs)** 鈥?**[闂鍙嶉](https://github.com/Calcium-Ion/make-api-private/issues)** 鈥?**[鏈€鏂板彂甯僝(https://github.com/Calcium-Ion/make-api-private/releases)**
 
-**[官方文档](https://docs.newapi.pro/zh/docs)** • **[问题反馈](https://github.com/Calcium-Ion/new-api/issues)** • **[最新发布](https://github.com/Calcium-Ion/new-api/releases)**
-
-<sub>Built with ❤️ by QuantumNous</sub>
+<sub>Built with 鉂わ笍 by QuantumNous</sub>
 
 </div>
+

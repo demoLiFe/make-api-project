@@ -1,0 +1,19 @@
+# File path: /etc/systemd/system/make-api-private.service
+# sudo systemctl daemon-reload
+# sudo systemctl start make-api-private
+# sudo systemctl enable make-api-private
+# sudo systemctl status make-api-private
+[Unit]
+Description=One API Service
+After=network.target
+
+[Service]
+User=ubuntu  # 娉ㄦ剰淇敼鐢ㄦ埛鍚?
+WorkingDirectory=/path/to/make-api-private  # 娉ㄦ剰淇敼璺緞
+ExecStart=/path/to/make-api-private/make-api-private --port 3000 --log-dir /path/to/make-api-private/logs  # 娉ㄦ剰淇敼璺緞鍜岀鍙ｅ彿
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+

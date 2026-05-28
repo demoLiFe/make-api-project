@@ -1,4 +1,4 @@
-package aws
+﻿package aws
 
 import (
 	"fmt"
@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/channel/claude"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/relay/channel"
+	"github.com/QuantumNous/make-api-private/relay/channel/claude"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/service"
+	"github.com/QuantumNous/make-api-private/types"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
 	"github.com/pkg/errors"
 
@@ -182,3 +182,4 @@ func (a *Adaptor) GetModelList() (models []string) {
 func (a *Adaptor) GetChannelName() string {
 	return ChannelName
 }
+

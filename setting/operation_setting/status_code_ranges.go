@@ -1,4 +1,4 @@
-package operation_setting
+﻿package operation_setting
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/types"
 )
 
 type StatusCodeRange struct {
@@ -206,3 +206,4 @@ func parseHTTPStatusCodeToken(token string) (StatusCodeRange, error) {
 	}
 	return StatusCodeRange{Start: code, End: code}, nil
 }
+

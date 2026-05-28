@@ -1,7 +1,7 @@
 package dto
 
 import (
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/types"
 	"github.com/gin-gonic/gin"
 )
 
@@ -23,3 +23,4 @@ func (b *BaseRequest) IsStream(c *gin.Context) bool {
 	return false
 }
 func (b *BaseRequest) SetModelName(modelName string) {}
+

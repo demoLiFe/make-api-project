@@ -1,4 +1,4 @@
-package controller
+﻿package controller
 
 import (
 	"fmt"
@@ -10,13 +10,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/relay/channel/gemini"
-	"github.com/QuantumNous/new-api/relay/channel/ollama"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/relay/channel/gemini"
+	"github.com/QuantumNous/make-api-private/relay/channel/ollama"
+	"github.com/QuantumNous/make-api-private/service"
 
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"
@@ -997,3 +997,4 @@ func DetectAllChannelUpstreamModelUpdates(c *gin.Context) {
 		},
 	})
 }
+

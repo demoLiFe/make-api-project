@@ -1,12 +1,12 @@
-package model
+﻿package model
 
 import (
 	"errors"
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/setting/operation_setting"
 	"github.com/bytedance/gopkg/util/gopool"
 	"gorm.io/gorm"
 )
@@ -509,3 +509,4 @@ func InvalidateUserTokensCache(userId int) error {
 	}
 	return firstErr
 }
+

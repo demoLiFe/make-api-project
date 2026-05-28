@@ -3,7 +3,7 @@ package service
 import (
 	"testing"
 
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -55,3 +55,4 @@ func TestResetStatusCode(t *testing.T) {
 		})
 	}
 }
+

@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting/perf_metrics_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/setting/perf_metrics_setting"
 )
 
 func flushLoop() {
@@ -96,3 +96,4 @@ func parseRedisInt(value string) int64 {
 	parsed, _ := strconv.ParseInt(value, 10, 64)
 	return parsed
 }
+

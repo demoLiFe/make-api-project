@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/middleware"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/middleware"
 
 	"github.com/gin-gonic/gin"
 )
@@ -32,3 +32,4 @@ func SetRouter(router *gin.Engine, assets ThemeAssets) {
 		})
 	}
 }
+

@@ -3,7 +3,7 @@ package oauth
 import (
 	"context"
 
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/model"
 	"github.com/gin-gonic/gin"
 )
 
@@ -34,3 +34,4 @@ type Provider interface {
 	// GetProviderPrefix returns the prefix for auto-generated usernames (e.g., "github_")
 	GetProviderPrefix() string
 }
+

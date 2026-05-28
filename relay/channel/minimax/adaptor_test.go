@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
+	"github.com/QuantumNous/make-api-private/dto"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	relayconstant "github.com/QuantumNous/make-api-private/relay/constant"
 
 	"github.com/gin-gonic/gin"
 )
@@ -135,3 +135,4 @@ func ioNopCloser(body string) nopReadCloser {
 func uintPtr(v uint) *uint {
 	return &v
 }
+

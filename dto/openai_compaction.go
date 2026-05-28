@@ -3,7 +3,7 @@ package dto
 import (
 	"encoding/json"
 
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/types"
 )
 
 type OpenAIResponsesCompactionResponse struct {
@@ -18,3 +18,4 @@ type OpenAIResponsesCompactionResponse struct {
 func (o *OpenAIResponsesCompactionResponse) GetOpenAIError() *types.OpenAIError {
 	return GetOpenAIError(o.Error)
 }
+

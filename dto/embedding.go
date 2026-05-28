@@ -3,7 +3,7 @@ package dto
 import (
 	"strings"
 
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -86,3 +86,4 @@ type EmbeddingResponse struct {
 	Model  string                  `json:"model"`
 	Usage  `json:"usage"`
 }
+

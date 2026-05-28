@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QuantumNous/make-api-private/dto"
 )
 
 func ResponsesResponseToChatCompletionsResponse(resp *dto.OpenAIResponsesResponse, id string) (*dto.OpenAITextResponse, *dto.Usage, error) {
@@ -131,3 +131,4 @@ func ExtractOutputTextFromResponses(resp *dto.OpenAIResponsesResponse) string {
 	}
 	return sb.String()
 }
+

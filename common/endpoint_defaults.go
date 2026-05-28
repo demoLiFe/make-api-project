@@ -1,6 +1,6 @@
-package common
+﻿package common
 
-import "github.com/QuantumNous/new-api/constant"
+import "github.com/QuantumNous/make-api-private/constant"
 
 // EndpointInfo 描述单个端点的默认请求信息
 // path: 上游路径
@@ -32,3 +32,4 @@ func GetDefaultEndpointInfo(et constant.EndpointType) (EndpointInfo, bool) {
 	info, ok := defaultEndpointInfoMap[et]
 	return info, ok
 }
+

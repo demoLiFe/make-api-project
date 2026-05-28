@@ -1,7 +1,7 @@
 {
-  "name": "new-api-electron",
+  "name": "make-api-private-electron",
   "version": "1.0.0",
-  "description": "New API - AI Model Gateway Desktop Application",
+  "description": "Make API Private - AI Model Gateway Desktop Application",
   "main": "main.js",
   "scripts": {
     "start-app": "electron .",
@@ -21,7 +21,7 @@
   "author": "QuantumNous",
   "repository": {
     "type": "git",
-    "url": "https://github.com/QuantumNous/new-api"
+    "url": "https://github.com/QuantumNous/make-api-private"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
@@ -29,7 +29,7 @@
     "electron-builder": "^26.7.0"
   },
   "build": {
-    "appId": "com.newapi.desktop",
+    "appId": "com.make-api-private.desktop",
     "productName": "New-API-App",
     "publish": null,
     "directories": {
@@ -57,8 +57,8 @@
       ],
       "extraResources": [
         {
-          "from": "../new-api",
-          "to": "bin/new-api"
+          "from": "../make-api-private",
+          "to": "bin/make-api-private"
         },
         {
           "from": "../web/dist",
@@ -74,8 +74,8 @@
       ],
       "extraResources": [
         {
-          "from": "../new-api.exe",
-          "to": "bin/new-api.exe"
+          "from": "../make-api-private.exe",
+          "to": "bin/make-api-private.exe"
         }
       ]
     },
@@ -88,8 +88,8 @@
       "category": "Development",
       "extraResources": [
         {
-          "from": "../new-api",
-          "to": "bin/new-api"
+          "from": "../make-api-private",
+          "to": "bin/make-api-private"
         }
       ]
     },

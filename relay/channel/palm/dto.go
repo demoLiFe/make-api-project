@@ -1,6 +1,6 @@
 package palm
 
-import "github.com/QuantumNous/new-api/dto"
+import "github.com/QuantumNous/make-api-private/dto"
 
 type PaLMChatMessage struct {
 	Author  string `json:"author"`
@@ -36,3 +36,4 @@ type PaLMChatResponse struct {
 	Filters    []PaLMFilter      `json:"filters"`
 	Error      PaLMError         `json:"error"`
 }
+

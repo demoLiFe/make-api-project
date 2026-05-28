@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 )
 
 const (
@@ -315,3 +315,4 @@ func decodeJWTClaims(token string) (map[string]any, bool) {
 	}
 	return claims, true
 }
+

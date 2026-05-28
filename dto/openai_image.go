@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/types"
 
 	"github.com/gin-gonic/gin"
 )

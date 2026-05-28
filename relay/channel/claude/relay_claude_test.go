@@ -1,11 +1,11 @@
-package claude
+﻿package claude
 
 import (
 	"encoding/base64"
 	"strings"
 	"testing"
 
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QuantumNous/make-api-private/dto"
 	"github.com/stretchr/testify/require"
 )
 
@@ -380,3 +380,4 @@ func TestRequestOpenAI2ClaudeMessage_ConvertsTextFileContentToText(t *testing.T)
 	require.NotNil(t, content[0].Text)
 	require.Equal(t, "alpha\nbeta", *content[0].Text)
 }
+

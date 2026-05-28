@@ -1,4 +1,4 @@
-package coze
+﻿package coze
 
 import (
 	"encoding/json"
@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/relay/channel"
+	"github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -137,3 +137,4 @@ func (a *Adaptor) SetupRequestHeader(c *gin.Context, req *http.Header, info *com
 	req.Set("Authorization", "Bearer "+info.ApiKey)
 	return nil
 }
+

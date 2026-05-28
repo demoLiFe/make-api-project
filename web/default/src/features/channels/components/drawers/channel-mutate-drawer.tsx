@@ -634,7 +634,7 @@ export function ChannelMutateDrawer({
     const timer = setTimeout(() => {
       toast.warning(
         t(
-          'Warning: Base URL should not end with /v1. New API will handle it automatically. This may cause request failures.'
+          'Warning: Base URL should not end with /v1. Make API Private will handle it automatically. This may cause request failures.'
         ),
         { duration: 5000 }
       )
@@ -1113,7 +1113,7 @@ export function ChannelMutateDrawer({
               onSubmit={form.handleSubmit(onSubmit)}
               className='flex-1 space-y-4 overflow-y-auto px-3 py-3 pb-4 sm:space-y-5 sm:px-4'
             >
-              {/* ── Basic Information ── */}
+              {/* Basic Information */}
               <div className='bg-card space-y-4 rounded-xl border p-3 sm:p-5'>
                 <CardHeading
                   title={t('Basic Information')}
@@ -1208,7 +1208,7 @@ export function ChannelMutateDrawer({
                 )}
               </div>
 
-              {/* ── API Access ── */}
+              {/* API Access */}
               <div className='bg-card space-y-4 rounded-xl border p-5'>
                 <CardHeading
                   title={t('API Access')}
@@ -1803,7 +1803,7 @@ export function ChannelMutateDrawer({
                         </FormControl>
                         <FormDescription>
                           {t(
-                            'Custom API base URL. For official channels, New API has built-in addresses. Only fill this for third-party proxy sites or special endpoints. Do not add /v1 or trailing slash.'
+                            'Custom API base URL. For official channels, Make API Private has built-in addresses. Only fill this for third-party proxy sites or special endpoints. Do not add /v1 or trailing slash.'
                           )}
                         </FormDescription>
                         <FormMessage />
@@ -2166,7 +2166,7 @@ export function ChannelMutateDrawer({
                 )}
               </div>
 
-              {/* ── Models & Groups ── */}
+              {/* Models & Groups */}
               <div className='bg-card space-y-4 rounded-xl border p-5'>
                 <CardHeading
                   title={t('Models & Groups')}
@@ -2453,7 +2453,7 @@ export function ChannelMutateDrawer({
                 </CollapsibleTrigger>
 
                 <CollapsibleContent className='mt-5 space-y-5'>
-                  {/* ── Routing & Overrides ── */}
+                  {/* Routing & Overrides */}
                   <div className='bg-card space-y-4 rounded-xl border p-5'>
                     <CardHeading
                       title={t('Routing & Overrides')}
@@ -2848,7 +2848,7 @@ export function ChannelMutateDrawer({
                     </div>
                   </div>
 
-                  {/* ── Extra Settings ── */}
+                  {/* Extra Settings */}
                   <div className='bg-card space-y-4 rounded-xl border p-5'>
                     <CardHeading
                       title={t('Channel Extra Settings')}
@@ -3422,3 +3422,4 @@ export function ChannelMutateDrawer({
     </>
   )
 }
+

@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/QuantumNous/new-api/controller"
-	"github.com/QuantumNous/new-api/middleware"
+	"github.com/QuantumNous/make-api-private/controller"
+	"github.com/QuantumNous/make-api-private/middleware"
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
 )
@@ -21,3 +21,4 @@ func SetDashboardRouter(router *gin.Engine) {
 		apiRouter.GET("/v1/dashboard/billing/usage", controller.GetUsage)
 	}
 }
+

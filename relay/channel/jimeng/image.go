@@ -6,10 +6,10 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/dto"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/service"
+	"github.com/QuantumNous/make-api-private/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -88,3 +88,4 @@ func jimengImageHandler(c *gin.Context, resp *http.Response, info *relaycommon.R
 
 	return &dto.Usage{}, nil
 }
+

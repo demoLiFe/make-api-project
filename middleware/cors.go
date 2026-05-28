@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
@@ -21,3 +21,4 @@ func PoweredBy() gin.HandlerFunc {
 		c.Next()
 	}
 }
+

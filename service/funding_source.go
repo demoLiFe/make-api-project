@@ -1,9 +1,9 @@
-package service
+﻿package service
 
 import (
 	"time"
 
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/model"
 )
 
 // ---------------------------------------------------------------------------
@@ -137,3 +137,4 @@ func refundWithRetry(fn func() error) error {
 	}
 	return lastErr
 }
+

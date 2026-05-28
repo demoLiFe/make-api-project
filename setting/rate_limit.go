@@ -6,7 +6,7 @@ import (
 	"math"
 	"sync"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 )
 
 var ModelRequestRateLimitEnabled = false
@@ -67,3 +67,4 @@ func CheckModelRequestRateLimitGroup(jsonStr string) error {
 
 	return nil
 }
+

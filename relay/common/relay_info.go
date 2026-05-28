@@ -1,4 +1,4 @@
-package common
+﻿package common
 
 import (
 	"encoding/json"
@@ -8,13 +8,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/pkg/billingexpr"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/setting/model_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/pkg/billingexpr"
+	relayconstant "github.com/QuantumNous/make-api-private/relay/constant"
+	"github.com/QuantumNous/make-api-private/setting/model_setting"
+	"github.com/QuantumNous/make-api-private/types"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
@@ -894,3 +894,4 @@ func RemoveGeminiDisabledFields(jsonData []byte) ([]byte, error) {
 	}
 	return jsonDataAfter, nil
 }
+

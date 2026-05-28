@@ -1,4 +1,4 @@
-package model
+﻿package model
 
 import (
 	"encoding/base64"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 
 	"github.com/go-webauthn/webauthn/protocol"
 	"github.com/go-webauthn/webauthn/webauthn"
@@ -208,3 +208,4 @@ func DeletePasskeyByUserID(userID int) error {
 	}
 	return nil
 }
+

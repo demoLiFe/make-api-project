@@ -1,4 +1,4 @@
-package controller
+﻿package controller
 
 import (
 	"errors"
@@ -9,21 +9,21 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/middleware"
-	"github.com/QuantumNous/new-api/model"
-	perfmetrics "github.com/QuantumNous/new-api/pkg/perf_metrics"
-	"github.com/QuantumNous/new-api/relay"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/middleware"
+	"github.com/QuantumNous/make-api-private/model"
+	perfmetrics "github.com/QuantumNous/make-api-private/pkg/perf_metrics"
+	"github.com/QuantumNous/make-api-private/relay"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	relayconstant "github.com/QuantumNous/make-api-private/relay/constant"
+	"github.com/QuantumNous/make-api-private/relay/helper"
+	"github.com/QuantumNous/make-api-private/service"
+	"github.com/QuantumNous/make-api-private/setting"
+	"github.com/QuantumNous/make-api-private/setting/operation_setting"
+	"github.com/QuantumNous/make-api-private/types"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/samber/lo"
@@ -651,3 +651,4 @@ func shouldRetryTaskRelay(c *gin.Context, channelId int, taskErr *dto.TaskError,
 	}
 	return true
 }
+

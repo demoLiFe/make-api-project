@@ -3,7 +3,7 @@ package service
 import (
 	"sync"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 	"github.com/tiktoken-go/tokenizer"
 	"github.com/tiktoken-go/tokenizer/codec"
 )
@@ -61,3 +61,4 @@ func getTokenNum(tokenEncoder tokenizer.Codec, text string) int {
 	tkm, _ := tokenEncoder.Count(text)
 	return tkm
 }
+

@@ -3,7 +3,7 @@ package setting
 import (
 	"encoding/json"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 )
 
 var Chats = []map[string]string{
@@ -49,3 +49,4 @@ func Chats2JsonString() string {
 	}
 	return string(jsonBytes)
 }
+

@@ -55,7 +55,7 @@ function getServerAddress(): string {
 
 function encodeConnectionString(key: string, url: string): string {
   return JSON.stringify({
-    _type: 'newapi_channel_conn',
+    _type: 'make-api-private_channel_conn',
     key,
     url,
   })
@@ -290,3 +290,4 @@ export function DataTableRowActions<TData>({
     </div>
   )
 }
+

@@ -1,7 +1,7 @@
 package codex
 
 import (
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
+	"github.com/QuantumNous/make-api-private/setting/ratio_setting"
 	"github.com/samber/lo"
 )
 
@@ -24,3 +24,4 @@ func withCompactModelSuffix(models []string) []string {
 	})...)
 	return lo.Uniq(out)
 }
+

@@ -1,16 +1,16 @@
-package service
+﻿package service
 
 import (
 	"encoding/json"
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/channel/openrouter"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/relay/reasonmap"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/relay/channel/openrouter"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/relay/reasonmap"
 	"github.com/samber/lo"
 )
 
@@ -1005,3 +1005,4 @@ func StreamResponseOpenAI2Gemini(openAIResponse *dto.ChatCompletionsStreamRespon
 
 	return geminiResponse
 }
+

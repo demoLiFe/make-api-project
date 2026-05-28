@@ -1,4 +1,4 @@
-package controller
+﻿package controller
 
 import (
 	"encoding/json"
@@ -6,16 +6,16 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/middleware"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/oauth"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/console_setting"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/middleware"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/oauth"
+	"github.com/QuantumNous/make-api-private/setting"
+	"github.com/QuantumNous/make-api-private/setting/console_setting"
+	"github.com/QuantumNous/make-api-private/setting/operation_setting"
+	"github.com/QuantumNous/make-api-private/setting/system_setting"
 
 	"github.com/gin-gonic/gin"
 )
@@ -363,3 +363,4 @@ func ResetPassword(c *gin.Context) {
 	})
 	return
 }
+

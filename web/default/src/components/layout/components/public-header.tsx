@@ -63,7 +63,7 @@ export function PublicHeader(props: PublicHeaderProps) {
 
   const user = auth.user
   const isAuthenticated = !!user
-  const displaySiteName = customSiteName || systemName || 'New API'
+  const displaySiteName = customSiteName || systemName || 'Make API Private'
   const links = dynamicLinks.length > 0 ? dynamicLinks : navLinks
 
   useEffect(() => {
@@ -117,7 +117,12 @@ export function PublicHeader(props: PublicHeaderProps) {
                   />
                 )}
               </div>
-              <span className='text-sm font-semibold tracking-tight'>
+              <span
+                className={cn(
+                  'text-sm font-semibold tracking-tight transition-colors duration-200',
+                  scrolled ? 'text-white/92' : 'text-foreground'
+                )}
+              >
                 {loading ? <Skeleton className='h-4 w-16' /> : displaySiteName}
               </span>
             </Link>
@@ -133,7 +138,12 @@ export function PublicHeader(props: PublicHeaderProps) {
                       href={link.href}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='text-muted-foreground hover:text-foreground rounded-lg px-3 py-1.5 text-[13px] font-medium transition-colors duration-200'
+                      className={cn(
+                        'rounded-lg px-3 py-1.5 text-[13px] font-medium transition-colors duration-200',
+                        scrolled
+                          ? 'text-white/64 hover:text-white/92'
+                          : 'text-muted-foreground hover:text-foreground'
+                      )}
                     >
                       {t(link.title)}
                     </a>
@@ -146,8 +156,12 @@ export function PublicHeader(props: PublicHeaderProps) {
                     className={cn(
                       'rounded-lg px-3 py-1.5 text-[13px] font-medium transition-colors duration-200',
                       isActive
-                        ? 'text-foreground'
-                        : 'text-muted-foreground hover:text-foreground'
+                        ? scrolled
+                          ? 'text-white'
+                          : 'text-foreground'
+                        : scrolled
+                          ? 'text-white/64 hover:text-white/92'
+                          : 'text-muted-foreground hover:text-foreground'
                     )}
                   >
                     {t(link.title)}
@@ -158,7 +172,12 @@ export function PublicHeader(props: PublicHeaderProps) {
               {(showLanguageSwitcher ||
                 showThemeSwitch ||
                 showNotifications) && (
-                <div className='bg-border/40 mx-2 h-4 w-px' />
+                <div
+                  className={cn(
+                    'mx-2 h-4 w-px transition-colors duration-200',
+                    scrolled ? 'bg-white/12' : 'bg-border/40'
+                  )}
+                />
               )}
 
               {showLanguageSwitcher && <LanguageSwitcher />}
@@ -172,7 +191,12 @@ export function PublicHeader(props: PublicHeaderProps) {
 
               {showAuthButtons && (
                 <>
-                  <div className='bg-border/40 mx-1 h-4 w-px' />
+                  <div
+                    className={cn(
+                      'mx-1 h-4 w-px transition-colors duration-200',
+                      scrolled ? 'bg-white/12' : 'bg-border/40'
+                    )}
+                  />
                   {loading ? (
                     <Skeleton className='h-8 w-20 rounded-lg' />
                   ) : isAuthenticated ? (
@@ -300,3 +324,4 @@ export function PublicHeader(props: PublicHeaderProps) {
     </>
   )
 }
+

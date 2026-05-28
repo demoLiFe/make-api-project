@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/i18n"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/i18n"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/model"
 	"github.com/gin-gonic/gin"
 )
 
@@ -193,3 +193,4 @@ type TrustLevelError struct {
 func (e *TrustLevelError) Error() string {
 	return "trust level too low"
 }
+

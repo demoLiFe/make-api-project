@@ -8,10 +8,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/model"
 
 	"github.com/bytedance/gopkg/util/gopool"
 )
@@ -146,3 +146,4 @@ func runCodexCredentialAutoRefreshOnce() {
 		logger.LogDebug(ctx, "codex credential auto-refresh: scanned=%d refreshed=%d", scanned, refreshed)
 	}
 }
+

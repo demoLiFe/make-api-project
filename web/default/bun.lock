@@ -3,7 +3,7 @@
   "configVersion": 0,
   "workspaces": {
     "": {
-      "name": "newapi-web",
+      "name": "make-api-private-web",
       "dependencies": {
         "@base-ui/react": "^1.4.1",
         "@fontsource-variable/public-sans": "^5.2.7",
@@ -2874,3 +2874,4 @@
     "yargs/string-width/strip-ansi/ansi-regex": ["ansi-regex@5.0.1", "", {}, "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ=="],
   }
 }
+

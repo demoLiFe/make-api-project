@@ -1,4 +1,4 @@
-package channel
+﻿package channel
 
 import (
 	"context"
@@ -11,14 +11,14 @@ import (
 	"sync"
 	"time"
 
-	common2 "github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/types"
+	common2 "github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/relay/constant"
+	"github.com/QuantumNous/make-api-private/relay/helper"
+	"github.com/QuantumNous/make-api-private/service"
+	"github.com/QuantumNous/make-api-private/setting/operation_setting"
+	"github.com/QuantumNous/make-api-private/types"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/gin-gonic/gin"
@@ -552,3 +552,4 @@ func DoTaskApiRequest(a TaskAdaptor, c *gin.Context, info *common.RelayInfo, req
 	}
 	return resp, nil
 }
+

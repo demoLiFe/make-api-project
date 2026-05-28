@@ -1,4 +1,4 @@
-package common
+﻿package common
 
 import (
 	"fmt"
@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
 
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"
@@ -222,3 +222,4 @@ func ValidateBasicTaskRequest(c *gin.Context, info *RelayInfo, action string) *d
 	storeTaskRequest(c, info, action, req)
 	return nil
 }
+

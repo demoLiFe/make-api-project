@@ -6,9 +6,9 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	relayconstant "github.com/QuantumNous/make-api-private/relay/constant"
 	"github.com/gin-gonic/gin"
 )
 
@@ -65,3 +65,4 @@ func JimengRequestConvert() func(c *gin.Context) {
 		c.Next()
 	}
 }
+

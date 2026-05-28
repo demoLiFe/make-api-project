@@ -5,19 +5,19 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/relay"
-	"github.com/QuantumNous/new-api/relay/channel/ai360"
-	"github.com/QuantumNous/new-api/relay/channel/lingyiwanwu"
-	"github.com/QuantumNous/new-api/relay/channel/minimax"
-	"github.com/QuantumNous/new-api/relay/channel/moonshot"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/relay"
+	"github.com/QuantumNous/make-api-private/relay/channel/ai360"
+	"github.com/QuantumNous/make-api-private/relay/channel/lingyiwanwu"
+	"github.com/QuantumNous/make-api-private/relay/channel/minimax"
+	"github.com/QuantumNous/make-api-private/relay/channel/moonshot"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/relay/helper"
+	"github.com/QuantumNous/make-api-private/service"
+	"github.com/QuantumNous/make-api-private/types"
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"
 )
@@ -282,3 +282,4 @@ func RetrieveModel(c *gin.Context, modelType int) {
 		})
 	}
 }
+

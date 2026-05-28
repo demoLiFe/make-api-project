@@ -44,11 +44,11 @@ export function UpdateCheckerSection({
     setChecking(true)
     try {
       const response = await fetch(
-        'https://api.github.com/repos/Calcium-Ion/new-api/releases/latest',
+        'https://api.github.com/repos/Calcium-Ion/make-api-private/releases/latest',
         {
           headers: {
             Accept: 'application/vnd.github+json',
-            'User-Agent': 'new-api-dashboard',
+            'User-Agent': 'make-api-private-dashboard',
           },
         }
       )
@@ -176,3 +176,4 @@ export function UpdateCheckerSection({
     </>
   )
 }
+

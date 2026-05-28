@@ -3,7 +3,7 @@ package types
 import (
 	"sync"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 )
 
 type RWMap[K comparable, V any] struct {
@@ -101,3 +101,4 @@ func (m *RWMap[K, V]) MarshalJSONString() string {
 	}
 	return string(bytes)
 }
+

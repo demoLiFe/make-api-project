@@ -3,7 +3,7 @@ package codex
 import (
 	"errors"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 )
 
 type OAuthKey struct {
@@ -28,3 +28,4 @@ func ParseOAuthKey(raw string) (*OAuthKey, error) {
 	}
 	return &key, nil
 }
+

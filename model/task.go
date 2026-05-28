@@ -1,4 +1,4 @@
-package model
+﻿package model
 
 import (
 	"bytes"
@@ -6,10 +6,10 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	commonRelay "github.com/QuantumNous/new-api/relay/common"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
+	commonRelay "github.com/QuantumNous/make-api-private/relay/common"
 )
 
 type TaskStatus string
@@ -517,3 +517,4 @@ func (t *Task) ToOpenAIVideo() *dto.OpenAIVideo {
 	openAIVideo.SetMetadata("url", t.GetResultURL())
 	return openAIVideo
 }
+

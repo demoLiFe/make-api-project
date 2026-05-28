@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/constant"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
 	"github.com/gin-gonic/gin"
 )
 
@@ -98,3 +98,4 @@ func parseDataURI(uri string) *VeoImageInput {
 		MimeType:           mimeType,
 	}
 }
+

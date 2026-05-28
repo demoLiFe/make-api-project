@@ -1,4 +1,4 @@
-package service
+﻿package service
 
 import (
 	"bytes"
@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/setting/system_setting"
 )
 
 // WorkerRequest Worker请求的数据结构
@@ -68,3 +68,4 @@ func DoDownloadRequest(originUrl string, reason ...string) (resp *http.Response,
 		return GetHttpClient().Get(originUrl)
 	}
 }
+

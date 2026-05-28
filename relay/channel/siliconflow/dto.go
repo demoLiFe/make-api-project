@@ -1,6 +1,6 @@
 package siliconflow
 
-import "github.com/QuantumNous/new-api/dto"
+import "github.com/QuantumNous/make-api-private/dto"
 
 type SFTokens struct {
 	InputTokens  int `json:"input_tokens"`
@@ -30,3 +30,4 @@ type SFImageRequest struct {
 	Image2            string  `json:"image2,omitempty"`
 	Image3            string  `json:"image3,omitempty"`
 }
+

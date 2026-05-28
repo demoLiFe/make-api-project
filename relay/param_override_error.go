@@ -1,8 +1,8 @@
 package relay
 
 import (
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/types"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/types"
 )
 
 func newAPIErrorFromParamOverride(err error) *types.NewAPIError {
@@ -11,3 +11,4 @@ func newAPIErrorFromParamOverride(err error) *types.NewAPIError {
 	}
 	return types.NewError(err, types.ErrorCodeChannelParamOverrideInvalid, types.ErrOptionWithSkipRetry())
 }
+

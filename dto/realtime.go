@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/QuantumNous/new-api/types"
+import "github.com/QuantumNous/make-api-private/types"
 
 const (
 	RealtimeEventTypeError              = "error"
@@ -86,3 +86,4 @@ type RealtimeContent struct {
 	Audio      string `json:"audio,omitempty"` // Base64-encoded audio bytes.
 	Transcript string `json:"transcript,omitempty"`
 }
+

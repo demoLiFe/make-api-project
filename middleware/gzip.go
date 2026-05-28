@@ -5,7 +5,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/QuantumNous/make-api-private/constant"
 	"github.com/andybalholm/brotli"
 	"github.com/gin-gonic/gin"
 )
@@ -74,3 +74,4 @@ func DecompressRequestMiddleware() gin.HandlerFunc {
 		c.Next()
 	}
 }
+

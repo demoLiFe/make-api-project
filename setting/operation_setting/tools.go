@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/QuantumNous/new-api/setting/config"
+	"github.com/QuantumNous/make-api-private/setting/config"
 )
 
 // ---------------------------------------------------------------------------
@@ -13,10 +13,10 @@ import (
 // DB key: tool_price_setting.prices
 //
 // Key format:
-//   - "tool_name"              → default price for all models
-//   - "tool_name:model_prefix*" → override for models matching the prefix
+//   - "tool_name"              鈫?default price for all models
+//   - "tool_name:model_prefix*" 鈫?override for models matching the prefix
 //
-// Lookup order: longest prefix match → default → hardcoded fallback → 0
+// Lookup order: longest prefix match 鈫?default 鈫?hardcoded fallback 鈫?0
 // ---------------------------------------------------------------------------
 
 var defaultToolPrices = map[string]float64{
@@ -115,7 +115,7 @@ func RebuildToolPriceIndex() {
 }
 
 // GetToolPriceForModel returns the price ($/1K calls) for a tool given a model name.
-// Lookup: longest prefix match → tool default → 0.
+// Lookup: longest prefix match 鈫?tool default 鈫?0.
 func GetToolPriceForModel(toolName, modelName string) float64 {
 	idx := currentIndex.Load()
 	if idx == nil {
@@ -217,3 +217,4 @@ func GetGeminiInputAudioPricePerMillionTokens(modelName string) float64 {
 	}
 	return 0
 }
+

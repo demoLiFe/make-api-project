@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QuantumNous/make-api-private/dto"
 )
 
 type BaiduMessage struct {
@@ -78,3 +78,4 @@ type BaiduTokenResponse struct {
 	ExpiresIn   int    `json:"expires_in"`
 	AccessToken string `json:"access_token"`
 }
+

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 )
 
 type accessPolicyPayload struct {
@@ -245,3 +245,4 @@ func validateAccessPolicyPayload(policy *accessPolicyPayload) error {
 
 	return nil
 }
+

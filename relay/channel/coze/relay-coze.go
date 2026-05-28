@@ -1,4 +1,4 @@
-package coze
+﻿package coze
 
 import (
 	"bufio"
@@ -9,12 +9,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/dto"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/relay/helper"
+	"github.com/QuantumNous/make-api-private/service"
+	"github.com/QuantumNous/make-api-private/types"
 	"github.com/samber/lo"
 
 	"github.com/gin-gonic/gin"
@@ -296,3 +296,4 @@ func doRequest(req *http.Request, info *relaycommon.RelayInfo) (*http.Response, 
 	// _ = resp.Body.Close()
 	return resp, nil
 }
+

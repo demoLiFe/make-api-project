@@ -6,9 +6,9 @@ import {
 } from './section-registry.tsx'
 
 const defaultSiteSettings: SiteSettings = {
-  'theme.frontend': 'default',
+  'theme.frontend': 'classic',
   Notice: '',
-  SystemName: 'New API',
+  SystemName: 'Make API Private',
   Logo: '',
   Footer: '',
   About: '',
@@ -30,3 +30,4 @@ export function SiteSettings() {
     />
   )
 }
+

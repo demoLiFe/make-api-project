@@ -1,4 +1,4 @@
-package aws
+﻿package aws
 
 import (
 	"context"
@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/logger"
 )
 
 type AwsClaudeRequest struct {
@@ -143,3 +143,4 @@ func parseStopSequences(stop any) []string {
 	}
 	return nil
 }
+

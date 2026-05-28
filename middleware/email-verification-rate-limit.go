@@ -1,4 +1,4 @@
-package middleware
+﻿package middleware
 
 import (
 	"context"
@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 
 	"github.com/gin-gonic/gin"
 )
@@ -79,3 +79,4 @@ func EmailVerificationRateLimit() gin.HandlerFunc {
 		}
 	}
 }
+

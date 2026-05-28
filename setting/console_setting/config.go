@@ -1,6 +1,6 @@
-package console_setting
+﻿package console_setting
 
-import "github.com/QuantumNous/new-api/setting/config"
+import "github.com/QuantumNous/make-api-private/setting/config"
 
 type ConsoleSetting struct {
 	ApiInfo              string `json:"api_info"`              // 控制台 API 信息 (JSON 数组字符串)
@@ -37,3 +37,4 @@ func init() {
 func GetConsoleSetting() *ConsoleSetting {
 	return &consoleSetting
 }
+

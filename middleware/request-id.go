@@ -6,7 +6,7 @@ import (
 	"encoding/hex"
 	"runtime/debug"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 	"github.com/gin-gonic/gin"
 )
 
@@ -28,3 +28,4 @@ func RequestId() func(c *gin.Context) {
 		c.Next()
 	}
 }
+

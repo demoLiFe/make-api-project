@@ -1,4 +1,4 @@
-package model
+﻿package model
 
 import (
 	"encoding/json"
@@ -8,11 +8,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/setting/billing_setting"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/setting/billing_setting"
+	"github.com/QuantumNous/make-api-private/setting/ratio_setting"
+	"github.com/QuantumNous/make-api-private/types"
 )
 
 type Pricing struct {
@@ -362,3 +362,4 @@ func updatePricing() {
 func GetSupportedEndpointMap() map[string]common.EndpointInfo {
 	return supportedEndpointMap
 }
+

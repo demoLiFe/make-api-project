@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/QuantumNous/make-api-private/constant"
 )
 
 // ValidateRedirectURL validates that a redirect URL is safe to use.
@@ -37,3 +37,4 @@ func ValidateRedirectURL(rawURL string) error {
 
 	return fmt.Errorf("domain %s is not in the trusted domains list", domain)
 }
+

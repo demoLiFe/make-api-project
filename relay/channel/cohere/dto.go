@@ -1,6 +1,6 @@
 package cohere
 
-import "github.com/QuantumNous/new-api/dto"
+import "github.com/QuantumNous/make-api-private/dto"
 
 type CohereRequest struct {
 	Model       string        `json:"model"`
@@ -58,3 +58,4 @@ type CohereTokens struct {
 	InputTokens  int `json:"input_tokens"`
 	OutputTokens int `json:"output_tokens"`
 }
+

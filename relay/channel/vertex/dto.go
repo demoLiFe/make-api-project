@@ -3,7 +3,7 @@ package vertex
 import (
 	"encoding/json"
 
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QuantumNous/make-api-private/dto"
 )
 
 type VertexAIClaudeRequest struct {
@@ -40,3 +40,4 @@ func copyRequest(req *dto.ClaudeRequest, version string) *VertexAIClaudeRequest 
 		OutputConfig:     req.OutputConfig,
 	}
 }
+

@@ -1,4 +1,4 @@
-package controller
+﻿package controller
 
 import (
 	"fmt"
@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/logger"
 	"github.com/gin-gonic/gin"
 )
 
@@ -383,3 +383,4 @@ func getDiskCacheInfo() DiskCacheInfo {
 
 	return info
 }
+

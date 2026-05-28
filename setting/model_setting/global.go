@@ -1,10 +1,10 @@
-package model_setting
+﻿package model_setting
 
 import (
 	"slices"
 	"strings"
 
-	"github.com/QuantumNous/new-api/setting/config"
+	"github.com/QuantumNous/make-api-private/setting/config"
 )
 
 type ChatCompletionsToResponsesPolicy struct {
@@ -77,3 +77,4 @@ func ShouldPreserveThinkingSuffix(modelName string) bool {
 	}
 	return false
 }
+

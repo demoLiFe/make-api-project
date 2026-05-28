@@ -1,4 +1,4 @@
-package controller
+﻿package controller
 
 import (
 	"errors"
@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	passkeysvc "github.com/QuantumNous/new-api/service/passkey"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
+	passkeysvc "github.com/QuantumNous/make-api-private/service/passkey"
+	"github.com/QuantumNous/make-api-private/setting/system_setting"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -574,3 +574,4 @@ func requireSecureVerificationMethod(c *gin.Context, method string) bool {
 
 	return true
 }
+

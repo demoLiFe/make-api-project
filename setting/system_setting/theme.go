@@ -1,8 +1,8 @@
 package system_setting
 
 import (
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/config"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/setting/config"
 )
 
 type ThemeSettings struct {
@@ -30,3 +30,4 @@ func GetThemeSettings() *ThemeSettings {
 func UpdateAndSyncTheme() {
 	syncThemeToCommon()
 }
+

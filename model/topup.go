@@ -1,11 +1,11 @@
-package model
+﻿package model
 
 import (
 	"errors"
 	"fmt"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/logger"
 
 	"github.com/shopspring/decimal"
 	"gorm.io/gorm"
@@ -585,3 +585,4 @@ func RechargeWaffoPancake(tradeNo string) (err error) {
 
 	return nil
 }
+

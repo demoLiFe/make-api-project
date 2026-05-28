@@ -3,10 +3,10 @@ package controller
 import (
 	"net/http"
 
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/service"
+	"github.com/QuantumNous/make-api-private/setting"
+	"github.com/QuantumNous/make-api-private/setting/ratio_setting"
 
 	"github.com/gin-gonic/gin"
 )
@@ -50,3 +50,4 @@ func GetUserGroups(c *gin.Context) {
 		"data":    usableGroups,
 	})
 }
+

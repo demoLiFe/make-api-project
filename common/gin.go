@@ -1,4 +1,4 @@
-package common
+﻿package common
 
 import (
 	"bytes"
@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/QuantumNous/make-api-private/constant"
 	"github.com/pkg/errors"
 
 	"github.com/gin-gonic/gin"
@@ -364,3 +364,4 @@ func multipartMemoryLimit() int64 {
 	}
 	return int64(limitMB) << 20
 }
+

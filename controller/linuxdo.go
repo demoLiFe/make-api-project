@@ -1,4 +1,4 @@
-package controller
+﻿package controller
 
 import (
 	"encoding/base64"
@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -266,3 +266,4 @@ func LinuxdoOAuth(c *gin.Context) {
 
 	setupLogin(&user, c)
 }
+

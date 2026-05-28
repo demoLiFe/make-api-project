@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
 	"github.com/bytedance/gopkg/util/gopool"
 )
 
@@ -116,3 +116,4 @@ func checkMemoryLimit(userId int, notifyType string) (bool, error) {
 
 	return currentLimit.Count <= limit, nil
 }
+

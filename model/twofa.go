@@ -1,11 +1,11 @@
-package model
+﻿package model
 
 import (
 	"errors"
 	"fmt"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 
 	"gorm.io/gorm"
 )
@@ -319,3 +319,4 @@ func GetTwoFAStats() (map[string]interface{}, error) {
 		"enabled_rate":  fmt.Sprintf("%.1f%%", enabledRate),
 	}, nil
 }
+

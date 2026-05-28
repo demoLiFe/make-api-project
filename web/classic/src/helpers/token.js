@@ -20,9 +20,9 @@ For commercial licensing, please contact support@quantumnous.com
 import { API } from './api';
 
 /**
- * 按需获取单个令牌的真实 key
+ * 获取单个 token 的真实 key。
  * @param {number|string} tokenId
- * @returns {Promise<string>} 返回不带 sk- 前缀的真实 token key
+ * @returns {Promise<string>} 返回不带 `sk-` 前缀的 token key
  */
 export async function fetchTokenKey(tokenId) {
   const response = await API.post(`/api/token/${tokenId}/key`);
@@ -34,9 +34,9 @@ export async function fetchTokenKey(tokenId) {
 }
 
 /**
- * 批量获取多个令牌的真实 key
+ * 批量获取多个 token 的真实 key。
  * @param {number[]} tokenIds
- * @returns {Promise<Record<number, string>>} 返回 {id: key} map，key 不带 sk- 前缀
+ * @returns {Promise<Record<number, string>>} 返回 `{id: key}` 映射，key 不带 `sk-` 前缀
  */
 export async function fetchTokenKeysBatch(tokenIds) {
   const response = await API.post('/api/token/batch/keys', { ids: tokenIds });
@@ -48,8 +48,8 @@ export async function fetchTokenKeysBatch(tokenIds) {
 }
 
 /**
- * 获取可用的 token keys
- * @returns {Promise<string[]>} 返回 active 状态的不带 sk- 前缀的真实 token key 数组
+ * 获取可用的 token keys。
+ * @returns {Promise<string[]>} 返回所有启用状态 token 的真实 key 数组，不带 `sk-` 前缀
  */
 export async function fetchTokenKeys() {
   try {
@@ -72,7 +72,7 @@ export async function fetchTokenKeys() {
 }
 
 /**
- * 获取服务器地址
+ * 获取当前服务端地址。
  * @returns {string} 服务器地址
  */
 export function getServerAddress() {
@@ -95,12 +95,12 @@ export function getServerAddress() {
   return serverAddress;
 }
 
-export const CHANNEL_CONN_CLIPBOARD_TYPE = 'newapi_channel_conn';
+export const CHANNEL_CONN_CLIPBOARD_TYPE = 'make-api-private_channel_conn';
 
 /**
- * @param {string} key - 完整的 API key（含 sk- 前缀）
+ * @param {string} key - 完整的 API key，包含 `sk-` 前缀
  * @param {string} url - 服务器地址
- * @returns {string} JSON 格式的连接字符串
+ * @returns {string} 可复制的 JSON 连接串
  */
 export function encodeChannelConnectionString(key, url) {
   return JSON.stringify({
@@ -111,7 +111,7 @@ export function encodeChannelConnectionString(key, url) {
 }
 
 /**
- * @param {string} text - 剪贴板文本
+ * @param {string} text - 剪贴板中的文本
  * @returns {{ key: string, url: string } | null}
  */
 export function parseChannelConnectionString(text) {

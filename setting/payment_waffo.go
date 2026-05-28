@@ -1,8 +1,8 @@
-package setting
+﻿package setting
 
 import (
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
 )
 
 var (
@@ -65,3 +65,4 @@ func WaffoPayMethods2JsonString() string {
 	}
 	return string(jsonBytes)
 }
+

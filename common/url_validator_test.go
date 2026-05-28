@@ -3,7 +3,7 @@ package common
 import (
 	"testing"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/QuantumNous/make-api-private/constant"
 )
 
 func TestValidateRedirectURL(t *testing.T) {
@@ -132,3 +132,4 @@ func findSubstring(s, substr string) bool {
 	}
 	return false
 }
+

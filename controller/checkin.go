@@ -1,14 +1,14 @@
-package controller
+﻿package controller
 
 import (
 	"fmt"
 	"net/http"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/setting/operation_setting"
 	"github.com/gin-gonic/gin"
 )
 
@@ -70,3 +70,4 @@ func DoCheckin(c *gin.Context) {
 			"checkin_date":  checkin.CheckinDate},
 	})
 }
+

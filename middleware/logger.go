@@ -3,7 +3,7 @@ package middleware
 import (
 	"fmt"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 	"github.com/gin-gonic/gin"
 )
 
@@ -38,3 +38,4 @@ func SetUpLogger(server *gin.Engine) {
 		)
 	}))
 }
+

@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/setting/operation_setting"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/gin-gonic/gin"
@@ -107,7 +107,7 @@ func logHelper(ctx context.Context, level string, msg string) {
 	}
 	_, _ = fmt.Fprintf(writer, "[%s] %v | %s | %s \n", level, now.Format("2006/01/02 - 15:04:05"), id, msg)
 	common.LogWriterMu.RUnlock()
-	logCount++ // we don't need accurate count, so no lock here
+	logCount++
 	if logCount > maxLogCount && !setupLogWorking {
 		logCount = 0
 		setupLogWorking = true
@@ -118,7 +118,6 @@ func logHelper(ctx context.Context, level string, msg string) {
 }
 
 func LogQuota(quota int) string {
-	// 新逻辑：根据额度展示类型输出
 	q := float64(quota)
 	switch operation_setting.GetQuotaDisplayType() {
 	case operation_setting.QuotaDisplayTypeCNY:
@@ -130,7 +129,7 @@ func LogQuota(quota int) string {
 		rate := operation_setting.GetGeneralSetting().CustomCurrencyExchangeRate
 		symbol := operation_setting.GetGeneralSetting().CustomCurrencySymbol
 		if symbol == "" {
-			symbol = "¤"
+			symbol = "¥"
 		}
 		if rate <= 0 {
 			rate = 1
@@ -139,8 +138,8 @@ func LogQuota(quota int) string {
 		return fmt.Sprintf("%s%.6f 额度", symbol, v)
 	case operation_setting.QuotaDisplayTypeTokens:
 		return fmt.Sprintf("%d 点额度", quota)
-	default: // USD
-		return fmt.Sprintf("＄%.6f 额度", q/common.QuotaPerUnit)
+	default:
+		return fmt.Sprintf("$%.6f 额度", q/common.QuotaPerUnit)
 	}
 }
 
@@ -156,7 +155,7 @@ func FormatQuota(quota int) string {
 		rate := operation_setting.GetGeneralSetting().CustomCurrencyExchangeRate
 		symbol := operation_setting.GetGeneralSetting().CustomCurrencySymbol
 		if symbol == "" {
-			symbol = "¤"
+			symbol = "¥"
 		}
 		if rate <= 0 {
 			rate = 1
@@ -166,11 +165,10 @@ func FormatQuota(quota int) string {
 	case operation_setting.QuotaDisplayTypeTokens:
 		return fmt.Sprintf("%d", quota)
 	default:
-		return fmt.Sprintf("＄%.6f", q/common.QuotaPerUnit)
+		return fmt.Sprintf("$%.6f", q/common.QuotaPerUnit)
 	}
 }
 
-// LogJson 仅供测试使用 only for test
 func LogJson(ctx context.Context, msg string, obj any) {
 	jsonStr, err := common.Marshal(obj)
 	if err != nil {

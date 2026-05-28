@@ -1,6 +1,6 @@
-package operation_setting
+﻿package operation_setting
 
-import "github.com/QuantumNous/new-api/setting/config"
+import "github.com/QuantumNous/make-api-private/setting/config"
 
 // TokenSetting 令牌相关配置
 type TokenSetting struct {
@@ -26,3 +26,4 @@ func GetTokenSetting() *TokenSetting {
 func GetMaxUserTokens() int {
 	return GetTokenSetting().MaxUserTokens
 }
+

@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 ![new-api](/web/default/public/logo.png)
 
@@ -110,7 +110,7 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/QuantumNous/new-api.git
+git clone https://github.com/QuantumNous/make-api-private.git
 cd new-api
 
 # Edit docker-compose.yml configuration
@@ -336,7 +336,7 @@ docker run --name new-api -d --restart always \
 
 ```bash
 # Clone the project
-git clone https://github.com/QuantumNous/new-api.git
+git clone https://github.com/QuantumNous/make-api-private.git
 cd new-api
 
 # Edit configuration
@@ -474,3 +474,4 @@ If this project is helpful to you, welcome to give us a ⭐️ Star！
 <sub>Built with ❤️ by QuantumNous</sub>
 
 </div>
+

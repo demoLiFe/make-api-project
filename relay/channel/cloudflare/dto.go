@@ -1,6 +1,6 @@
 package cloudflare
 
-import "github.com/QuantumNous/new-api/dto"
+import "github.com/QuantumNous/make-api-private/dto"
 
 type CfRequest struct {
 	Messages    []dto.Message `json:"messages,omitempty"`
@@ -19,3 +19,4 @@ type CfAudioResponse struct {
 type CfSTTResult struct {
 	Text string `json:"text"`
 }
+

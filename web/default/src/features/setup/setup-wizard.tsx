@@ -69,7 +69,7 @@ export function SetupWizard() {
   const navigate = useNavigate()
   const queryClient = useQueryClient()
   const { systemName, logo, loading: systemConfigLoading } = useSystemConfig()
-  const displaySystemName = systemName || 'New API'
+  const displaySystemName = systemName || 'Make API Private'
 
   const [currentStep, setCurrentStep] = useState(0)
   const [setupStatus, setSetupStatus] = useState<SetupStatus | undefined>()
@@ -466,3 +466,4 @@ export function SetupWizard() {
     </div>
   )
 }
+

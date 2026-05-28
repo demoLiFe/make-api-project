@@ -1,12 +1,12 @@
-package controller
+﻿package controller
 
 import (
 	"fmt"
 	"net/http"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 )
@@ -177,3 +177,4 @@ func consumePasskeyReady(c *gin.Context) (bool, error) {
 	}
 	return true, nil
 }
+

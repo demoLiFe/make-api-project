@@ -128,7 +128,7 @@ export function resolveChatUrl({
 
   if (url.includes('{cherryConfig}')) {
     const payload = {
-      id: 'new-api',
+      id: 'make-api-private',
       baseUrl: safeServerAddress,
       apiKey: safeApiKey,
     }
@@ -138,7 +138,7 @@ export function resolveChatUrl({
 
   if (url.includes('{aionuiConfig}')) {
     const payload = {
-      platform: 'new-api',
+      platform: 'make-api-private',
       baseUrl: safeServerAddress,
       apiKey: safeApiKey,
     }
@@ -164,3 +164,4 @@ export function getFirstActiveKey(
   if (!Array.isArray(keys)) return undefined
   return keys.find((item) => item.status === API_KEY_STATUS.ENABLED)
 }
+

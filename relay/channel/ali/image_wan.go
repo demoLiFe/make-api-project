@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/dto"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
 
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"
@@ -47,3 +47,4 @@ func isOldWanModel(modelName string) bool {
 func isWanModel(modelName string) bool {
 	return strings.Contains(modelName, "wan")
 }
+

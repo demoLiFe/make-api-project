@@ -1,4 +1,4 @@
-package relay
+﻿package relay
 
 import (
 	"bytes"
@@ -11,16 +11,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/model"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	relayconstant "github.com/QuantumNous/make-api-private/relay/constant"
+	"github.com/QuantumNous/make-api-private/relay/helper"
+	"github.com/QuantumNous/make-api-private/service"
+	"github.com/QuantumNous/make-api-private/setting"
+	"github.com/QuantumNous/make-api-private/setting/system_setting"
 
 	"github.com/gin-gonic/gin"
 )
@@ -677,3 +677,4 @@ func getMjRequestPath(path string) string {
 	}
 	return requestURL
 }
+

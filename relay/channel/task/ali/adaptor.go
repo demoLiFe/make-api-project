@@ -1,4 +1,4 @@
-package ali
+﻿package ali
 
 import (
 	"bytes"
@@ -8,14 +8,14 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/channel/task/taskcommon"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/relay/channel"
+	"github.com/QuantumNous/make-api-private/relay/channel/task/taskcommon"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/service"
 	"github.com/samber/lo"
 
 	"github.com/gin-gonic/gin"
@@ -533,3 +533,4 @@ func convertAliStatus(aliStatus string) string {
 		return dto.VideoStatusUnknown
 	}
 }
+

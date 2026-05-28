@@ -107,7 +107,7 @@ const rootElement = document.getElementById('root')!
       const saved = localStorage.getItem('status')
       if (saved) {
         const s = JSON.parse(saved)
-        apply(s?.system_name || 'New API')
+        apply(s?.system_name || 'Make API Private')
         if (s?.logo) applyFaviconToDom(s.logo)
       }
     } catch {
@@ -116,7 +116,7 @@ const rootElement = document.getElementById('root')!
     // Background refresh
     getStatus()
       .then((s) => {
-        apply((s?.system_name as string | undefined) || 'New API')
+        apply((s?.system_name as string | undefined) || 'Make API Private')
         try {
           localStorage.setItem('status', JSON.stringify(s))
         } catch {
@@ -147,3 +147,4 @@ if (!rootElement.innerHTML) {
     </StrictMode>
   )
 }
+

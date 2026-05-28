@@ -11,20 +11,20 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/controller"
-	"github.com/QuantumNous/new-api/i18n"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/middleware"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/oauth"
-	perfmetrics "github.com/QuantumNous/new-api/pkg/perf_metrics"
-	"github.com/QuantumNous/new-api/relay"
-	"github.com/QuantumNous/new-api/router"
-	"github.com/QuantumNous/new-api/service"
-	_ "github.com/QuantumNous/new-api/setting/performance_setting"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/controller"
+	"github.com/QuantumNous/make-api-private/i18n"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/middleware"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/oauth"
+	perfmetrics "github.com/QuantumNous/make-api-private/pkg/perf_metrics"
+	"github.com/QuantumNous/make-api-private/relay"
+	"github.com/QuantumNous/make-api-private/router"
+	"github.com/QuantumNous/make-api-private/service"
+	_ "github.com/QuantumNous/make-api-private/setting/performance_setting"
+	"github.com/QuantumNous/make-api-private/setting/ratio_setting"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/gin-contrib/sessions"
@@ -97,10 +97,9 @@ func main() {
 		go model.SyncChannelCache(common.SyncFrequency)
 	}
 
-	// 热更新配置
-	go model.SyncOptions(common.SyncFrequency)
+	// 鐑洿鏂伴厤缃?	go model.SyncOptions(common.SyncFrequency)
 
-	// 数据看板
+	// 鏁版嵁鐪嬫澘
 	go model.UpdateQuotaData()
 
 	if os.Getenv("CHANNEL_UPDATE_FREQUENCY") != "" {
@@ -164,7 +163,7 @@ func main() {
 		common.SysLog(fmt.Sprintf("panic detected: %v", err))
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"error": gin.H{
-				"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/Calcium-Ion/new-api", err),
+				"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/Calcium-Ion/make-api-private", err),
 				"type":    "new_api_panic",
 			},
 		})
@@ -189,7 +188,7 @@ func main() {
 	InjectUmamiAnalytics()
 	InjectGoogleAnalytics()
 
-	// 设置路由
+	// 璁剧疆璺敱
 	router.SetRouter(server, router.ThemeAssets{
 		DefaultBuildFS:   buildFS,
 		DefaultIndexPage: indexPage,
@@ -265,7 +264,7 @@ func InitResources() error {
 		}
 	}
 
-	// 加载环境变量
+	// 鍔犺浇鐜鍙橀噺
 	common.InitEnv()
 
 	logger.SetupLogger()
@@ -289,11 +288,10 @@ func InitResources() error {
 	// Initialize options, should after model.InitDB()
 	model.InitOptionMap()
 
-	// 清理旧的磁盘缓存文件
+	// 娓呯悊鏃х殑纾佺洏缂撳瓨鏂囦欢
 	common.CleanupOldCacheFiles()
 
-	// 初始化模型
-	model.GetPricing()
+	// 鍒濆鍖栨ā鍨?	model.GetPricing()
 
 	// Initialize SQL Database
 	err = model.InitLogDB()
@@ -309,7 +307,7 @@ func InitResources() error {
 
 	perfmetrics.Init()
 
-	// 启动系统监控
+	// 鍚姩绯荤粺鐩戞帶
 	common.StartSystemMonitor()
 
 	// Initialize i18n
@@ -332,3 +330,4 @@ func InitResources() error {
 
 	return nil
 }
+

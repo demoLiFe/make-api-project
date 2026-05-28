@@ -11,11 +11,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/relay/helper"
+	"github.com/QuantumNous/make-api-private/types"
 	"github.com/samber/lo"
 
 	"github.com/gin-gonic/gin"
@@ -290,3 +290,4 @@ func getAPIVersion(c *gin.Context, modelName string) string {
 	common.SysLog("api_version not found, using default: " + apiVersion)
 	return apiVersion
 }
+

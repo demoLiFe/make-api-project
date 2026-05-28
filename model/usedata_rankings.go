@@ -3,7 +3,7 @@ package model
 import (
 	"fmt"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 	"gorm.io/gorm"
 )
 
@@ -64,3 +64,4 @@ func applyRankingQuotaTimeRange(query *gorm.DB, startTime int64, endTime int64) 
 	}
 	return query
 }
+

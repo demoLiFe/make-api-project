@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"sort"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -23,6 +23,7 @@ func TelegramBind(c *gin.Context) {
 		})
 		return
 	}
+
 	params := c.Request.URL.Query()
 	if !checkTelegramAuthorization(params, common.TelegramBotToken) {
 		c.JSON(200, gin.H{
@@ -31,6 +32,7 @@ func TelegramBind(c *gin.Context) {
 		})
 		return
 	}
+
 	telegramId := params["id"][0]
 	if model.IsTelegramIdAlreadyTaken(telegramId) {
 		c.JSON(200, gin.H{
@@ -57,6 +59,7 @@ func TelegramBind(c *gin.Context) {
 		})
 		return
 	}
+
 	user.TelegramId = telegramId
 	if err := user.Update(false); err != nil {
 		c.JSON(200, gin.H{
@@ -77,6 +80,7 @@ func TelegramLogin(c *gin.Context) {
 		})
 		return
 	}
+
 	params := c.Request.URL.Query()
 	if !checkTelegramAuthorization(params, common.TelegramBotToken) {
 		c.JSON(200, gin.H{
@@ -100,7 +104,7 @@ func TelegramLogin(c *gin.Context) {
 
 func checkTelegramAuthorization(params map[string][]string, token string) bool {
 	strs := []string{}
-	var hash = ""
+	hash := ""
 	for k, v := range params {
 		if k == "hash" {
 			hash = v[0]
@@ -109,7 +113,7 @@ func checkTelegramAuthorization(params map[string][]string, token string) bool {
 		strs = append(strs, k+"="+v[0])
 	}
 	sort.Strings(strs)
-	var imploded = ""
+	imploded := ""
 	for _, s := range strs {
 		if imploded != "" {
 			imploded += "\n"
@@ -117,9 +121,9 @@ func checkTelegramAuthorization(params map[string][]string, token string) bool {
 		imploded += s
 	}
 	sha256hash := sha256.New()
-	io.WriteString(sha256hash, token)
+	_, _ = io.WriteString(sha256hash, token)
 	hmachash := hmac.New(sha256.New, sha256hash.Sum(nil))
-	io.WriteString(hmachash, imploded)
+	_, _ = io.WriteString(hmachash, imploded)
 	ss := hex.EncodeToString(hmachash.Sum(nil))
 	return hash == ss
 }

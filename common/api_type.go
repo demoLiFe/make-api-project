@@ -1,6 +1,6 @@
 package common
 
-import "github.com/QuantumNous/new-api/constant"
+import "github.com/QuantumNous/make-api-private/constant"
 
 func ChannelType2APIType(channelType int) (int, bool) {
 	apiType := -1
@@ -81,3 +81,4 @@ func ChannelType2APIType(channelType int) (int, bool) {
 	}
 	return apiType, true
 }
+

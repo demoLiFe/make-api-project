@@ -1,6 +1,6 @@
 package xai
 
-import "github.com/QuantumNous/new-api/dto"
+import "github.com/QuantumNous/make-api-private/dto"
 
 // ChatCompletionResponse represents the response from XAI chat completion API
 type ChatCompletionResponse struct {
@@ -25,3 +25,4 @@ type ImageRequest struct {
 	// User           string          `json:"user,omitempty"`
 	// ExtraFields    json.RawMessage `json:"extra_fields,omitempty"`
 }
+

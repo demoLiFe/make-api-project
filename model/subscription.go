@@ -1,4 +1,4 @@
-package model
+﻿package model
 
 import (
 	"errors"
@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/pkg/cachex"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/pkg/cachex"
 	"github.com/samber/hot"
 	"gorm.io/gorm"
 )
@@ -1204,3 +1204,4 @@ func PostConsumeUserSubscriptionDelta(userSubscriptionId int, delta int64) error
 		return tx.Save(&sub).Error
 	})
 }
+

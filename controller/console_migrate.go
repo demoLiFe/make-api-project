@@ -1,4 +1,4 @@
-// 用于迁移检测的旧键，该文件下个版本会删除
+﻿// 用于迁移检测的旧键，该文件下个版本会删除
 
 package controller
 
@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
 
 	"github.com/gin-gonic/gin"
 )
@@ -104,3 +104,4 @@ func MigrateConsoleSetting(c *gin.Context) {
 	common.SysLog("console setting migrated")
 	c.JSON(http.StatusOK, gin.H{"success": true, "message": "migrated"})
 }
+

@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/model"
 )
 
 const (
@@ -597,3 +597,4 @@ func minInt(a int, b int) int {
 	}
 	return b
 }
+

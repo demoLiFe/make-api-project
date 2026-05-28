@@ -1,12 +1,12 @@
-package middleware
+﻿package middleware
 
 import (
 	"fmt"
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/types"
 	"github.com/gin-gonic/gin"
 )
 
@@ -69,3 +69,4 @@ func checkSystemPerformance() *types.NewAPIError {
 
 	return nil
 }
+

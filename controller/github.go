@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -49,14 +49,16 @@ func getGitHubUserInfoByCode(code string) (*GitHubUser, error) {
 	res, err := client.Do(req)
 	if err != nil {
 		common.SysLog(err.Error())
-		return nil, errors.New("无法连接至 GitHub 服务器，请稍后重试！")
+		return nil, errors.New("无法连接到 GitHub 服务器，请稍后重试！")
 	}
 	defer res.Body.Close()
+
 	var oAuthResponse GitHubOAuthResponse
 	err = json.NewDecoder(res.Body).Decode(&oAuthResponse)
 	if err != nil {
 		return nil, err
 	}
+
 	req, err = http.NewRequest("GET", "https://api.github.com/user", nil)
 	if err != nil {
 		return nil, err
@@ -65,9 +67,10 @@ func getGitHubUserInfoByCode(code string) (*GitHubUser, error) {
 	res2, err := client.Do(req)
 	if err != nil {
 		common.SysLog(err.Error())
-		return nil, errors.New("无法连接至 GitHub 服务器，请稍后重试！")
+		return nil, errors.New("无法连接到 GitHub 服务器，请稍后重试！")
 	}
 	defer res2.Body.Close()
+
 	var githubUser GitHubUser
 	err = json.NewDecoder(res2.Body).Decode(&githubUser)
 	if err != nil {
@@ -102,18 +105,18 @@ func GitHubOAuth(c *gin.Context) {
 		})
 		return
 	}
+
 	code := c.Query("code")
 	githubUser, err := getGitHubUserInfoByCode(code)
 	if err != nil {
 		common.ApiError(c, err)
 		return
 	}
+
 	user := model.User{
 		GitHubId: githubUser.Login,
 	}
-	// IsGitHubIdAlreadyTaken is unscoped
 	if model.IsGitHubIdAlreadyTaken(user.GitHubId) {
-		// FillUserByGitHubId is scoped
 		err := user.FillUserByGitHubId()
 		if err != nil {
 			c.JSON(http.StatusOK, gin.H{
@@ -122,7 +125,6 @@ func GitHubOAuth(c *gin.Context) {
 			})
 			return
 		}
-		// if user.Id == 0 , user has been deleted
 		if user.Id == 0 {
 			c.JSON(http.StatusOK, gin.H{
 				"success": false,
@@ -181,12 +183,14 @@ func GitHubBind(c *gin.Context) {
 		})
 		return
 	}
+
 	code := c.Query("code")
 	githubUser, err := getGitHubUserInfoByCode(code)
 	if err != nil {
 		common.ApiError(c, err)
 		return
 	}
+
 	user := model.User{
 		GitHubId: githubUser.Login,
 	}
@@ -197,24 +201,25 @@ func GitHubBind(c *gin.Context) {
 		})
 		return
 	}
+
 	session := sessions.Default(c)
 	id := session.Get("id")
-	// id := c.GetInt("id")  // critical bug!
 	user.Id = id.(int)
 	err = user.FillUserById()
 	if err != nil {
 		common.ApiError(c, err)
 		return
 	}
+
 	user.GitHubId = githubUser.Login
 	err = user.Update(false)
 	if err != nil {
 		common.ApiError(c, err)
 		return
 	}
+
 	c.JSON(http.StatusOK, gin.H{
 		"success": true,
 		"message": "bind",
 	})
-	return
 }

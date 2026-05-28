@@ -3,9 +3,9 @@ package middleware
 import (
 	"fmt"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/types"
 	"github.com/gin-gonic/gin"
 )
 
@@ -35,3 +35,4 @@ func abortWithMidjourneyMessage(c *gin.Context, statusCode int, code int, descri
 	c.Abort()
 	logger.LogError(c.Request.Context(), description)
 }
+

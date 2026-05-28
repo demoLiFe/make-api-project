@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"unicode/utf8"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/i18n"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/i18n"
+	"github.com/QuantumNous/make-api-private/model"
 
 	"github.com/gin-gonic/gin"
 )
@@ -185,3 +185,4 @@ func validateExpiredTime(c *gin.Context, expired int64) (bool, string) {
 	}
 	return true, ""
 }
+

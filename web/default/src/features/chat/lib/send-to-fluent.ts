@@ -3,13 +3,13 @@ export function sendToFluent(apiKey: string, serverAddress?: string): boolean {
     return false
   }
 
-  const container = document.getElementById('fluent-new-api-container')
+  const container = document.getElementById('fluent-make-api-private-container')
   if (!container) {
     return false
   }
 
   const payload = {
-    id: 'new-api',
+    id: 'make-api-private',
     baseUrl: serverAddress || window.location.origin,
     apiKey: `sk-${apiKey}`,
   }
@@ -22,3 +22,4 @@ export function sendToFluent(apiKey: string, serverAddress?: string): boolean {
 
   return true
 }
+

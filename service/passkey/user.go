@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/model"
 
 	webauthn "github.com/go-webauthn/webauthn/webauthn"
 )
@@ -69,3 +69,4 @@ func (u *WebAuthnUser) PasskeyCredential() *model.PasskeyCredential {
 	}
 	return u.credential
 }
+

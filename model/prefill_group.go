@@ -1,10 +1,10 @@
-package model
+﻿package model
 
 import (
 	"database/sql/driver"
 	"encoding/json"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 
 	"gorm.io/gorm"
 )
@@ -125,3 +125,4 @@ func GetAllPrefillGroups(groupType string) ([]*PrefillGroup, error) {
 	}
 	return groups, nil
 }
+

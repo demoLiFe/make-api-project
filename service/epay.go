@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/QuantumNous/make-api-private/setting/operation_setting"
+	"github.com/QuantumNous/make-api-private/setting/system_setting"
 )
 
 func GetCallbackAddress() string {
@@ -11,3 +11,4 @@ func GetCallbackAddress() string {
 	}
 	return operation_setting.CustomCallbackAddress
 }
+

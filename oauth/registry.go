@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
 )
 
 var (
@@ -132,3 +132,4 @@ func RegisterOrUpdateCustomProvider(config *model.CustomOAuthProvider) {
 func UnregisterCustomProvider(slug string) {
 	Unregister(slug)
 }
+

@@ -1,11 +1,11 @@
-package controller
+﻿package controller
 
 import (
 	"net/http"
 	"strconv"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
 
 	"github.com/gin-gonic/gin"
 )
@@ -169,3 +169,4 @@ func DeleteHistoryLogs(c *gin.Context) {
 	})
 	return
 }
+

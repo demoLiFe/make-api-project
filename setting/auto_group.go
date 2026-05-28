@@ -1,7 +1,7 @@
 package setting
 
 import (
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 )
 
 var autoGroups = []string{
@@ -35,3 +35,4 @@ func AutoGroups2JsonString() string {
 func GetAutoGroups() []string {
 	return autoGroups
 }
+

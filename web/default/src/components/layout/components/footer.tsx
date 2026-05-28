@@ -60,13 +60,13 @@ export function Footer(props: FooterProps) {
   } = useSystemConfig()
 
   const displayLogo = systemLogo || props.logo || '/logo.png'
-  const displayName = systemName || props.name || 'New API'
+  const displayName = systemName || props.name || 'Make API Private'
   const isDemoSiteMode = Boolean(demoSiteEnabled)
   const currentYear = new Date().getFullYear()
   const normalizedFooterHtml = useMemo(() => {
     if (!footerHtml) return footerHtml
 
-    return footerHtml.replace(/New API/gi, displayName)
+    return footerHtml.replace(/Make API Private/gi, displayName)
   }, [displayName, footerHtml])
 
   const fallbackColumns = useMemo<FooterColumnProps[]>(
@@ -76,15 +76,15 @@ export function Footer(props: FooterProps) {
         links: [
           {
             text: t('footer.columns.about.links.aboutProject'),
-            href: 'https://docs.newapi.pro/wiki/project-introduction/',
+            href: 'https://docs.make-api-private.pro/wiki/project-introduction/',
           },
           {
             text: t('footer.columns.about.links.contact'),
-            href: 'https://docs.newapi.pro/support/community-interaction/',
+            href: 'https://docs.make-api-private.pro/support/community-interaction/',
           },
           {
             text: t('footer.columns.about.links.features'),
-            href: 'https://docs.newapi.pro/wiki/features-introduction/',
+            href: 'https://docs.make-api-private.pro/wiki/features-introduction/',
           },
         ],
       },
@@ -93,15 +93,15 @@ export function Footer(props: FooterProps) {
         links: [
           {
             text: t('footer.columns.docs.links.quickStart'),
-            href: 'https://docs.newapi.pro/getting-started/',
+            href: 'https://docs.make-api-private.pro/getting-started/',
           },
           {
             text: t('footer.columns.docs.links.installation'),
-            href: 'https://docs.newapi.pro/installation/',
+            href: 'https://docs.make-api-private.pro/installation/',
           },
           {
             text: t('footer.columns.docs.links.apiDocs'),
-            href: 'https://docs.newapi.pro/api/',
+            href: 'https://docs.make-api-private.pro/api/',
           },
         ],
       },
@@ -203,3 +203,4 @@ export function Footer(props: FooterProps) {
     </footer>
   )
 }
+

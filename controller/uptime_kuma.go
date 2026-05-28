@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/setting/console_setting"
+	"github.com/QuantumNous/make-api-private/setting/console_setting"
 
 	"github.com/gin-gonic/gin"
 	"golang.org/x/sync/errgroup"
@@ -153,3 +153,4 @@ func GetUptimeKumaStatus(c *gin.Context) {
 	g.Wait()
 	c.JSON(http.StatusOK, gin.H{"success": true, "message": "", "data": results})
 }
+

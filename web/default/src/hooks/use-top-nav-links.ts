@@ -17,7 +17,7 @@ const DEFAULT_HEADER_NAV_MODULES = {
   pricing: { enabled: true, requireAuth: false },
   rankings: { enabled: true, requireAuth: false },
   docs: true,
-  about: true,
+  about: false,
 }
 
 function parseAccessModule(
@@ -82,7 +82,7 @@ function parseHeaderNavModules(
  *   pricing: { enabled: true, requireAuth: false },
  *   rankings: { enabled: true, requireAuth: false },
  *   docs: true,
- *   about: true
+ *   about: false
  * }
  */
 export function useTopNavLinks(): TopNavLink[] {
@@ -133,11 +133,6 @@ export function useTopNavLinks(): TopNavLink[] {
     } else {
       links.push({ title: t('Docs'), href: '/docs' })
     }
-  }
-
-  // About
-  if (modules?.about !== false) {
-    links.push({ title: t('About'), href: '/about' })
   }
 
   return links

@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -39,6 +39,7 @@ func getWeChatIdByCode(code string) (string, error) {
 		return "", err
 	}
 	defer httpResponse.Body.Close()
+
 	var res wechatLoginResponse
 	err = json.NewDecoder(httpResponse.Body).Decode(&res)
 	if err != nil {
@@ -61,6 +62,7 @@ func WeChatAuth(c *gin.Context) {
 		})
 		return
 	}
+
 	code := c.Query("code")
 	wechatId, err := getWeChatIdByCode(code)
 	if err != nil {
@@ -70,6 +72,7 @@ func WeChatAuth(c *gin.Context) {
 		})
 		return
 	}
+
 	user := model.User{
 		WeChatId: wechatId,
 	}
@@ -134,6 +137,7 @@ func WeChatBind(c *gin.Context) {
 		})
 		return
 	}
+
 	var req wechatBindRequest
 	if err := common.DecodeJson(c.Request.Body, &req); err != nil {
 		c.JSON(http.StatusOK, gin.H{
@@ -142,6 +146,7 @@ func WeChatBind(c *gin.Context) {
 		})
 		return
 	}
+
 	code := req.Code
 	wechatId, err := getWeChatIdByCode(code)
 	if err != nil {
@@ -158,6 +163,7 @@ func WeChatBind(c *gin.Context) {
 		})
 		return
 	}
+
 	session := sessions.Default(c)
 	id := session.Get("id")
 	user := model.User{
@@ -178,5 +184,4 @@ func WeChatBind(c *gin.Context) {
 		"success": true,
 		"message": "",
 	})
-	return
 }

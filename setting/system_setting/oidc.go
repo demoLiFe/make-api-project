@@ -1,6 +1,6 @@
-package system_setting
+﻿package system_setting
 
-import "github.com/QuantumNous/new-api/setting/config"
+import "github.com/QuantumNous/make-api-private/setting/config"
 
 type OIDCSettings struct {
 	Enabled               bool   `json:"enabled"`
@@ -23,3 +23,4 @@ func init() {
 func GetOIDCSettings() *OIDCSettings {
 	return &defaultOIDCSettings
 }
+

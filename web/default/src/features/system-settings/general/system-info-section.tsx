@@ -14,14 +14,6 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
 import { FormDirtyIndicator } from '../components/form-dirty-indicator'
 import { FormNavigationGuard } from '../components/form-navigation-guard'
@@ -139,55 +131,12 @@ export function SystemInfoSection({ defaultValues }: SystemInfoSectionProps) {
             <FormDirtyIndicator isDirty={isDirty} />
             <FormField
               control={form.control}
-              name='theme.frontend'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('Frontend Theme')}</FormLabel>
-                  <Select
-                    items={[
-                      { value: 'default', label: t('Default (New Frontend)') },
-                      {
-                        value: 'classic',
-                        label: t('Classic (Legacy Frontend)'),
-                      },
-                    ]}
-                    onValueChange={field.onChange}
-                    value={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger className='w-full'>
-                        <SelectValue />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent alignItemWithTrigger={false}>
-                      <SelectGroup>
-                        <SelectItem value='default'>
-                          {t('Default (New Frontend)')}
-                        </SelectItem>
-                        <SelectItem value='classic'>
-                          {t('Classic (Legacy Frontend)')}
-                        </SelectItem>
-                      </SelectGroup>
-                    </SelectContent>
-                  </Select>
-                  <FormDescription>
-                    {t(
-                      'Switch between the new frontend and the classic frontend. Changes take effect after page reload.'
-                    )}
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
               name='SystemName'
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t('System Name')}</FormLabel>
                   <FormControl>
-                    <Input placeholder={t('New API')} {...field} />
+                    <Input placeholder={t('Make API Private')} {...field} />
                   </FormControl>
                   <FormDescription>
                     {t('The name displayed across the application')}
@@ -260,38 +209,13 @@ export function SystemInfoSection({ defaultValues }: SystemInfoSectionProps) {
 
             <FormField
               control={form.control}
-              name='About'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('About')}</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder={t(
-                        'Enter HTML code (e.g., <p>About us...</p>) or a URL (e.g., https://example.com) to embed as iframe'
-                      )}
-                      rows={4}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>
-                    {t(
-                      'Supports HTML markup or iframe embedding. Enter HTML code directly, or provide a complete URL to automatically embed it as an iframe.'
-                    )}
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
               name='HomePageContent'
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t('Home Page Content')}</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder={t('Welcome to our New API...')}
+                      placeholder={t('Welcome to our Make API Private...')}
                       rows={6}
                       {...field}
                     />
@@ -379,3 +303,4 @@ export function SystemInfoSection({ defaultValues }: SystemInfoSectionProps) {
     </>
   )
 }
+

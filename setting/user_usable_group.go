@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 )
 
 var userUsableGroups = map[string]string{
@@ -52,3 +52,4 @@ func GetUsableGroupDescription(groupName string) string {
 	}
 	return groupName
 }
+

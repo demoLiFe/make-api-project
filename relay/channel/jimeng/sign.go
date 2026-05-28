@@ -1,4 +1,4 @@
-package jimeng
+﻿package jimeng
 
 import (
 	"bytes"
@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/QuantumNous/make-api-private/logger"
 	"github.com/gin-gonic/gin"
 )
 
@@ -175,3 +175,4 @@ func hmacSHA256(key []byte, data []byte) []byte {
 	h.Write(data)
 	return h.Sum(nil)
 }
+

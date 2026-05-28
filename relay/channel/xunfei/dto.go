@@ -1,6 +1,6 @@
 package xunfei
 
-import "github.com/QuantumNous/new-api/dto"
+import "github.com/QuantumNous/make-api-private/dto"
 
 type XunfeiMessage struct {
 	Role    string `json:"role"`
@@ -57,3 +57,4 @@ type XunfeiChatResponse struct {
 		} `json:"usage"`
 	} `json:"payload"`
 }
+

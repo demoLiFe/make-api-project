@@ -10,8 +10,8 @@ import (
 	"net/url"
 	"strings"
 
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/service"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
+	"github.com/QuantumNous/make-api-private/service"
 
 	"github.com/bytedance/gopkg/cache/asynccache"
 	"github.com/golang-jwt/jwt/v5"
@@ -181,3 +181,4 @@ func exchangeJwtForAccessTokenWithProxy(signedJWT string, proxy string) (string,
 	}
 	return "", fmt.Errorf("failed to get access token: %v", result)
 }
+

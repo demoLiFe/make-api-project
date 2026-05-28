@@ -1,11 +1,11 @@
-package ali
+﻿package ali
 
 import (
 	"strings"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/logger"
+	"github.com/QuantumNous/make-api-private/service"
 	"github.com/gin-gonic/gin"
 )
 
@@ -234,3 +234,4 @@ type AliRerankResponse struct {
 	RequestId string   `json:"request_id"`
 	AliError
 }
+

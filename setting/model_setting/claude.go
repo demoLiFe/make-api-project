@@ -1,10 +1,10 @@
-package model_setting
+﻿package model_setting
 
 import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/setting/config"
+	"github.com/QuantumNous/make-api-private/setting/config"
 )
 
 //var claudeHeadersSettings = map[string][]string{}
@@ -87,3 +87,4 @@ func (c *ClaudeSettings) GetDefaultMaxTokens(model string) int {
 	}
 	return c.DefaultMaxTokens["default"]
 }
+

@@ -1,7 +1,7 @@
-package model
+﻿package model
 
 import (
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 
 	"gorm.io/gorm"
 )
@@ -86,3 +86,4 @@ func SearchVendors(keyword string, offset int, limit int) ([]*Vendor, int64, err
 	}
 	return vendors, total, nil
 }
+

@@ -17,7 +17,7 @@ export const OFFICIAL_CHANNEL_ID = -100
 export const OFFICIAL_CHANNEL_NAME = '官方倍率预设'
 export const OFFICIAL_CHANNEL_BASE_URL = 'https://basellm.github.io'
 export const OFFICIAL_CHANNEL_ENDPOINT =
-  '/llm-metadata/api/newapi/ratio_config-v1-base.json'
+  '/llm-metadata/api/make-api-private/ratio_config-v1-base.json'
 
 export const MODELS_DEV_PRESET_ID = -101
 export const MODELS_DEV_PRESET_NAME = 'models.dev 价格预设'
@@ -57,3 +57,4 @@ export const CHANNEL_STATUS_CONFIG = {
   2: { label: 'Disabled', variant: 'danger' as const },
   3: { label: 'Auto-Disabled', variant: 'warning' as const },
 } as const
+

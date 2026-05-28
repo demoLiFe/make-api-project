@@ -1,4 +1,4 @@
-package model
+﻿package model
 
 import (
 	"errors"
@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QuantumNous/make-api-private/common"
 
 	"github.com/samber/lo"
 	"gorm.io/gorm"
@@ -339,3 +339,4 @@ func FixAbility() (int, int, error) {
 	InitChannelCache()
 	return successCount, failCount, nil
 }
+

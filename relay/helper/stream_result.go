@@ -1,7 +1,7 @@
 package helper
 
 import (
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
+	relaycommon "github.com/QuantumNous/make-api-private/relay/common"
 )
 
 // StreamResult is passed to each dataHandler invocation, providing methods
@@ -50,3 +50,4 @@ func (r *StreamResult) IsStopped() bool {
 func (r *StreamResult) reset() {
 	r.stopped = false
 }
+

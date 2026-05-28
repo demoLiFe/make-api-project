@@ -17,10 +17,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/setting"
 )
 
 const (
@@ -396,3 +396,4 @@ func verifyWaffoPancakeWebhookWithKey(signatureInput string, signaturePart strin
 	}
 	return nil
 }
+

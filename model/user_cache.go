@@ -1,12 +1,12 @@
-package model
+﻿package model
 
 import (
 	"fmt"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/constant"
+	"github.com/QuantumNous/make-api-private/dto"
 
 	"github.com/gin-gonic/gin"
 
@@ -237,3 +237,4 @@ func GetUserLanguage(userId int) string {
 	}
 	return userCache.GetSetting().Language
 }
+

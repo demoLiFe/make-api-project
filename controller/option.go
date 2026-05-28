@@ -1,17 +1,17 @@
-package controller
+﻿package controller
 
 import (
 	"fmt"
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/console_setting"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/model"
+	"github.com/QuantumNous/make-api-private/setting"
+	"github.com/QuantumNous/make-api-private/setting/console_setting"
+	"github.com/QuantumNous/make-api-private/setting/operation_setting"
+	"github.com/QuantumNous/make-api-private/setting/ratio_setting"
+	"github.com/QuantumNous/make-api-private/setting/system_setting"
 
 	"github.com/gin-gonic/gin"
 )
@@ -326,3 +326,4 @@ func UpdateOption(c *gin.Context) {
 	})
 	return
 }
+

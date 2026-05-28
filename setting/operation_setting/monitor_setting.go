@@ -1,10 +1,10 @@
-package operation_setting
+﻿package operation_setting
 
 import (
 	"os"
 	"strconv"
 
-	"github.com/QuantumNous/new-api/setting/config"
+	"github.com/QuantumNous/make-api-private/setting/config"
 )
 
 type MonitorSetting struct {
@@ -33,3 +33,4 @@ func GetMonitorSetting() *MonitorSetting {
 	}
 	return &monitorSetting
 }
+

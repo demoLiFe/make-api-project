@@ -6,11 +6,11 @@ import (
 	"reflect"
 	"testing"
 
-	common2 "github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	common2 "github.com/QuantumNous/make-api-private/common"
+	"github.com/QuantumNous/make-api-private/types"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/setting/model_setting"
+	"github.com/QuantumNous/make-api-private/dto"
+	"github.com/QuantumNous/make-api-private/setting/model_setting"
 	"github.com/samber/lo"
 )
 
@@ -2201,3 +2201,4 @@ func assertJSONEqual(t *testing.T, want, got string) {
 		t.Fatalf("json not equal\nwant: %s\ngot:  %s", want, got)
 	}
 }
+

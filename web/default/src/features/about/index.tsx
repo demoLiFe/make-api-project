@@ -39,7 +39,7 @@ function EmptyAboutState() {
         </div>
         <div className='space-y-3 text-sm'>
           <p className='text-muted-foreground'>
-            &copy; {currentYear} New API
+            &copy; {currentYear} Make API Private
           </p>
         </div>
       </div>
@@ -109,3 +109,4 @@ export function About() {
     </PublicLayout>
   )
 }
+

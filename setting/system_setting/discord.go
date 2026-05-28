@@ -1,6 +1,6 @@
-package system_setting
+﻿package system_setting
 
-import "github.com/QuantumNous/new-api/setting/config"
+import "github.com/QuantumNous/make-api-private/setting/config"
 
 type DiscordSettings struct {
 	Enabled      bool   `json:"enabled"`
@@ -19,3 +19,4 @@ func init() {
 func GetDiscordSettings() *DiscordSettings {
 	return &defaultDiscordSettings
 }
+

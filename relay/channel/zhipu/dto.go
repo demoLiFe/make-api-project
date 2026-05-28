@@ -3,7 +3,7 @@ package zhipu
 import (
 	"time"
 
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QuantumNous/make-api-private/dto"
 )
 
 type ZhipuMessage struct {
@@ -45,3 +45,4 @@ type zhipuTokenData struct {
 	Token      string
 	ExpiryTime time.Time
 }
+
