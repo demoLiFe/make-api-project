@@ -104,6 +104,45 @@ func normalizeDeepSeekOpenAIMessages(request *dto.GeneralOpenAIRequest) {
 			request.Messages[i].Role = "system"
 		}
 	}
+	dropIncompleteDeepSeekToolCalls(request)
+}
+
+func dropIncompleteDeepSeekToolCalls(request *dto.GeneralOpenAIRequest) {
+	if request == nil || len(request.Messages) == 0 {
+		return
+	}
+	for i := range request.Messages {
+		toolCalls := request.Messages[i].ParseToolCalls()
+		if len(toolCalls) == 0 {
+			continue
+		}
+		required := make(map[string]struct{}, len(toolCalls))
+		for _, toolCall := range toolCalls {
+			if strings.TrimSpace(toolCall.ID) != "" {
+				required[toolCall.ID] = struct{}{}
+			}
+		}
+		if len(required) == 0 {
+			request.Messages[i].ToolCalls = nil
+			continue
+		}
+		for j := i + 1; j < len(request.Messages); j++ {
+			msg := request.Messages[j]
+			if msg.Role != "tool" {
+				if len(required) == 0 {
+					break
+				}
+				break
+			}
+			delete(required, strings.TrimSpace(msg.ToolCallId))
+			if len(required) == 0 {
+				break
+			}
+		}
+		if len(required) > 0 {
+			request.Messages[i].ToolCalls = nil
+		}
+	}
 }
 
 func applyDeepSeekV4OpenAIThinkingSuffix(info *relaycommon.RelayInfo, request *dto.GeneralOpenAIRequest) error {

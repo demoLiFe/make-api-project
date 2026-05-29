@@ -47,3 +47,66 @@ func TestConvertOpenAIResponsesRequestNormalizesDeveloperRole(t *testing.T) {
 		t.Fatalf("role = %q, want user", got.Messages[1].Role)
 	}
 }
+
+func TestConvertOpenAIRequestDropsIncompleteToolCalls(t *testing.T) {
+	assistant := dto.Message{Role: "assistant", Content: nil}
+	assistant.SetToolCalls([]dto.ToolCallRequest{
+		{
+			ID:   "call_1",
+			Type: "function",
+			Function: dto.FunctionRequest{
+				Name:      "read_file",
+				Arguments: "{}",
+			},
+		},
+	})
+	req := &dto.GeneralOpenAIRequest{
+		Model: "deepseek-chat",
+		Messages: []dto.Message{
+			{Role: "user", Content: "inspect"},
+			assistant,
+			{Role: "user", Content: "continue"},
+		},
+	}
+
+	converted, err := (&Adaptor{}).ConvertOpenAIRequest(nil, nil, req)
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := converted.(*dto.GeneralOpenAIRequest)
+	if len(got.Messages[1].ParseToolCalls()) != 0 {
+		t.Fatalf("tool calls were not dropped: %#v", got.Messages[1].ParseToolCalls())
+	}
+}
+
+func TestConvertOpenAIRequestKeepsCompleteToolCalls(t *testing.T) {
+	assistant := dto.Message{Role: "assistant", Content: nil}
+	assistant.SetToolCalls([]dto.ToolCallRequest{
+		{
+			ID:   "call_1",
+			Type: "function",
+			Function: dto.FunctionRequest{
+				Name:      "read_file",
+				Arguments: "{}",
+			},
+		},
+	})
+	req := &dto.GeneralOpenAIRequest{
+		Model: "deepseek-chat",
+		Messages: []dto.Message{
+			{Role: "user", Content: "inspect"},
+			assistant,
+			{Role: "tool", ToolCallId: "call_1", Content: "ok"},
+			{Role: "user", Content: "continue"},
+		},
+	}
+
+	converted, err := (&Adaptor{}).ConvertOpenAIRequest(nil, nil, req)
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := converted.(*dto.GeneralOpenAIRequest)
+	if len(got.Messages[1].ParseToolCalls()) != 1 {
+		t.Fatalf("tool calls were dropped: %#v", got.Messages[1].ParseToolCalls())
+	}
+}
