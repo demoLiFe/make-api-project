@@ -87,11 +87,23 @@ func (a *Adaptor) ConvertOpenAIRequest(c *gin.Context, info *relaycommon.RelayIn
 	if request == nil {
 		return nil, errors.New("request is nil")
 	}
+	normalizeDeepSeekOpenAIMessages(request)
 	if err := applyDeepSeekV4OpenAIThinkingSuffix(info, request); err != nil {
 		return nil, err
 	}
 
 	return request, nil
+}
+
+func normalizeDeepSeekOpenAIMessages(request *dto.GeneralOpenAIRequest) {
+	if request == nil {
+		return
+	}
+	for i := range request.Messages {
+		if request.Messages[i].Role == "developer" {
+			request.Messages[i].Role = "system"
+		}
+	}
 }
 
 func applyDeepSeekV4OpenAIThinkingSuffix(info *relaycommon.RelayInfo, request *dto.GeneralOpenAIRequest) error {
@@ -169,6 +181,7 @@ func (a *Adaptor) ConvertOpenAIResponsesRequest(c *gin.Context, info *relaycommo
 	if err := applyDeepSeekV4OpenAIThinkingSuffix(info, chatReq); err != nil {
 		return nil, err
 	}
+	normalizeDeepSeekOpenAIMessages(chatReq)
 	if info != nil {
 		info.FinalRequestRelayFormat = types.RelayFormatOpenAI
 	}
