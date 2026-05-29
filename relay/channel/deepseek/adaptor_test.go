@@ -113,3 +113,29 @@ func TestConvertOpenAIRequestKeepsCompleteToolCalls(t *testing.T) {
 		t.Fatalf("tool calls were dropped: %#v", got.Messages[1].ParseToolCalls())
 	}
 }
+
+func TestConvertOpenAIRequestDropsOrphanToolMessages(t *testing.T) {
+	req := &dto.GeneralOpenAIRequest{
+		Model: "deepseek-chat",
+		Messages: []dto.Message{
+			{Role: "user", Content: "inspect"},
+			{Role: "tool", ToolCallId: "missing_call", Content: "orphan"},
+			{Role: "assistant", Content: nil},
+			{Role: "user", Content: "continue"},
+		},
+	}
+
+	converted, err := (&Adaptor{}).ConvertOpenAIRequest(nil, nil, req)
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := converted.(*dto.GeneralOpenAIRequest)
+	for _, msg := range got.Messages {
+		if msg.Role == "tool" {
+			t.Fatalf("orphan tool message was not dropped: %#v", got.Messages)
+		}
+		if msg.Role == "assistant" && msg.Content == nil && len(msg.ParseToolCalls()) == 0 {
+			t.Fatalf("empty assistant message was not populated: %#v", got.Messages)
+		}
+	}
+}

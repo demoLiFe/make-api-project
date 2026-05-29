@@ -111,6 +111,7 @@ func dropIncompleteDeepSeekToolCalls(request *dto.GeneralOpenAIRequest) {
 	if request == nil || len(request.Messages) == 0 {
 		return
 	}
+	validToolCallIDs := make(map[string]struct{})
 	for i := range request.Messages {
 		toolCalls := request.Messages[i].ParseToolCalls()
 		if len(toolCalls) == 0 {
@@ -144,8 +145,28 @@ func dropIncompleteDeepSeekToolCalls(request *dto.GeneralOpenAIRequest) {
 				request.Messages[i].SetStringContent(formatDeepSeekDroppedToolCalls(toolCalls))
 			}
 			request.Messages[i].ToolCalls = nil
+			continue
+		}
+		for _, toolCall := range toolCalls {
+			if strings.TrimSpace(toolCall.ID) != "" {
+				validToolCallIDs[toolCall.ID] = struct{}{}
+			}
 		}
 	}
+
+	messages := make([]dto.Message, 0, len(request.Messages))
+	for _, msg := range request.Messages {
+		if msg.Role == "tool" {
+			if _, ok := validToolCallIDs[strings.TrimSpace(msg.ToolCallId)]; !ok {
+				continue
+			}
+		}
+		if msg.Role == "assistant" && msg.Content == nil && len(msg.ParseToolCalls()) == 0 {
+			msg.SetStringContent("[Previous empty assistant message omitted]")
+		}
+		messages = append(messages, msg)
+	}
+	request.Messages = messages
 }
 
 func formatDeepSeekDroppedToolCalls(toolCalls []dto.ToolCallRequest) string {
