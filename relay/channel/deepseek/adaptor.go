@@ -140,9 +140,40 @@ func dropIncompleteDeepSeekToolCalls(request *dto.GeneralOpenAIRequest) {
 			}
 		}
 		if len(required) > 0 {
+			if request.Messages[i].Content == nil || request.Messages[i].StringContent() == "" {
+				request.Messages[i].SetStringContent(formatDeepSeekDroppedToolCalls(toolCalls))
+			}
 			request.Messages[i].ToolCalls = nil
 		}
 	}
+}
+
+func formatDeepSeekDroppedToolCalls(toolCalls []dto.ToolCallRequest) string {
+	if len(toolCalls) == 0 {
+		return ""
+	}
+	var b strings.Builder
+	b.WriteString("[Previous assistant tool calls omitted because matching tool results were not present]\n")
+	for _, toolCall := range toolCalls {
+		if toolCall.Function.Name == "" && toolCall.Function.Arguments == "" {
+			continue
+		}
+		b.WriteString("tool_call")
+		if toolCall.ID != "" {
+			b.WriteString(" ")
+			b.WriteString(toolCall.ID)
+		}
+		if toolCall.Function.Name != "" {
+			b.WriteString(": ")
+			b.WriteString(toolCall.Function.Name)
+		}
+		if toolCall.Function.Arguments != "" {
+			b.WriteString(" ")
+			b.WriteString(toolCall.Function.Arguments)
+		}
+		b.WriteString("\n")
+	}
+	return strings.TrimSpace(b.String())
 }
 
 func applyDeepSeekV4OpenAIThinkingSuffix(info *relaycommon.RelayInfo, request *dto.GeneralOpenAIRequest) error {

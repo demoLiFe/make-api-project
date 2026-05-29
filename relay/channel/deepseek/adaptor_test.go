@@ -77,6 +77,9 @@ func TestConvertOpenAIRequestDropsIncompleteToolCalls(t *testing.T) {
 	if len(got.Messages[1].ParseToolCalls()) != 0 {
 		t.Fatalf("tool calls were not dropped: %#v", got.Messages[1].ParseToolCalls())
 	}
+	if got.Messages[1].StringContent() == "" {
+		t.Fatalf("assistant content should be populated when dropping incomplete tool calls")
+	}
 }
 
 func TestConvertOpenAIRequestKeepsCompleteToolCalls(t *testing.T) {
