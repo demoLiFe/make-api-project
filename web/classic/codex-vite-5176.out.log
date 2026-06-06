@@ -1,0 +1,45 @@
+
+> react-template@0.1.0 dev
+> vite --host 127.0.0.1 --port 5176
+
+Forced re-optimization of dependencies
+
+  [32m[1mVITE[22m v5.4.11[39m  [2mready in [0m[1m2333[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5176[22m/[39m
+[2m13:51:43[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m13:58:37[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Chat/index.jsx, /src/index.css[22m
+[2m13:59:29[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:01:45[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:04:35[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:06:28[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:09:39[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/table/model-pricing/view/table/PricingTable.jsx, /src/index.css[22m
+[2m14:10:59[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/table/model-pricing/view/table/PricingTable.jsx, /src/index.css[22m
+[2m14:12:07[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:14:12[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/table/model-pricing/view/card/PricingCardSkeleton.jsx, /src/index.css[22m
+[2m14:14:54[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:16:24[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:21:14[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/components/dashboard/index.jsx[22m
+[2m14:21:46[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:24:10[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/components/dashboard/index.jsx[22m
+[2m14:24:39[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:55:39[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14:57:53[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15:02:32[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15:05:01[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15:06:29[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15:12:12[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/playground/SettingsPanel.jsx, /src/index.css[22m
+[2m15:13:03[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15:15:24[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15:17:34[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Setting/Ratio/components/TieredPricingEditor.jsx, /src/index.css[22m
+[2m15:18:38[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15:21:40[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Setting/index.jsx, /src/index.css[22m
+[2m15:21:40[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Setting/Ratio/components/TieredPricingEditor.jsx, /src/index.css[22m
+[2m15:22:22[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15:23:38[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15:26:08[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/model-deployments/DeploymentAccessGuard.jsx, /src/index.css[22m
+[2m15:27:58[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m16:01:51[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m
+[2m16:02:51[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m16:03:31[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m16:09:48[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.jsx[22m

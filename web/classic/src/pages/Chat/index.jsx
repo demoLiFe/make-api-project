@@ -29,7 +29,6 @@ const ChatPage = () => {
   const { keys, serverAddress, isLoading } = useTokenKeys(id);
 
   const comLink = (key) => {
-    // console.log('chatLink:', chatLink);
     if (!serverAddress || !key) return '';
     let link = '';
     if (id) {
@@ -54,27 +53,21 @@ const ChatPage = () => {
   const iframeSrc = keys.length > 0 ? comLink(keys[0]) : '';
 
   return !isLoading && iframeSrc ? (
-    <iframe
-      src={iframeSrc}
-      style={{
-        width: '100%',
-        height: 'calc(100vh - 64px)',
-        border: 'none',
-        marginTop: '64px',
-      }}
-      title='Token Frame'
-      allow='camera;microphone'
-    />
+    <div className='chat-tech-page'>
+      <div className='chat-tech-frame-shell'>
+        <iframe
+          className='chat-tech-frame'
+          src={iframeSrc}
+          title='Token Frame'
+          allow='camera;microphone'
+        />
+      </div>
+    </div>
   ) : (
-    <div className='fixed inset-0 w-screen h-screen flex items-center justify-center bg-white/80 z-[1000] mt-[60px]'>
-      <div className='flex flex-col items-center'>
+    <div className='chat-tech-page chat-tech-loading-page'>
+      <div className='chat-tech-loading-card'>
         <Spin size='large' spinning={true} tip={null} />
-        <span
-          className='whitespace-nowrap mt-2 text-center'
-          style={{ color: 'var(--semi-color-primary)' }}
-        >
-          {t('正在跳转...')}
-        </span>
+        <span className='chat-tech-loading-text'>{t('正在跳转...')}</span>
       </div>
     </div>
   );

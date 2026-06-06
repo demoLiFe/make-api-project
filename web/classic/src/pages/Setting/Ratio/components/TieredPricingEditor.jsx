@@ -536,11 +536,12 @@ function VisualTierCard({ tier, index, isLast, isOnly, onUpdate, onRemove, t }) 
 
   return (
     <div
+      className='tiered-pricing-card'
       style={{
         padding: '12px 16px',
         borderRadius: 8,
-        border: '1px solid var(--semi-color-border)',
-        background: 'var(--semi-color-bg-2)',
+        border: '1px solid var(--tiered-pricing-card-border, var(--semi-color-border))',
+        background: 'var(--tiered-pricing-card-bg, var(--semi-color-bg-2))',
         marginBottom: 8,
       }}
     >
@@ -623,6 +624,7 @@ function VisualTierCard({ tier, index, isLast, isOnly, onUpdate, onRemove, t }) 
         </div>
       ) : (
         <div
+          className='tiered-pricing-fallback-summary'
           style={{
             marginBottom: 10,
             padding: '4px 8px',
@@ -722,7 +724,7 @@ function VisualEditor({ visualConfig, onChange, t }) {
   };
 
   return (
-    <div>
+    <div className='tiered-pricing-editor'>
       <Banner
         type='info'
         description={t('每个档位可设置 0~2 个条件（对 len、p 和 c），最后一档为兜底档无需条件。len 为输入上下文总长度（含缓存），推荐用于阶梯条件。')}

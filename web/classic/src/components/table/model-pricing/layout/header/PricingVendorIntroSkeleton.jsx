@@ -49,7 +49,7 @@ const SIZES = {
 const SKELETON_STYLES = {
   cover: (primaryColor) => ({
     '--palette-primary-darkerChannel': primaryColor,
-    backgroundImage: `linear-gradient(0deg, rgba(var(--palette-primary-darkerChannel) / 80%), rgba(var(--palette-primary-darkerChannel) / 80%)), url('/cover-4.webp')`,
+    backgroundImage: `radial-gradient(circle at 88% 18%, rgba(151, 232, 255, 0.52), transparent 32%), radial-gradient(circle at 12% 22%, rgba(198, 211, 255, 0.42), transparent 34%), linear-gradient(120deg, rgba(var(--palette-primary-darkerChannel) / 92%), rgba(0, 103, 255, 0.82) 48%, rgba(5, 16, 35, 0.9))`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -100,7 +100,7 @@ const PricingVendorIntroSkeleton = memo(
   ({ isAllVendors = false, isMobile = false }) => {
     const placeholder = (
       <Card
-        className='!rounded-2xl shadow-sm border-0'
+        className='pricing-vendor-card !rounded-2xl shadow-sm border-0'
         cover={
           <div
             className='relative h-full'

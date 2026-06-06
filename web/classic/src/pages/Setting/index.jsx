@@ -228,12 +228,13 @@ const Setting = () => {
     }
   }, [location.search]);
   return (
-    <div className='mt-[60px] px-2'>
+    <div className='console-page-inner settings-page-inner'>
       <Layout>
         <Layout.Content>
           <Tabs
             type='card'
             collapsible
+            dropdownProps={{ dropdownClassName: 'settings-tech-tabs-dropdown' }}
             activeKey={tabActiveKey}
             onChange={(key) => onChangeTab(key)}
           >

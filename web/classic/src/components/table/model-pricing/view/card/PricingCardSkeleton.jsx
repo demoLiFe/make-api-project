@@ -26,12 +26,12 @@ const PricingCardSkeleton = ({
   showRatio = false,
 }) => {
   const placeholder = (
-    <div className='px-2 pt-2'>
+    <div className='pricing-card-skeleton px-2 pt-2'>
       <div className='grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4'>
         {Array.from({ length: skeletonCount }).map((_, index) => (
           <Card
             key={index}
-            className='!rounded-2xl border border-gray-200'
+            className='pricing-skeleton-card !rounded-2xl'
             bodyStyle={{ padding: '24px' }}
           >
             {/* 头部：图标 + 模型名称 + 操作按钮 */}

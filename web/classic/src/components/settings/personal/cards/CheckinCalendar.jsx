@@ -314,18 +314,26 @@ const CheckinCalendar = ({ t, status, turnstileEnabled, turnstileSiteKey }) => {
         <Spin spinning={loading}>
           <div className='border rounded-lg overflow-hidden checkin-calendar'>
             <style>{`
+            .checkin-calendar {
+              border-color: rgba(202, 226, 247, 0.72) !important;
+              background: #ffffff;
+            }
             .checkin-calendar .semi-calendar {
               font-size: 13px;
+              background: transparent;
             }
             .checkin-calendar .semi-calendar-month-header {
               padding: 8px 12px;
             }
             .checkin-calendar .semi-calendar-month-week-row {
               height: 28px;
+              background: #eef8ff;
             }
             .checkin-calendar .semi-calendar-month-week-row th {
               font-size: 12px;
               padding: 4px 0;
+              color: rgba(51, 65, 85, 0.86);
+              background: #eef8ff;
             }
             .checkin-calendar .semi-calendar-month-grid-row {
               height: auto;
@@ -333,6 +341,7 @@ const CheckinCalendar = ({ t, status, turnstileEnabled, turnstileSiteKey }) => {
             .checkin-calendar .semi-calendar-month-grid-row td {
               height: 56px;
               padding: 2px;
+              border-color: rgba(202, 226, 247, 0.62);
             }
             .checkin-calendar .semi-calendar-month-grid-row-cell {
               position: relative;
@@ -357,6 +366,43 @@ const CheckinCalendar = ({ t, status, turnstileEnabled, turnstileSiteKey }) => {
               display: flex;
               align-items: center;
               justify-content: center;}
+            .dark .checkin-calendar {
+              border-color: rgba(152, 211, 255, 0.22) !important;
+              background: #162f48;
+            }
+            .dark .checkin-calendar .semi-calendar {
+              background: #162f48;
+              color: rgba(218, 232, 246, 0.88);
+            }
+            .dark .checkin-calendar .semi-calendar-month-header {
+              background: #254866;
+              border-color: rgba(152, 211, 255, 0.18);
+            }
+            .dark .checkin-calendar .semi-calendar-month-week-row {
+              background: #254866;
+            }
+            .dark .checkin-calendar .semi-calendar-month-week-row th {
+              color: rgba(218, 232, 246, 0.88);
+              background: #254866;
+              border-color: rgba(152, 211, 255, 0.18);
+            }
+            .dark .checkin-calendar .semi-calendar-month-grid-row td {
+              background: #18324c;
+              border-color: rgba(152, 211, 255, 0.14);
+            }
+            .dark .checkin-calendar .semi-calendar-month-grid-row-cell {
+              background: #18324c;
+            }
+            .dark .checkin-calendar .semi-calendar-month-same {
+              background: #18324c;
+            }
+            .dark .checkin-calendar .semi-calendar-month-grid-row-cell-day {
+              color: rgba(245, 250, 255, 0.94);
+            }
+            .dark .checkin-calendar .semi-calendar-month-today .semi-calendar-month-grid-row-cell-day {
+              background: #3c82f6;
+              color: #ffffff;
+            }
           `}</style>
             <Calendar
               mode='month'

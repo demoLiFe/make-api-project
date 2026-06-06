@@ -97,9 +97,10 @@ func main() {
 		go model.SyncChannelCache(common.SyncFrequency)
 	}
 
-	// 鐑洿鏂伴厤缃?	go model.SyncOptions(common.SyncFrequency)
+	// 热更新配置
+	go model.SyncOptions(common.SyncFrequency)
 
-	// 鏁版嵁鐪嬫澘
+	// 数据看板
 	go model.UpdateQuotaData()
 
 	if os.Getenv("CHANNEL_UPDATE_FREQUENCY") != "" {
@@ -188,7 +189,7 @@ func main() {
 	InjectUmamiAnalytics()
 	InjectGoogleAnalytics()
 
-	// 璁剧疆璺敱
+	// 设置路由
 	router.SetRouter(server, router.ThemeAssets{
 		DefaultBuildFS:   buildFS,
 		DefaultIndexPage: indexPage,
@@ -264,7 +265,7 @@ func InitResources() error {
 		}
 	}
 
-	// 鍔犺浇鐜鍙橀噺
+	// 加载环境变量
 	common.InitEnv()
 
 	logger.SetupLogger()
@@ -288,10 +289,11 @@ func InitResources() error {
 	// Initialize options, should after model.InitDB()
 	model.InitOptionMap()
 
-	// 娓呯悊鏃х殑纾佺洏缂撳瓨鏂囦欢
+	// 清理旧的磁盘缓存文件
 	common.CleanupOldCacheFiles()
 
-	// 鍒濆鍖栨ā鍨?	model.GetPricing()
+	// 初始化模型价格
+	model.GetPricing()
 
 	// Initialize SQL Database
 	err = model.InitLogDB()
@@ -330,4 +332,3 @@ func InitResources() error {
 
 	return nil
 }
-

@@ -56,14 +56,7 @@ const UserInfoHeader = ({ t, userState }) => {
       className='!rounded-2xl overflow-hidden'
       cover={
         <div
-          className='relative h-32'
-          style={{
-            '--palette-primary-darkerChannel': '0 75 80',
-            backgroundImage: `linear-gradient(0deg, rgba(var(--palette-primary-darkerChannel) / 80%), rgba(var(--palette-primary-darkerChannel) / 80%)), url('/cover-4.webp')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
+          className='personal-profile-cover relative h-32'
         >
           {/* 用户信息内容 */}
           <div className='relative z-10 h-full flex flex-col justify-end p-6'>

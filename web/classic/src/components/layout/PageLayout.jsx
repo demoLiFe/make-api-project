@@ -62,14 +62,14 @@ const PageLayout = () => {
     '/pricing',
   ];
 
-  const shouldHideFooter = cardProPages.includes(location.pathname);
-
   const shouldInnerPadding =
     location.pathname.includes('/console') &&
     !location.pathname.startsWith('/console/chat') &&
     location.pathname !== '/console/playground';
 
   const isConsoleRoute = location.pathname.startsWith('/console');
+  const shouldHideFooter =
+    isConsoleRoute || cardProPages.includes(location.pathname);
   const showSider = isConsoleRoute && (!isMobile || drawerOpen);
 
   useEffect(() => {
@@ -209,17 +209,23 @@ const PageLayout = () => {
           }}
         >
           <Content
+            className={shouldInnerPadding ? 'console-tech-route' : ''}
             style={{
               flex: '1 0 auto',
               overflowY: isMobile ? 'visible' : 'hidden',
               WebkitOverflowScrolling: 'touch',
-              padding: shouldInnerPadding ? (isMobile ? '5px' : '24px') : '0',
+              padding: shouldInnerPadding ? (isMobile ? '5px' : '8px') : '0',
               position: 'relative',
             }}
           >
             <ErrorBoundary>
               <App />
             </ErrorBoundary>
+            {isConsoleRoute && (
+              <div className='console-footer-shell'>
+                <FooterBar />
+              </div>
+            )}
           </Content>
           {!shouldHideFooter && (
             <Layout.Footer

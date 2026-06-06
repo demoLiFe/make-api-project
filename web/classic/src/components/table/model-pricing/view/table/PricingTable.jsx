@@ -18,7 +18,8 @@ For commercial licensing, please contact support@quantumnous.com
 */
 
 import React, { useMemo } from 'react';
-import { Card, Table, Empty } from '@douyinfe/semi-ui';
+import { Empty } from '@douyinfe/semi-ui';
+import CardTable from '../../../../common/ui/CardTable';
 import {
   IllustrationNoResult,
   IllustrationNoResultDark,
@@ -74,7 +75,6 @@ const PricingTable = ({
     showRatio,
   ]);
 
-  // 更新列定义中的 searchValue
   const processedColumns = useMemo(() => {
     const cols = columns.map((column) => {
       if (column.dataIndex === 'model_name') {
@@ -86,62 +86,47 @@ const PricingTable = ({
       return column;
     });
 
-    // Remove fixed property when in compact mode (mobile view)
     if (compactMode) {
       return cols.map(({ fixed, ...rest }) => rest);
     }
     return cols;
   }, [columns, searchValue, compactMode]);
 
-  const ModelTable = useMemo(
-    () => (
-      <Card className='!rounded-xl overflow-hidden' bordered={false}>
-        <Table
-          columns={processedColumns}
-          dataSource={filteredModels}
-          loading={loading}
-          rowSelection={rowSelection}
-          scroll={compactMode ? undefined : { x: 'max-content' }}
-          onRow={(record) => ({
-            onClick: () => openModelDetail && openModelDetail(record),
-            style: { cursor: 'pointer' },
-          })}
-          empty={
-            <Empty
-              image={
-                <IllustrationNoResult style={{ width: 150, height: 150 }} />
-              }
-              darkModeImage={
-                <IllustrationNoResultDark style={{ width: 150, height: 150 }} />
-              }
-              description={t('搜索无结果')}
-              style={{ padding: 30 }}
-            />
-          }
-          pagination={{
-            defaultPageSize: 20,
-            pageSize: pageSize,
-            showSizeChanger: true,
-            pageSizeOptions: [10, 20, 50, 100],
-            onPageSizeChange: (size) => setPageSize(size),
-          }}
-        />
-      </Card>
-    ),
-    [
-      filteredModels,
-      loading,
-      processedColumns,
-      rowSelection,
-      pageSize,
-      setPageSize,
-      openModelDetail,
-      t,
-      compactMode,
-    ],
+  return (
+    <div className='pricing-table-card'>
+      <CardTable
+        columns={processedColumns}
+        dataSource={filteredModels}
+        loading={loading}
+        rowSelection={rowSelection}
+        scroll={compactMode ? undefined : { x: 'max-content' }}
+        onRow={(record) => ({
+          onClick: () => openModelDetail && openModelDetail(record),
+          style: { cursor: 'pointer' },
+        })}
+        empty={
+          <Empty
+            image={<IllustrationNoResult style={{ width: 150, height: 150 }} />}
+            darkModeImage={
+              <IllustrationNoResultDark style={{ width: 150, height: 150 }} />
+            }
+            description={t('搜索无结果')}
+            style={{ padding: 30 }}
+          />
+        }
+        pagination={{
+          defaultPageSize: 20,
+          pageSize,
+          showSizeChanger: true,
+          pageSizeOptions: [10, 20, 50, 100],
+          onPageSizeChange: (size) => setPageSize(size),
+        }}
+        hidePagination={true}
+        className='rounded-xl overflow-hidden'
+        size='middle'
+      />
+    </div>
   );
-
-  return ModelTable;
 };
 
 export default PricingTable;

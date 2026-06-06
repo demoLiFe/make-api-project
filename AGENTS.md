@@ -1,4 +1,4 @@
-# AGENTS.md 鈥?Project Conventions for make-api-private
+# AGENTS.md - Project Conventions for make-api-private
 
 ## Overview
 
@@ -67,4 +67,3 @@ If user-visible frontend text is changed, keep i18n consistent with the existing
 ### Rule 7: Safe Fork Workflow
 
 This repository is a private fork. Changes here should not be constrained by upstream branding rules, but functional compatibility with the current codebase should be preserved unless the user asks for deeper divergence.
-

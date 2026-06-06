@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Typography } from '@douyinfe/semi-ui';
 import MarkdownRenderer from '../../components/common/markdown/MarkdownRenderer';
 
 const { Title } = Typography;
+
+const docNavItems = [
+  { key: 'create-token', label: '创建令牌', match: '一、创建令牌' },
+  { key: 'prepare-config', label: '准备配置', match: '二、准备 3 个配置项' },
+  { key: 'test-api', label: '测试接口', match: '三、先测试接口' },
+  {
+    key: 'codex-config',
+    label: 'Codex 桌面端',
+    match: '四、Codex 桌面端配置',
+  },
+  {
+    key: 'opencode-config',
+    label: 'OpenCode 桌面端',
+    match: '五、OpenCode 桌面端配置',
+  },
+  { key: 'errors', label: '常见报错', match: '六、常见报错' },
+  { key: 'checklist', label: '最后检查', match: '七、最后检查' },
+];
 
 const docsContent = `
 # Codex / OpenCode 配置使用文档
@@ -63,16 +81,9 @@ sk-xxxxxxxxxxxxxxxxxxxxxxxx
 \`\`\`text
 gpt-5.3-codex
 gpt-5.2-codex
-gpt-4.1
-gpt-4o-mini
+gpt-5.5
 deepseek-chat
 claude-3-5-sonnet
-\`\`\`
-
-如果只是先测试是否能用，建议先用：
-
-\`\`\`text
-gpt-4o-mini
 \`\`\`
 
 ---
@@ -103,145 +114,38 @@ curl https://api.make1688.com/v1/models \\
 
 ---
 
-## 四、Codex 保姆级安装和配置
+## 四、Codex 桌面端配置
 
-### 1. 先检查有没有安装 Node.js
+### 1. 下载 Codex 桌面端
 
-Codex 官方 npm 安装方式依赖 Node.js。
+从 OpenAI 官方入口下载 Codex 桌面端：
 
-先执行：
+[https://openai.com/codex/get-started/](https://openai.com/codex/get-started/)
 
-\`\`\`bash
-node --version
-npm --version
-\`\`\`
+下载完成后，先正常安装并打开一次。
 
-如果都能看到版本号，说明已经安装好了，可以直接看后面的 Codex 安装步骤。
+![Codex 桌面端配置 makeapi 中转站](/docs-assets/codex-desktop-config.svg)
 
-如果提示找不到命令，说明你本机还没有装 Node.js。
+### 2. 配置 makeapi 中转站
 
-### 2. Node.js 最低版本
+如果 Codex 桌面端支持读取本机 Codex 配置，按下面这样写配置文件。
 
-根据 OpenAI Codex 官方 GitHub 仓库当前的 package 配置，Node.js 版本要求是：
+Windows 文件位置：
 
 \`\`\`text
-Node.js >= 22
+C:\\Users\\你的用户名\\.codex\\config.toml
 \`\`\`
 
-建议直接安装：
-
-\`\`\`text
-Node.js 22 或更高版本
-\`\`\`
-
-如果你安装的是更低版本，Codex 可能无法正常安装或运行。
-
-### 3. Windows 安装 Node.js
-
-最适合新手的方式：
-
-1. 打开 Node.js 官网下载页
-2. 下载 Windows 安装包
-3. 双击安装
-4. 一路点击 Next
-5. 保持默认安装选项
-6. 安装完成后关闭安装窗口
-
-安装完成后，重新打开 PowerShell，再执行：
-
-\`\`\`powershell
-node --version
-npm --version
-\`\`\`
-
-如果能看到版本号，说明 Node.js 已经装好了。
-
-### 4. macOS 安装 Node.js
-
-如果你已经安装 Homebrew，可以执行：
-
-\`\`\`bash
-brew install node
-\`\`\`
-
-安装完成后执行：
-
-\`\`\`bash
-node --version
-npm --version
-\`\`\`
-
-### 5. Linux 安装 Node.js
-
-最稳妥的做法是使用你当前发行版支持的 Node.js 22 或更高版本安装方式。
-
-安装完成后执行：
-
-\`\`\`bash
-node --version
-npm --version
-\`\`\`
-
-### 6. 安装 Codex
-
-如果 Node.js 已经装好，再执行：
-
-Windows：
-
-\`\`\`powershell
-npm install -g @openai/codex
-\`\`\`
-
-macOS：
-
-\`\`\`bash
-npm install -g @openai/codex
-\`\`\`
-
-Linux：
-
-\`\`\`bash
-npm install -g @openai/codex
-\`\`\`
-
-### 7. 检查 Codex 是否安装成功
-
-\`\`\`bash
-codex --version
-\`\`\`
-
-如果能看到版本号，说明安装成功。
-
-### 8. 最简单配置方式
-
-Windows PowerShell：
-
-\`\`\`powershell
-$env:OPENAI_API_KEY="sk-替换成你刚创建的令牌"
-$env:OPENAI_BASE_URL="https://api.make1688.com/v1"
-codex -m gpt-4.1
-\`\`\`
-
-macOS / Linux：
-
-\`\`\`bash
-export OPENAI_API_KEY="sk-替换成你刚创建的令牌"
-export OPENAI_BASE_URL="https://api.make1688.com/v1"
-codex -m gpt-4.1
-\`\`\`
-
-### 9. 配置文件方式
-
-文件位置：
+macOS / Linux 文件位置：
 
 \`\`\`text
 ~/.codex/config.toml
 \`\`\`
 
-配置文件示例：
+配置内容：
 
 \`\`\`toml
-model = "gpt-4.1"
+model = "gpt-5.5"
 model_provider = "makeapi"
 
 [model_providers.makeapi]
@@ -250,30 +154,7 @@ wire_api = "responses"
 env_key = "MAKE_API_KEY"
 \`\`\`
 
-上面这份配置可以这样理解：
-
-1. model：默认使用哪个模型
-2. model_provider：默认使用哪个 provider
-3. base_url：请求发到哪里
-4. wire_api：请求协议类型
-5. env_key：告诉 Codex 去读取哪个环境变量里的令牌
-
-也就是说：
-
-\`\`\`text
-config.toml 里写地址和读取规则
-环境变量里放真正的 key
-\`\`\`
-
-### 10. key 怎么一起配置进去
-
-如果你用了下面这行：
-
-\`\`\`toml
-env_key = "MAKE_API_KEY"
-\`\`\`
-
-那你还要在系统里设置同名环境变量。
+### 3. 设置 API Key
 
 Windows PowerShell：
 
@@ -287,43 +168,9 @@ macOS / Linux：
 export MAKE_API_KEY="sk-替换成你刚创建的令牌"
 \`\`\`
 
-这样 Codex 启动时，就会自动去读取 MAKE_API_KEY 里的令牌。
+### 4. 重启并测试
 
-### 11. 更适合新手的完整写法
-
-第一步，先写配置文件：
-
-\`\`\`toml
-model = "gpt-4.1"
-model_provider = "makeapi"
-
-[model_providers.makeapi]
-base_url = "https://api.make1688.com/v1"
-wire_api = "responses"
-env_key = "MAKE_API_KEY"
-\`\`\`
-
-第二步，再设置令牌：
-
-\`\`\`powershell
-$env:MAKE_API_KEY="sk-替换成你刚创建的令牌"
-\`\`\`
-
-第三步，启动 Codex：
-
-\`\`\`powershell
-codex
-\`\`\`
-
-如果你不想用 env_key 这种方式，也可以直接用最简单写法：
-
-\`\`\`powershell
-$env:OPENAI_API_KEY="sk-替换成你刚创建的令牌"
-$env:OPENAI_BASE_URL="https://api.make1688.com/v1"
-codex -m gpt-4.1
-\`\`\`
-
-### 12. Codex 验证
+保存配置后，重新打开 Codex 桌面端。
 
 先输入：
 
@@ -331,67 +178,51 @@ codex -m gpt-4.1
 只回复 OK，不要输出别的内容。
 \`\`\`
 
-再输入：
+如果没有回复，先检查这 3 个地方：
 
-\`\`\`text
-请先读取当前项目目录结构，并告诉我前后端分别在哪些目录。
-\`\`\`
+1. Base URL 是否是 \`https://api.make1688.com/v1\`
+2. API Key 是否是刚创建的新令牌
+3. Model 是否是后台真实存在的模型名，例如 \`gpt-5.5\`
+
+注意：如果你打开的 Codex 桌面端只支持官方账号登录，没有 Base URL / Provider / 自定义模型入口，那就不能直接填中转站。这个时候优先使用支持自定义 provider 的 OpenCode 桌面端。
 
 ---
 
-## 五、OpenCode 保姆级安装和配置
+## 五、OpenCode 桌面端配置
 
-### 1. 安装 OpenCode
+### 1. 下载 OpenCode 桌面端
 
-官方文档里常见的 Node.js 安装命令是：
+从 OpenCode 官方入口下载桌面端：
 
-\`\`\`bash
-npm install -g opencode-ai
+[https://opencode.ai/download](https://opencode.ai/download)
+
+下载完成后，先正常安装并打开一次。
+
+![OpenCode 桌面端配置 makeapi 中转站](/docs-assets/opencode-desktop-config.svg)
+
+### 2. 写入配置文件
+
+OpenCode 桌面端和 OpenCode 命令行都可以读取 \`opencode.json\`。
+
+Windows 文件位置：
+
+\`\`\`text
+C:\\Users\\你的用户名\\AppData\\Roaming\\opencode\\opencode.json
 \`\`\`
 
-Windows：
-
-\`\`\`powershell
-npm install -g opencode-ai
-\`\`\`
-
-macOS：
-
-\`\`\`bash
-npm install -g opencode-ai
-\`\`\`
-
-Linux：
-
-\`\`\`bash
-npm install -g opencode-ai
-\`\`\`
-
-### 2. 检查 OpenCode 是否安装成功
-
-\`\`\`bash
-opencode --version
-\`\`\`
-
-### 3. 配置文件位置
-
-全局：
+macOS / Linux 文件位置：
 
 \`\`\`text
 ~/.config/opencode/opencode.json
 \`\`\`
 
-项目级：
-
-\`\`\`text
-项目根目录/opencode.json
-\`\`\`
-
-### 4. OpenCode 配置示例
+配置内容：
 
 \`\`\`json
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "makeapi/gpt-5.5",
+  "small_model": "makeapi/gpt-5.5",
   "provider": {
     "makeapi": {
       "npm": "@ai-sdk/openai-compatible",
@@ -401,49 +232,23 @@ opencode --version
         "apiKey": "sk-替换成你刚创建的令牌"
       },
       "models": {
-        "gpt-4.1": {
-          "name": "GPT-4.1"
-        },
-        "gpt-4o-mini": {
-          "name": "GPT-4o Mini"
+        "gpt-5.5": {
+          "name": "gpt-5.5",
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         }
       }
     }
-  },
-  "model": "makeapi/gpt-4.1",
-  "small_model": "makeapi/gpt-4o-mini"
+  }
 }
 \`\`\`
 
-### 5. OpenCode 里 key 怎么配置
+### 3. 重启并测试
 
-最简单的方式，就是直接写在配置文件里：
-
-\`\`\`json
-"apiKey": "sk-替换成你刚创建的令牌"
-\`\`\`
-
-如果你不想直接写死，也可以改成环境变量方式：
-
-\`\`\`json
-"apiKey": "{env:MAKE_API_KEY}"
-\`\`\`
-
-然后在系统里设置：
-
-Windows PowerShell：
-
-\`\`\`powershell
-$env:MAKE_API_KEY="sk-替换成你刚创建的令牌"
-\`\`\`
-
-macOS / Linux：
-
-\`\`\`bash
-export MAKE_API_KEY="sk-替换成你刚创建的令牌"
-\`\`\`
-
-### 6. OpenCode 验证
+保存配置后，重启 OpenCode 桌面端。
 
 先输入：
 
@@ -451,11 +256,17 @@ export MAKE_API_KEY="sk-替换成你刚创建的令牌"
 只回复 OK，不要输出别的内容。
 \`\`\`
 
-再输入：
+如果要在 OpenCode 里发图片，必须保留下面这段：
 
-\`\`\`text
-请读取当前项目目录结构，并告诉我这是前端项目、后端项目，还是全栈项目。
+\`\`\`json
+"attachment": true,
+"modalities": {
+  "input": ["text", "image"],
+  "output": ["text"]
+}
 \`\`\`
+
+这段是在告诉 OpenCode：“这个模型可以读取图片”。如果删掉它，就算你的中转站和上游模型本身支持图片，OpenCode 也可能提示当前模型不支持图片。
 
 ---
 
@@ -473,64 +284,103 @@ Base URL 写错，或者漏了 /v1。
 
 模型名写错，或者后台没有这个模型。
 
+### 当前模型不支持图片
+
+OpenCode 配置里缺少 \`attachment\` 或 \`modalities.input: ["text", "image"]\`。
+
 ### insufficient balance / no quota
 
 余额不足，或者令牌额度不足。
 
 ---
 
-## 七、最容易填错的地方
-
-### 1. Base URL
-
-错误：
-
-\`\`\`text
-https://api.make1688.com
-\`\`\`
-
-正确：
-
-\`\`\`text
-https://api.make1688.com/v1
-\`\`\`
-
-### 2. 模型名
-
-错误：
-
-\`\`\`text
-GPT-4.1
-\`\`\`
-
-正确：
-
-\`\`\`text
-gpt-4.1
-\`\`\`
-
----
-
-## 八、最后检查
+## 七、最后检查
 
 1. 已创建令牌
 2. Base URL 已写成 /v1 结尾
 3. API Key 已填新令牌
 4. Model 已填后台真实存在的模型名
 5. 已测试 /v1/models
-6. 已让 Codex 或 OpenCode 回复过 OK
+6. 已从官方入口下载安装桌面端
+7. 已让 Codex 或 OpenCode 回复过 OK
 `;
 
 const DocsPage = () => {
+  const contentRef = useRef(null);
+  const activeSectionRef = useRef(docNavItems[0].key);
+  const [activeSection, setActiveSection] = useState(docNavItems[0].key);
+
+  const getSectionHeadings = () => {
+    const container = contentRef.current;
+    if (!container) return [];
+    return docNavItems
+      .map((item) => {
+        const heading = Array.from(container.querySelectorAll('h2')).find(
+          (node) => node.textContent?.trim() === item.match,
+        );
+        return heading ? { ...item, heading } : null;
+      })
+      .filter(Boolean);
+  };
+
+  const getHeadingScrollTop = (heading, container) => {
+    const containerRect = container.getBoundingClientRect();
+    const headingRect = heading.getBoundingClientRect();
+    return container.scrollTop + headingRect.top - containerRect.top - 12;
+  };
+
+  const setActiveSectionSafely = (key) => {
+    if (activeSectionRef.current === key) return;
+    activeSectionRef.current = key;
+    setActiveSection(key);
+  };
+
+  const handleSectionClick = (item) => {
+    setActiveSectionSafely(item.key);
+    const section = getSectionHeadings().find((entry) => entry.key === item.key);
+    const container = contentRef.current;
+    if (!section || !container) return;
+    container.scrollTo({
+      top: getHeadingScrollTop(section.heading, container),
+      behavior: 'auto',
+    });
+  };
+
   return (
-    <div className='min-h-screen bg-gray-50'>
-      <div className='max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
-        <div className='bg-white rounded-lg shadow-sm p-6 md:p-10'>
-          <Title heading={2} className='text-center mb-8'>
-            Codex / OpenCode 配置使用文档
-          </Title>
-          <div className='prose prose-lg max-w-none'>
-            <MarkdownRenderer content={docsContent} />
+    <div className='docs-tech-page relative overflow-hidden'>
+      <div className='docs-tech-orbit docs-tech-orbit-left' />
+      <div className='docs-tech-orbit docs-tech-orbit-right' />
+      <div className='docs-tech-rays' />
+      <div className='docs-tech-shell w-full max-w-[1320px] mx-auto px-3 sm:px-4 lg:px-6'>
+        <div className='docs-tech-card rounded-2xl p-6 md:p-10'>
+          <div className='docs-tech-header'>
+            <div>
+              <div className='docs-tech-kicker'>Make API Client Guide</div>
+              <Title heading={2} className='docs-tech-title mb-0'>
+                Codex / OpenCode 配置使用文档
+              </Title>
+            </div>
+          </div>
+          <div className='docs-tech-layout'>
+            <aside className='docs-tech-sidebar'>
+              <div className='docs-tech-sidebar-title'>配置流程</div>
+              {docNavItems.map((item) => (
+                <button
+                  key={item.key}
+                  type='button'
+                  className={activeSection === item.key ? 'active' : ''}
+                  onClick={() => handleSectionClick(item)}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </aside>
+            <div
+              ref={contentRef}
+              className='docs-tech-content prose prose-lg max-w-none'
+            >
+              <MarkdownRenderer content={docsContent} />
+            </div>
           </div>
         </div>
       </div>

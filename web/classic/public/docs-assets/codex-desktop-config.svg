@@ -1,0 +1,66 @@
+<svg width="1040" height="560" viewBox="0 0 1040 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1040" height="560" rx="26" fill="#F5FBFF"/>
+  <rect width="1040" height="560" rx="26" fill="url(#bg)"/>
+  <rect x="58" y="52" width="924" height="456" rx="26" fill="white" fill-opacity="0.8" stroke="#C7E4F8"/>
+
+  <rect x="94" y="96" width="268" height="364" rx="22" fill="#F3FAFF" stroke="#CBE7FA"/>
+  <use href="#codexAppIcon" x="119" y="125" width="64" height="64"/>
+  <text x="126" y="212" fill="#0F172A" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="24" font-weight="900">Codex 桌面端</text>
+  <text x="126" y="240" fill="#526174" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="14">读取本机 Codex 配置</text>
+  <rect x="126" y="282" width="196" height="38" rx="12" fill="white" stroke="#C8E2F7"/>
+  <text x="148" y="306" fill="#0067FF" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="14" font-weight="900">1. 写配置文件</text>
+  <rect x="126" y="336" width="196" height="38" rx="12" fill="white" stroke="#C8E2F7"/>
+  <text x="148" y="360" fill="#0067FF" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="14" font-weight="900">2. 设置 Key</text>
+  <rect x="126" y="390" width="196" height="38" rx="12" fill="white" stroke="#C8E2F7"/>
+  <text x="148" y="414" fill="#0067FF" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="14" font-weight="900">3. 重启测试</text>
+
+  <text x="400" y="128" fill="#0F172A" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="28" font-weight="900">Codex 桌面端配置 makeapi</text>
+  <text x="400" y="160" fill="#526174" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15">先配置 provider，再让桌面端重新读取本机配置。</text>
+
+  <rect x="400" y="194" width="546" height="234" rx="18" fill="#0B1220"/>
+  <text x="434" y="232" fill="#8DD3FF" font-family="Consolas, monospace" font-size="17">~/.codex/config.toml</text>
+  <text x="434" y="272" fill="#EAF6FF" font-family="Consolas, monospace" font-size="17">model = "gpt-5.5"</text>
+  <text x="434" y="304" fill="#EAF6FF" font-family="Consolas, monospace" font-size="17">model_provider = "makeapi"</text>
+  <text x="434" y="350" fill="#8DD3FF" font-family="Consolas, monospace" font-size="17">[model_providers.makeapi]</text>
+  <text x="434" y="382" fill="#EAF6FF" font-family="Consolas, monospace" font-size="17">base_url = "https://api.make1688.com/v1"</text>
+  <text x="434" y="414" fill="#EAF6FF" font-family="Consolas, monospace" font-size="17">env_key = "MAKE_API_KEY"</text>
+
+  <rect x="400" y="448" width="546" height="46" rx="15" fill="#EAF6FF" stroke="#B8DDF8"/>
+  <text x="430" y="477" fill="#0F172A" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="900">重新打开桌面端后，输入“只回复 OK”验证。</text>
+
+  <defs>
+    <symbol id="codexAppIcon" viewBox="0 0 64 64">
+      <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#codexTile)" filter="url(#codexTileShadow)"/>
+      <rect x="2.5" y="2.5" width="59" height="59" rx="17.5" fill="none" stroke="white" stroke-opacity="0.86"/>
+      <g filter="url(#codexShadow)" transform="translate(32 30.5) scale(0.82) translate(-32 -32)">
+        <g fill="url(#codexCloud)">
+          <circle cx="32" cy="20" r="13.4"/>
+          <circle cx="42.39" cy="26" r="13.4"/>
+          <circle cx="42.39" cy="38" r="13.4"/>
+          <circle cx="32" cy="44" r="13.4"/>
+          <circle cx="21.61" cy="38" r="13.4"/>
+          <circle cx="21.61" cy="26" r="13.4"/>
+        </g>
+        <path d="M21.4 25.6L28.7 34.1L21.4 42.6" stroke="white" stroke-opacity="0.86" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M34.6 40.5H45.5" stroke="white" stroke-opacity="0.86" stroke-width="4.2" stroke-linecap="round"/>
+      </g>
+    </symbol>
+    <filter id="codexTileShadow" x="-2" y="-1" width="68" height="68" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="5" stdDeviation="4.5" flood-color="#C4CCD8" flood-opacity="0.5"/>
+    </filter>
+    <filter id="codexShadow" x="0" y="2" width="64" height="62" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#3B31FF" flood-opacity="0.32"/>
+    </filter>
+    <linearGradient id="codexTile" x1="6" y1="3" x2="62" y2="63" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.72" stop-color="#F5F6F8"/>
+      <stop offset="1" stop-color="#E8EAEE"/>
+    </linearGradient>
+    <linearGradient id="codexCloud" x1="29" y1="15" x2="39" y2="51" gradientUnits="userSpaceOnUse"><stop stop-color="#B995FF"/><stop offset="0.46" stop-color="#6E8BFF"/><stop offset="1" stop-color="#2D28FF"/></linearGradient>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(560 120) rotate(90) scale(386 748)">
+      <stop stop-color="#D7FAFF"/>
+      <stop offset="0.46" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E4F1FF"/>
+    </radialGradient>
+  </defs>
+</svg>

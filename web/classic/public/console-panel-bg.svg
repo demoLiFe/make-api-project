@@ -1,0 +1,44 @@
+<svg width="1440" height="360" viewBox="0 0 1440 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="360" fill="#0B2238"/>
+  <path d="M0 0H1440V360H0V0Z" fill="url(#baseGlow)"/>
+  <path d="M-80 326L230 8H610L292 360H-80V326Z" fill="#1B4D78" fill-opacity=".32"/>
+  <path d="M298 0H720L995 132L736 360H366L642 112L298 0Z" fill="#33739F" fill-opacity=".24"/>
+  <path d="M832 0H1440V360H1018L1226 124L832 0Z" fill="#1F5B87" fill-opacity=".30"/>
+  <path d="M0 151L191 183L400 113L662 160L870 73L1139 111L1440 39V360H0V151Z" fill="#07182A" fill-opacity=".22"/>
+  <path d="M-34 306L188 61" stroke="#61D8FF" stroke-opacity=".34" stroke-width="1.4"/>
+  <path d="M120 360L298 0" stroke="#8CE7FF" stroke-opacity=".28" stroke-width="1.2"/>
+  <path d="M524 360L732 8" stroke="#61D8FF" stroke-opacity=".18" stroke-width="1"/>
+  <path d="M874 360L1038 34" stroke="#88E8FF" stroke-opacity=".18" stroke-width="1"/>
+  <path d="M1188 360L1448 88" stroke="#61D8FF" stroke-opacity=".24" stroke-width="1.2"/>
+  <path d="M0 250L294 192L560 216L810 142L1114 177L1440 112" stroke="#5AB9FF" stroke-opacity=".23" stroke-width="1"/>
+  <path d="M0 84L278 132L512 64L806 104L1094 30L1440 72" stroke="#77E8FF" stroke-opacity=".16" stroke-width="1"/>
+  <g opacity=".52" filter="url(#softBlur)">
+    <path d="M168 214C236 106 342 79 482 136C386 161 316 223 286 322C244 286 204 250 168 214Z" fill="#188CFF"/>
+    <path d="M742 76C866 11 1009 50 1092 169C964 128 846 164 736 274C726 204 728 138 742 76Z" fill="#20E0D2"/>
+    <path d="M1138 208C1234 96 1346 71 1470 132V360H1178C1196 306 1182 256 1138 208Z" fill="#3E7BFF"/>
+  </g>
+  <g opacity=".5">
+    <circle cx="152" cy="72" r="2" fill="#8CF2FF"/>
+    <circle cx="512" cy="212" r="1.8" fill="#5AD4FF"/>
+    <circle cx="689" cy="48" r="1.6" fill="#B7FCFF"/>
+    <circle cx="1030" cy="248" r="2" fill="#7CE8FF"/>
+    <circle cx="1268" cy="92" r="1.8" fill="#5AD4FF"/>
+    <circle cx="1364" cy="280" r="1.6" fill="#B7FCFF"/>
+  </g>
+  <rect x="1" y="1" width="1438" height="358" stroke="url(#edgeGlow)" stroke-opacity=".42" stroke-width="2"/>
+  <defs>
+    <radialGradient id="baseGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 112) rotate(90) scale(320 850)">
+      <stop stop-color="#1B6EA0" stop-opacity=".58"/>
+      <stop offset=".48" stop-color="#0F3554" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#07182A"/>
+    </radialGradient>
+    <linearGradient id="edgeGlow" x1="0" y1="0" x2="1440" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75E9FF"/>
+      <stop offset=".48" stop-color="#2B86FF"/>
+      <stop offset="1" stop-color="#36FFD7"/>
+    </linearGradient>
+    <filter id="softBlur" x="-40" y="-60" width="1540" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+  </defs>
+</svg>

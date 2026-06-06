@@ -73,13 +73,16 @@ const DeploymentAccessGuard = ({
           }}
         >
           <Card
+            className='deployment-access-card'
             style={{
               padding: '60px 40px',
               borderRadius: '16px',
-              border: '1px solid var(--semi-color-border)',
-              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+              border:
+                '1px solid var(--deployment-access-card-border, var(--semi-color-border))',
+              boxShadow:
+                'var(--deployment-access-card-shadow, 0 4px 20px rgba(0, 0, 0, 0.08))',
               background:
-                'linear-gradient(135deg, var(--semi-color-bg-0) 0%, var(--semi-color-fill-0) 100%)',
+                'var(--deployment-access-card-bg, linear-gradient(135deg, var(--semi-color-bg-0) 0%, var(--semi-color-fill-0) 100%))',
             }}
           >
             {/* 图标区域 */}
@@ -129,13 +132,17 @@ const DeploymentAccessGuard = ({
 
             {/* 配置要求区域 */}
             <div
+              className='deployment-access-requirements-card'
               style={{
-                backgroundColor: 'var(--semi-color-bg-1)',
+                background:
+                  'var(--deployment-access-requirements-bg, var(--semi-color-bg-1))',
                 padding: '24px',
                 borderRadius: '12px',
-                border: '1px solid var(--semi-color-border)',
+                border:
+                  '1px solid var(--deployment-access-requirements-border, var(--semi-color-border))',
                 margin: '32px 0',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
+                boxShadow:
+                  'var(--deployment-access-requirements-shadow, 0 2px 8px rgba(0, 0, 0, 0.04))',
               }}
             >
               <div

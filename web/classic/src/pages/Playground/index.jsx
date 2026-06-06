@@ -459,16 +459,16 @@ const Playground = () => {
 
   return (
     <PlaygroundProvider value={playgroundContextValue}>
-      <div className='h-full'>
+      <div className='playground-tech-page h-full'>
         <Layout className='h-full bg-transparent flex flex-col md:flex-row'>
           {(showSettings || !isMobile) && (
             <Layout.Sider
               className={`
-              bg-transparent border-r-0 flex-shrink-0 overflow-auto mt-[60px]
+              playground-tech-sider bg-transparent border-r-0 flex-shrink-0 overflow-auto mt-[60px]
               ${
                 isMobile
-                  ? 'fixed top-0 left-0 right-0 bottom-0 z-[1000] w-full h-auto bg-white shadow-lg'
-                  : 'relative z-[1] w-80 h-[calc(100vh-66px)]'
+                  ? 'fixed top-0 left-0 right-0 bottom-0 z-[1000] w-full h-auto shadow-lg'
+                  : 'relative z-[1] w-80 playground-tech-panel-height'
               }
             `}
               width={isMobile ? '100%' : 320}
@@ -496,8 +496,8 @@ const Playground = () => {
             </Layout.Sider>
           )}
 
-          <Layout.Content className='relative flex-1 overflow-hidden'>
-            <div className='overflow-hidden flex flex-col lg:flex-row h-[calc(100vh-66px)] mt-[60px]'>
+          <Layout.Content className='playground-tech-content relative flex-1 overflow-hidden'>
+            <div className='playground-tech-main playground-tech-panel-height overflow-hidden flex flex-col lg:flex-row mt-[60px]'>
               <div className='flex-1 flex flex-col'>
                 <ChatArea
                   chatRef={chatRef}
@@ -534,7 +534,7 @@ const Playground = () => {
 
             {/* 调试面板 - 移动端覆盖层 */}
             {showDebugPanel && isMobile && (
-              <div className='fixed top-0 left-0 right-0 bottom-0 z-[1000] bg-white overflow-auto shadow-lg'>
+              <div className='playground-tech-debug-mobile fixed top-0 left-0 right-0 bottom-0 z-[1000] overflow-auto shadow-lg'>
                 <OptimizedDebugPanel
                   debugData={debugData}
                   activeDebugTab={activeDebugTab}

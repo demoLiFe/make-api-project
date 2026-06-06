@@ -65,7 +65,7 @@ const SearchActions = memo(
     }, [tokenUnit, setTokenUnit]);
 
     return (
-      <div className='flex items-center gap-2 w-full'>
+      <div className='pricing-search-actions flex items-center gap-2 w-full'>
         <div className='flex-1'>
           <Input
             prefix={<IconSearch />}

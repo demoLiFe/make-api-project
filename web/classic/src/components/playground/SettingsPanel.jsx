@@ -140,6 +140,7 @@ const SettingsPanel = ({
             renderOptionItem={renderGroupOption}
             style={{ width: '100%' }}
             dropdownStyle={{ width: '100%', maxWidth: '100%' }}
+            dropdownClassName='playground-tech-select-dropdown'
             className='!rounded-lg'
             disabled={customRequestMode}
           />
@@ -171,6 +172,7 @@ const SettingsPanel = ({
             optionList={models}
             style={{ width: '100%' }}
             dropdownStyle={{ width: '100%', maxWidth: '100%' }}
+            dropdownClassName='playground-tech-select-dropdown'
             className='!rounded-lg'
             disabled={customRequestMode}
           />

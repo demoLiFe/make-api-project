@@ -542,9 +542,7 @@ const PersonalSetting = () => {
   };
 
   return (
-    <div className='mt-[60px]'>
-      <div className='flex justify-center'>
-        <div className='w-full max-w-7xl mx-auto px-2'>
+    <div className='personal-tech-page w-full max-w-7xl mx-auto mt-[60px] px-3 md:px-6'>
           {/* 顶部用户信息区域 */}
           <UserInfoHeader t={t} userState={userState} />
 
@@ -561,9 +559,9 @@ const PersonalSetting = () => {
           )}
 
           {/* 账户管理和其他设置 */}
-          <div className='grid grid-cols-1 xl:grid-cols-2 items-start gap-4 md:gap-6 mt-4 md:mt-6'>
+          <div className='grid grid-cols-1 xl:grid-cols-2 items-start gap-6 mt-6'>
             {/* 左侧：账户管理设置 */}
-            <div className='flex flex-col gap-4 md:gap-6'>
+            <div className='flex flex-col gap-6'>
               <AccountManagement
                 t={t}
                 userState={userState}
@@ -595,8 +593,6 @@ const PersonalSetting = () => {
               saveNotificationSettings={saveNotificationSettings}
             />
           </div>
-        </div>
-      </div>
 
       {/* 模态框组件 */}
       <EmailBindModal

@@ -8,9 +8,9 @@ Description=One API Service
 After=network.target
 
 [Service]
-User=ubuntu  # 娉ㄦ剰淇敼鐢ㄦ埛鍚?
-WorkingDirectory=/path/to/make-api-private  # 娉ㄦ剰淇敼璺緞
-ExecStart=/path/to/make-api-private/make-api-private --port 3000 --log-dir /path/to/make-api-private/logs  # 娉ㄦ剰淇敼璺緞鍜岀鍙ｅ彿
+User=ubuntu  # 注意修改用户名
+WorkingDirectory=/path/to/make-api-private  # 注意修改路径
+ExecStart=/path/to/make-api-private/make-api-private --port 3000 --log-dir /path/to/make-api-private/logs  # 注意修改路径和端口号
 Restart=always
 RestartSec=5
 
