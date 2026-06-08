@@ -297,7 +297,7 @@ const ModelTestModal = ({
         ) : null
       }
       maskClosable={!isBatchTesting}
-      className='!rounded-lg'
+      className='model-test-modal !rounded-lg'
       size={isMobile ? 'full-width' : 'large'}
     >
       {hasChannel && (
