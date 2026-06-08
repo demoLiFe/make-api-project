@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Typography } from '@douyinfe/semi-ui';
 import MarkdownRenderer from '../../components/common/markdown/MarkdownRenderer';
 
@@ -307,7 +307,7 @@ OpenCode 配置里缺少 \`attachment\` 或 \`modalities.input: ["text", "image"
 
 const DocsPage = () => {
   const contentRef = useRef(null);
-  const activeSectionRef = useRef(docNavItems[0].key);
+  const sidebarRef = useRef(null);
   const [activeSection, setActiveSection] = useState(docNavItems[0].key);
 
   const getSectionHeadings = () => {
@@ -329,24 +329,36 @@ const DocsPage = () => {
     return container.scrollTop + headingRect.top - containerRect.top - 12;
   };
 
-  const setActiveSectionSafely = (key) => {
-    if (activeSectionRef.current === key) return;
-    activeSectionRef.current = key;
-    setActiveSection(key);
-  };
-
   const handleSectionClick = (item) => {
-    setActiveSectionSafely(item.key);
+    setActiveSection(item.key);
     const section = getSectionHeadings().find(
       (entry) => entry.key === item.key,
     );
     const container = contentRef.current;
     if (!section || !container) return;
-    container.scrollTo({
-      top: getHeadingScrollTop(section.heading, container),
-      behavior: 'auto',
-    });
+    if (container.scrollHeight > container.clientHeight + 4) {
+      container.scrollTo({
+        top: getHeadingScrollTop(section.heading, container),
+        behavior: 'smooth',
+      });
+    } else {
+      section.heading.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   };
+
+  useEffect(() => {
+    const activeButton = sidebarRef.current?.querySelector(
+      `button[data-section-key="${activeSection}"]`,
+    );
+    activeButton?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    });
+  }, [activeSection]);
 
   return (
     <div className='docs-tech-page relative overflow-hidden'>
@@ -364,11 +376,12 @@ const DocsPage = () => {
             </div>
           </div>
           <div className='docs-tech-layout'>
-            <aside className='docs-tech-sidebar'>
+            <aside ref={sidebarRef} className='docs-tech-sidebar'>
               <div className='docs-tech-sidebar-title'>配置流程</div>
               {docNavItems.map((item) => (
                 <button
                   key={item.key}
+                  data-section-key={item.key}
                   type='button'
                   className={activeSection === item.key ? 'active' : ''}
                   onClick={() => handleSectionClick(item)}

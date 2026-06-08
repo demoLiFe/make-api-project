@@ -755,7 +755,7 @@ const AccountManagement = ({
                       type='danger'
                       theme='solid'
                       onClick={() => setShowAccountDeleteModal(true)}
-                      className='w-full sm:w-auto !bg-slate-500 hover:!bg-slate-600'
+                      className='account-delete-action-button w-full sm:w-auto'
                       icon={<IconDelete />}
                     >
                       {t('删除账户')}

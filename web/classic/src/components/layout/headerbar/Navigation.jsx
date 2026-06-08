@@ -17,7 +17,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 For commercial licensing, please contact support@quantumnous.com
 */
 
-import React from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SkeletonWrapper from '../components/SkeletonWrapper';
 
@@ -27,22 +27,51 @@ const Navigation = ({
   isLoading,
   userState,
   pricingRequireAuth,
+  location,
 }) => {
+  const navRef = useRef(null);
+
+  const activeItemKey = useMemo(() => {
+    const pathname = location?.pathname || '/';
+    if (pathname === '/') return 'home';
+    if (pathname.startsWith('/console')) return 'console';
+    if (pathname.startsWith('/pricing')) return 'pricing';
+    if (pathname.startsWith('/docs')) return 'docs';
+    return '';
+  }, [location?.pathname]);
+
+  useEffect(() => {
+    if (!isMobile || !activeItemKey) return;
+    const activeLink = navRef.current?.querySelector(
+      `[data-nav-key="${activeItemKey}"]`,
+    );
+    activeLink?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    });
+  }, [activeItemKey, isMobile]);
+
   const renderNavLinks = () => {
     const baseClasses =
       'flex-shrink-0 flex items-center gap-1 font-semibold rounded-md transition-all duration-200 ease-in-out';
     const hoverClasses = 'hover:text-semi-color-primary';
     const spacingClasses = isMobile ? 'p-1' : 'p-2';
 
-    const commonLinkClasses = `${baseClasses} ${spacingClasses} ${hoverClasses}`;
-
     return mainNavLinks.map((link) => {
+      const isActive = activeItemKey === link.itemKey;
+      const commonLinkClasses = `${baseClasses} ${spacingClasses} ${hoverClasses} ${
+        isActive
+          ? 'text-semi-color-primary bg-semi-color-primary-light-default'
+          : ''
+      }`;
       const linkContent = <span>{link.text}</span>;
 
       if (link.isExternal) {
         return (
           <a
             key={link.itemKey}
+            data-nav-key={link.itemKey}
             href={link.externalLink}
             target='_blank'
             rel='noopener noreferrer'
@@ -62,7 +91,12 @@ const Navigation = ({
       }
 
       return (
-        <Link key={link.itemKey} to={targetPath} className={commonLinkClasses}>
+        <Link
+          key={link.itemKey}
+          data-nav-key={link.itemKey}
+          to={targetPath}
+          className={commonLinkClasses}
+        >
           {linkContent}
         </Link>
       );
@@ -70,7 +104,10 @@ const Navigation = ({
   };
 
   return (
-    <nav className='flex flex-1 items-center gap-1 lg:gap-2 mx-2 md:mx-4 overflow-x-auto whitespace-nowrap scrollbar-hide'>
+    <nav
+      ref={navRef}
+      className='flex flex-1 items-center gap-1 lg:gap-2 mx-2 md:mx-4 overflow-x-auto whitespace-nowrap scrollbar-hide'
+    >
       <SkeletonWrapper
         loading={isLoading}
         type='navigation'

@@ -50,6 +50,11 @@ const APP_CONFIGS = {
     defaultName: 'My Gemini',
     modelFields: [{ key: 'model', label: '主模型' }],
   },
+  opencode: {
+    label: 'OpenCode',
+    defaultName: 'My OpenCode',
+    modelFields: [{ key: 'model', label: '主模型' }],
+  },
 };
 
 function getServerAddress() {
@@ -65,7 +70,10 @@ function getServerAddress() {
 
 function buildCCSwitchURL(app, name, models, apiKey) {
   const serverAddress = getServerAddress();
-  const endpoint = app === 'codex' ? serverAddress + '/v1' : serverAddress;
+  const endpoint =
+    app === 'codex' || app === 'opencode'
+      ? serverAddress + '/v1'
+      : serverAddress;
   const params = new URLSearchParams();
   params.set('resource', 'provider');
   params.set('app', app);
@@ -132,6 +140,7 @@ export default function CCSwitchModal({
 
   return (
     <Modal
+      className='cc-switch-modal'
       title={t('填入 CC Switch')}
       visible={visible}
       onCancel={onClose}
