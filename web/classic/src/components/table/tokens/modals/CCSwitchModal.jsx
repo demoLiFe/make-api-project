@@ -68,6 +68,44 @@ function getServerAddress() {
   return window.location.origin;
 }
 
+function encodeBase64(content) {
+  const bytes = new TextEncoder().encode(content);
+  let binary = '';
+  bytes.forEach((byte) => {
+    binary += String.fromCharCode(byte);
+  });
+  return btoa(binary);
+}
+
+function buildOpenCodeConfig(name, model, endpoint, apiKey) {
+  const providerKey = 'makeapi';
+  return {
+    $schema: 'https://opencode.ai/config.json',
+    model: `${providerKey}/${model}`,
+    small_model: `${providerKey}/${model}`,
+    provider: {
+      [providerKey]: {
+        npm: '@ai-sdk/openai-compatible',
+        name,
+        options: {
+          baseURL: endpoint,
+          apiKey,
+        },
+        models: {
+          [model]: {
+            name: model,
+            attachment: true,
+            modalities: {
+              input: ['text', 'image'],
+              output: ['text'],
+            },
+          },
+        },
+      },
+    },
+  };
+}
+
 function buildCCSwitchURL(app, name, models, apiKey) {
   const serverAddress = getServerAddress();
   const endpoint =
@@ -82,6 +120,19 @@ function buildCCSwitchURL(app, name, models, apiKey) {
   params.set('apiKey', apiKey);
   for (const [k, v] of Object.entries(models)) {
     if (v) params.set(k, v);
+  }
+  if (app === 'opencode' && models.model) {
+    params.set('configFormat', 'json');
+    params.set(
+      'config',
+      encodeBase64(
+        JSON.stringify(
+          buildOpenCodeConfig(name, models.model, endpoint, apiKey),
+          null,
+          2,
+        ),
+      ),
+    );
   }
   params.set('homepage', serverAddress);
   params.set('enabled', 'true');

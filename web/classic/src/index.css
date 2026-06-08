@@ -1808,8 +1808,17 @@ html.dark .sbg-variant-green {
 }
 
 .dark .semi-dropdown-item svg,
-.dark .semi-select-option svg,
 .dark .semi-cascader-option svg {
+  color: rgba(154, 211, 255, 0.92) !important;
+}
+
+.dark .semi-select-option .semi-select-option-icon,
+.dark .semi-select-option .semi-select-option-icon svg {
+  color: transparent !important;
+}
+
+.dark .semi-select-option-selected .semi-select-option-icon,
+.dark .semi-select-option-selected .semi-select-option-icon svg {
   color: rgba(154, 211, 255, 0.92) !important;
 }
 
