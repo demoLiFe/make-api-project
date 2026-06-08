@@ -133,6 +133,7 @@ const ModelsPage = () => {
       {showMarketplaceDisplayNotice ? (
         <div style={{ position: 'relative', marginBottom: 12 }}>
           <Banner
+            className='marketplace-display-banner'
             type='warning'
             closeIcon={null}
             icon={

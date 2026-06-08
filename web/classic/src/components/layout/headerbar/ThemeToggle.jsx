@@ -66,7 +66,7 @@ const ThemeToggle = ({ theme, onThemeToggle, t }) => {
     <Dropdown
       position='bottomRight'
       render={
-        <Dropdown.Menu>
+        <Dropdown.Menu className='theme-toggle-dropdown'>
           {themeOptions.map((option) => (
             <Dropdown.Item
               key={option.key}

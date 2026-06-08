@@ -1585,6 +1585,65 @@ html.dark .sbg-variant-green {
   margin-bottom: 0 !important;
 }
 
+.marketplace-display-banner.semi-banner {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(168, 211, 248, 0.74) !important;
+  border-radius: 12px;
+  background:
+    linear-gradient(112deg, rgba(236, 248, 255, 0.98) 0%, rgba(248, 253, 255, 0.98) 46%, rgba(221, 241, 255, 0.96) 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86), 0 12px 28px rgba(76, 126, 190, 0.12);
+}
+
+.marketplace-display-banner.semi-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(160deg, transparent 0 24%, rgba(70, 155, 225, 0.12) 24.08%, transparent 24.22%),
+    radial-gradient(circle at 12% 50%, rgba(101, 187, 255, 0.18), transparent 34%);
+}
+
+.marketplace-display-banner .semi-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.marketplace-display-banner .semi-banner-content,
+.marketplace-display-banner .semi-banner-description,
+.marketplace-display-banner .semi-typography {
+  color: rgba(31, 53, 78, 0.92) !important;
+  font-weight: 700;
+}
+
+.marketplace-display-banner .semi-banner-icon svg {
+  color: #2c8de8 !important;
+}
+
+.dark .marketplace-display-banner.semi-banner {
+  border-color: rgba(125, 191, 255, 0.26) !important;
+  background:
+    linear-gradient(112deg, rgba(28, 58, 86, 0.98) 0%, rgba(21, 43, 68, 0.98) 48%, rgba(29, 68, 99, 0.98) 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(172, 220, 255, 0.08), 0 16px 36px rgba(0, 8, 18, 0.18);
+}
+
+.dark .marketplace-display-banner.semi-banner::before {
+  background:
+    linear-gradient(160deg, transparent 0 24%, rgba(125, 211, 252, 0.12) 24.08%, transparent 24.22%),
+    radial-gradient(circle at 12% 50%, rgba(56, 189, 248, 0.13), transparent 34%);
+}
+
+.dark .marketplace-display-banner .semi-banner-content,
+.dark .marketplace-display-banner .semi-banner-description,
+.dark .marketplace-display-banner .semi-typography {
+  color: rgba(226, 241, 255, 0.94) !important;
+}
+
+.dark .marketplace-display-banner .semi-banner-icon svg {
+  color: #86c8ff !important;
+}
+
 .console-tech-route .table-scroll-card .semi-card-body {
   flex: 1 1 auto;
   min-height: 0;
@@ -1634,6 +1693,393 @@ html.dark .sbg-variant-green {
 .console-tech-route .card-content-scroll::-webkit-scrollbar-track,
 .console-tech-route .model-test-scroll::-webkit-scrollbar-track {
   background: transparent;
+}
+
+.dark .semi-dropdown-wrapper,
+.dark .semi-popover-wrapper,
+.dark .semi-tooltip-wrapper,
+.dark .semi-select-option-list,
+.dark .semi-cascader-option-lists,
+.dark .semi-datepicker,
+.dark .semi-timepicker-panel {
+  overflow: hidden;
+  border: 1px solid rgba(152, 211, 255, 0.22) !important;
+  border-radius: 10px !important;
+  background:
+    linear-gradient(180deg, rgba(31, 65, 96, 0.98), rgba(20, 45, 70, 0.98)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 46px rgba(3, 12, 28, 0.36) !important;
+  backdrop-filter: blur(14px);
+}
+
+.dark .semi-dropdown-menu,
+.dark .semi-dropdown-menu-wrapper,
+.dark .semi-popover-content,
+.dark .semi-select-option-list .semi-select-option-list-content,
+.dark .semi-cascader-option-lists .semi-cascader-option-list {
+  background: transparent !important;
+}
+
+.dark .semi-dropdown-item,
+.dark .semi-select-option,
+.dark .semi-cascader-option,
+.dark .semi-datepicker-day,
+.dark .semi-datepicker-month,
+.dark .semi-timepicker-panel-list-item {
+  margin: 3px 4px;
+  border-radius: 8px;
+  color: rgba(226, 240, 255, 0.9) !important;
+  background: transparent !important;
+}
+
+.dark .semi-dropdown-item:hover,
+.dark .semi-dropdown-item-active,
+.dark .semi-dropdown-item-selected,
+.dark .semi-select-option:hover,
+.dark .semi-select-option-focused,
+.dark .semi-select-option-selected,
+.dark .semi-cascader-option:hover,
+.dark .semi-cascader-option-active,
+.dark .semi-datepicker-day:hover,
+.dark .semi-datepicker-day-selected,
+.dark .semi-datepicker-month:hover,
+.dark .semi-datepicker-month-selected,
+.dark .semi-timepicker-panel-list-item:hover,
+.dark .semi-timepicker-panel-list-item-active {
+  color: rgba(245, 250, 255, 0.96) !important;
+  background: rgba(72, 145, 218, 0.28) !important;
+}
+
+.dark .semi-dropdown-item svg,
+.dark .semi-select-option svg,
+.dark .semi-cascader-option svg {
+  color: rgba(154, 211, 255, 0.92) !important;
+}
+
+.dark .semi-dropdown-divider,
+.dark .semi-divider {
+  border-color: rgba(152, 211, 255, 0.16) !important;
+}
+
+.dark .semi-modal-mask,
+.dark .semi-sidesheet-mask {
+  background: rgba(3, 12, 24, 0.62) !important;
+  backdrop-filter: blur(2px);
+}
+
+.dark .semi-modal,
+.dark .semi-sidesheet {
+  color: rgba(226, 240, 255, 0.92) !important;
+}
+
+.dark .semi-modal-content,
+.dark .semi-sidesheet-inner {
+  overflow: hidden;
+  border: 1px solid rgba(152, 211, 255, 0.22) !important;
+  background:
+    linear-gradient(180deg, rgba(25, 54, 82, 0.98), rgba(16, 38, 60, 0.98)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 28px 80px rgba(0, 8, 18, 0.36) !important;
+}
+
+.dark .semi-sidesheet-header {
+  border-bottom: 1px solid rgba(152, 211, 255, 0.18) !important;
+  background:
+    linear-gradient(180deg, rgba(37, 72, 104, 0.96), rgba(27, 57, 86, 0.96)) !important;
+}
+
+.dark .semi-modal-header {
+  border-bottom: 0 !important;
+  background: transparent !important;
+}
+
+.dark .semi-modal-title,
+.dark .semi-sidesheet-title,
+.dark .semi-modal-header .semi-typography,
+.dark .semi-sidesheet-header .semi-typography {
+  color: rgba(245, 250, 255, 0.96) !important;
+}
+
+.dark .semi-modal-header .semi-modal-title {
+  background: transparent !important;
+}
+
+.dark .semi-modal-body,
+.dark .semi-sidesheet-body {
+  background: transparent !important;
+  color: rgba(226, 240, 255, 0.9) !important;
+}
+
+.dark .semi-modal-footer,
+.dark .semi-sidesheet-footer,
+.dark .semi-sidesheet-footer > div,
+.dark .semi-modal-footer > div {
+  border-top-color: rgba(152, 211, 255, 0.18) !important;
+  background: #142b43 !important;
+}
+
+.dark .semi-modal-content .semi-card,
+.dark .semi-sidesheet-inner .semi-card {
+  border-color: rgba(152, 211, 255, 0.18) !important;
+  background-color: rgba(28, 55, 82, 0.74) !important;
+  color: rgba(226, 240, 255, 0.9) !important;
+}
+
+.dark .semi-modal-content .semi-form,
+.dark .semi-sidesheet-inner .semi-form,
+.dark .semi-modal-content .semi-form-field,
+.dark .semi-sidesheet-inner .semi-form-field,
+.dark .semi-modal-content [class*='bg-white'],
+.dark .semi-sidesheet-inner [class*='bg-white'],
+.dark .semi-modal-content [class*='bg-gray-50'],
+.dark .semi-sidesheet-inner [class*='bg-gray-50'] {
+  border-color: transparent !important;
+  background-color: transparent !important;
+  color: rgba(226, 240, 255, 0.9) !important;
+}
+
+.dark .semi-modal-content .semi-card-header,
+.dark .semi-sidesheet-inner .semi-card-header {
+  border-bottom-color: rgba(152, 211, 255, 0.16) !important;
+  background-color: #254866 !important;
+}
+
+.dark .semi-modal-content .semi-card-body,
+.dark .semi-sidesheet-inner .semi-card-body {
+  background-color: transparent !important;
+}
+
+.dark .semi-modal-content .semi-input-wrapper,
+.dark .semi-sidesheet-inner .semi-input-wrapper,
+.dark .semi-modal-content .semi-input-number,
+.dark .semi-sidesheet-inner .semi-input-number,
+.dark .semi-modal-content .semi-select,
+.dark .semi-sidesheet-inner .semi-select,
+.dark .semi-modal-content .semi-select-selection,
+.dark .semi-sidesheet-inner .semi-select-selection,
+.dark .semi-modal-content .semi-textarea-wrapper,
+.dark .semi-sidesheet-inner .semi-textarea-wrapper {
+  border-color: rgba(152, 211, 255, 0.2) !important;
+  background: #18324c !important;
+}
+
+.dark .semi-modal-content .semi-input,
+.dark .semi-sidesheet-inner .semi-input,
+.dark .semi-modal-content .semi-input-number input,
+.dark .semi-sidesheet-inner .semi-input-number input,
+.dark .semi-modal-content .semi-select-selection-text,
+.dark .semi-sidesheet-inner .semi-select-selection-text,
+.dark .semi-modal-content textarea,
+.dark .semi-sidesheet-inner textarea {
+  color: rgba(235, 245, 255, 0.92) !important;
+}
+
+.dark .semi-modal-content .semi-input-number-suffix-btns,
+.dark .semi-sidesheet-inner .semi-input-number-suffix-btns {
+  overflow: hidden;
+  border-left: 1px solid rgba(152, 211, 255, 0.18) !important;
+  border-radius: 0 6px 6px 0;
+  background: rgba(18, 38, 61, 0.42) !important;
+}
+
+.dark .semi-modal-content .semi-input-number-suffix-btns > .semi-input-number-button,
+.dark .semi-sidesheet-inner .semi-input-number-suffix-btns > .semi-input-number-button {
+  color: rgba(203, 225, 246, 0.72) !important;
+  background: transparent !important;
+}
+
+.dark .semi-modal-content .semi-input-number-suffix-btns > .semi-input-number-button:first-child,
+.dark .semi-sidesheet-inner .semi-input-number-suffix-btns > .semi-input-number-button:first-child {
+  border-bottom: 1px solid rgba(152, 211, 255, 0.14) !important;
+}
+
+.dark .semi-modal-content .semi-input-number-suffix-btns > .semi-input-number-button-up:not(.semi-input-number-button-up-not-allowed):hover,
+.dark .semi-modal-content .semi-input-number-suffix-btns > .semi-input-number-button-down:not(.semi-input-number-button-down-not-allowed):hover,
+.dark .semi-sidesheet-inner .semi-input-number-suffix-btns > .semi-input-number-button-up:not(.semi-input-number-button-up-not-allowed):hover,
+.dark .semi-sidesheet-inner .semi-input-number-suffix-btns > .semi-input-number-button-down:not(.semi-input-number-button-down-not-allowed):hover {
+  color: rgba(239, 248, 255, 0.96) !important;
+  background: rgba(72, 145, 218, 0.32) !important;
+}
+
+.dark .semi-modal-content .semi-input-number-suffix-btns > .semi-input-number-button-up:not(.semi-input-number-button-up-not-allowed):active,
+.dark .semi-modal-content .semi-input-number-suffix-btns > .semi-input-number-button-down:not(.semi-input-number-button-down-not-allowed):active,
+.dark .semi-sidesheet-inner .semi-input-number-suffix-btns > .semi-input-number-button-up:not(.semi-input-number-button-up-not-allowed):active,
+.dark .semi-sidesheet-inner .semi-input-number-suffix-btns > .semi-input-number-button-down:not(.semi-input-number-button-down-not-allowed):active {
+  background: rgba(58, 126, 199, 0.42) !important;
+}
+
+.dark .semi-modal-content .semi-input-number-button-up-disabled,
+.dark .semi-modal-content .semi-input-number-button-down-disabled,
+.dark .semi-modal-content .semi-input-number-button-up-not-allowed,
+.dark .semi-modal-content .semi-input-number-button-down-not-allowed,
+.dark .semi-sidesheet-inner .semi-input-number-button-up-disabled,
+.dark .semi-sidesheet-inner .semi-input-number-button-down-disabled,
+.dark .semi-sidesheet-inner .semi-input-number-button-up-not-allowed,
+.dark .semi-sidesheet-inner .semi-input-number-button-down-not-allowed {
+  color: rgba(203, 225, 246, 0.28) !important;
+  background: rgba(16, 31, 50, 0.28) !important;
+}
+
+.dark .semi-modal-content .semi-select .semi-tag,
+.dark .semi-sidesheet-inner .semi-select .semi-tag,
+.dark .semi-modal-content .semi-tagInput .semi-tag,
+.dark .semi-sidesheet-inner .semi-tagInput .semi-tag {
+  border: 1px solid rgba(125, 191, 255, 0.26) !important;
+  border-radius: 999px !important;
+  background:
+    linear-gradient(180deg, rgba(73, 124, 172, 0.72), rgba(45, 84, 124, 0.78)) !important;
+  color: rgba(236, 247, 255, 0.96) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.dark .semi-modal-content .semi-select .semi-tag:hover,
+.dark .semi-sidesheet-inner .semi-select .semi-tag:hover,
+.dark .semi-modal-content .semi-tagInput .semi-tag:hover,
+.dark .semi-sidesheet-inner .semi-tagInput .semi-tag:hover {
+  border-color: rgba(144, 205, 255, 0.4) !important;
+  background:
+    linear-gradient(180deg, rgba(86, 145, 198, 0.82), rgba(52, 97, 140, 0.86)) !important;
+}
+
+.dark .semi-modal-content .semi-select .semi-tag-content,
+.dark .semi-sidesheet-inner .semi-select .semi-tag-content,
+.dark .semi-modal-content .semi-tagInput .semi-tag-content,
+.dark .semi-sidesheet-inner .semi-tagInput .semi-tag-content,
+.dark .semi-modal-content .semi-select .semi-tag span,
+.dark .semi-sidesheet-inner .semi-select .semi-tag span {
+  color: rgba(236, 247, 255, 0.96) !important;
+}
+
+.dark .semi-modal-content .semi-select .semi-tag-close,
+.dark .semi-sidesheet-inner .semi-select .semi-tag-close,
+.dark .semi-modal-content .semi-tagInput .semi-tag-close,
+.dark .semi-sidesheet-inner .semi-tagInput .semi-tag-close,
+.dark .semi-modal-content .semi-select .semi-tag .semi-icon-close,
+.dark .semi-sidesheet-inner .semi-select .semi-tag .semi-icon-close {
+  color: rgba(204, 225, 245, 0.78) !important;
+}
+
+.dark .semi-modal-content .semi-select .semi-tag-close:hover,
+.dark .semi-sidesheet-inner .semi-select .semi-tag-close:hover,
+.dark .semi-modal-content .semi-tagInput .semi-tag-close:hover,
+.dark .semi-sidesheet-inner .semi-tagInput .semi-tag-close:hover {
+  color: rgba(245, 250, 255, 0.98) !important;
+  background: rgba(125, 191, 255, 0.18) !important;
+}
+
+.dark .semi-modal-content .semi-form-field-label,
+.dark .semi-sidesheet-inner .semi-form-field-label,
+.dark .semi-modal-content .semi-typography,
+.dark .semi-sidesheet-inner .semi-typography,
+.dark .semi-modal-content label,
+.dark .semi-sidesheet-inner label {
+  color: rgba(226, 240, 255, 0.9) !important;
+}
+
+.dark .semi-modal-confirm-content,
+.dark .semi-modal-confirm-content .semi-typography {
+  color: rgba(218, 232, 246, 0.88) !important;
+}
+
+.dark .semi-modal-close,
+.dark .semi-sidesheet-close {
+  color: rgba(190, 211, 230, 0.78) !important;
+}
+
+.dark .semi-modal-close:hover,
+.dark .semi-sidesheet-close:hover {
+  color: rgba(245, 250, 255, 0.96) !important;
+  background: rgba(72, 145, 218, 0.22) !important;
+}
+
+.dark .semi-notification-notice {
+  overflow: hidden;
+  border: 1px solid rgba(152, 211, 255, 0.24) !important;
+  border-radius: 10px !important;
+  background:
+    linear-gradient(180deg, rgba(31, 65, 96, 0.98), rgba(20, 45, 70, 0.98)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 46px rgba(3, 12, 28, 0.36) !important;
+  backdrop-filter: blur(14px);
+}
+
+.dark .semi-toast,
+.dark .semi-toast-wrapper .semi-toast {
+  overflow: visible !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.dark .semi-toast-content {
+  overflow: hidden;
+  border: 1px solid rgba(152, 211, 255, 0.24) !important;
+  border-radius: 10px !important;
+  background:
+    linear-gradient(180deg, rgba(31, 65, 96, 0.98), rgba(20, 45, 70, 0.98)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 46px rgba(3, 12, 28, 0.36) !important;
+  backdrop-filter: blur(14px);
+}
+
+.dark .semi-toast-content-text,
+.dark .semi-toast .semi-typography,
+.dark .semi-notification-notice-content,
+.dark .semi-notification-notice-title,
+.dark .semi-notification-notice-description,
+.dark .semi-notification-notice .semi-typography {
+  color: rgba(236, 247, 255, 0.94) !important;
+}
+
+.dark .semi-toast-close,
+.dark .semi-notification-notice-close {
+  color: rgba(190, 211, 230, 0.78) !important;
+}
+
+.dark .semi-toast-close:hover,
+.dark .semi-notification-notice-close:hover {
+  color: rgba(245, 250, 255, 0.96) !important;
+  background: rgba(72, 145, 218, 0.22) !important;
+}
+
+.dark .semi-toast-success,
+.dark .semi-notification-notice-success {
+  border-color: rgba(83, 218, 137, 0.28) !important;
+}
+
+.dark .semi-toast-warning,
+.dark .semi-notification-notice-warning {
+  border-color: rgba(245, 181, 88, 0.3) !important;
+}
+
+.dark .semi-toast-error,
+.dark .semi-notification-notice-error {
+  border-color: rgba(248, 113, 113, 0.3) !important;
+}
+
+.dark .theme-toggle-dropdown .semi-dropdown-item {
+  min-width: 148px;
+}
+
+.dark .theme-toggle-dropdown .semi-dropdown-item[class*='bg-semi-color-primary-light-default'] {
+  color: rgba(245, 250, 255, 0.96) !important;
+  background: linear-gradient(135deg, rgba(72, 145, 218, 0.42), rgba(48, 98, 151, 0.34)) !important;
+  box-shadow: inset 3px 0 0 rgba(87, 169, 255, 0.92);
+}
+
+.dark .theme-toggle-dropdown .semi-dropdown-item span,
+.dark .theme-toggle-dropdown .semi-dropdown-item div {
+  color: rgba(226, 240, 255, 0.9) !important;
+}
+
+.dark .theme-toggle-dropdown .semi-dropdown-item .text-semi-color-text-2,
+.dark .theme-toggle-dropdown > div {
+  color: rgba(180, 203, 224, 0.78) !important;
 }
 
 .playground-tech-page {
@@ -3173,8 +3619,8 @@ html:not(.dark) .blur-ball-teal {
 
 .docs-tech-layout {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 32px;
   height: calc(100% - 88px);
   min-height: 0;
 }

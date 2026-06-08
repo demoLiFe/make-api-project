@@ -448,6 +448,7 @@ const EditModelModal = (props) => {
                   </Col>
                   <Col span={24}>
                     <Banner
+                      className='marketplace-display-banner'
                       type='warning'
                       closeIcon={null}
                       icon={

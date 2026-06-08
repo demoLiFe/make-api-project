@@ -337,7 +337,9 @@ const DocsPage = () => {
 
   const handleSectionClick = (item) => {
     setActiveSectionSafely(item.key);
-    const section = getSectionHeadings().find((entry) => entry.key === item.key);
+    const section = getSectionHeadings().find(
+      (entry) => entry.key === item.key,
+    );
     const container = contentRef.current;
     if (!section || !container) return;
     container.scrollTo({
@@ -351,7 +353,7 @@ const DocsPage = () => {
       <div className='docs-tech-orbit docs-tech-orbit-left' />
       <div className='docs-tech-orbit docs-tech-orbit-right' />
       <div className='docs-tech-rays' />
-      <div className='docs-tech-shell w-full max-w-[1320px] mx-auto px-3 sm:px-4 lg:px-6'>
+      <div className='docs-tech-shell w-full max-w-[1560px] mx-auto px-3 sm:px-4 lg:px-8'>
         <div className='docs-tech-card rounded-2xl p-6 md:p-10'>
           <div className='docs-tech-header'>
             <div>
