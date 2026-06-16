@@ -19,6 +19,7 @@ For commercial licensing, please contact support@quantumnous.com
 
 import { useState, useCallback, useEffect } from 'react';
 import { initVChartSemiTheme } from '@visactor/vchart-semi-theme';
+import { useActualTheme } from '../../context/Theme';
 import {
   modelColorMap,
   renderNumber,
@@ -42,6 +43,97 @@ const USER_COLORS = [
   '#ec4899', '#06b6d4', '#f97316', '#6366f1', '#14b8a6',
 ];
 
+const DASHBOARD_TOOLTIP_THEMES = {
+  light: {
+    panel: {
+      padding: { top: 12, right: 14, bottom: 12, left: 14 },
+      backgroundColor: 'rgba(236, 248, 255, 0.98)',
+      border: {
+        color: 'rgba(168, 211, 248, 0.76)',
+        width: 1,
+        radius: 8,
+      },
+      shadow: {
+        x: 0,
+        y: 12,
+        blur: 28,
+        spread: 0,
+        color: 'rgba(76, 126, 190, 0.16)',
+      },
+    },
+    titleLabel: {
+      fill: 'rgba(31, 53, 78, 0.94)',
+      fontSize: 13,
+      fontWeight: 800,
+      lineHeight: 18,
+    },
+    keyLabel: {
+      fill: 'rgba(51, 76, 104, 0.82)',
+      fontSize: 12,
+      lineHeight: 18,
+    },
+    valueLabel: {
+      fill: 'rgba(17, 87, 150, 0.94)',
+      fontSize: 12,
+      fontWeight: 800,
+      lineHeight: 18,
+    },
+    shape: {
+      size: 8,
+      spacing: 8,
+    },
+    spaceRow: 8,
+  },
+  dark: {
+    panel: {
+      padding: { top: 12, right: 14, bottom: 12, left: 14 },
+      backgroundColor: 'rgba(22, 47, 72, 0.96)',
+      border: {
+        color: 'rgba(152, 211, 255, 0.22)',
+        width: 1,
+        radius: 8,
+      },
+      shadow: {
+        x: 0,
+        y: 18,
+        blur: 46,
+        spread: 0,
+        color: 'rgba(3, 12, 28, 0.36)',
+      },
+    },
+    titleLabel: {
+      fill: 'rgba(239, 248, 255, 0.95)',
+      fontSize: 13,
+      fontWeight: 800,
+      lineHeight: 18,
+    },
+    keyLabel: {
+      fill: 'rgba(216, 233, 249, 0.86)',
+      fontSize: 12,
+      lineHeight: 18,
+    },
+    valueLabel: {
+      fill: 'rgba(255, 255, 255, 0.96)',
+      fontSize: 12,
+      fontWeight: 800,
+      lineHeight: 18,
+    },
+    shape: {
+      size: 8,
+      spacing: 8,
+    },
+    spaceRow: 8,
+  },
+};
+
+const withDashboardTooltipTheme = (tooltip, theme) => ({
+  ...tooltip,
+  style: {
+    ...tooltip?.style,
+    ...DASHBOARD_TOOLTIP_THEMES[theme],
+  },
+});
+
 export const useDashboardCharts = (
   dataExportDefaultTime,
   setTrendData,
@@ -53,6 +145,9 @@ export const useDashboardCharts = (
   setModelColors,
   t,
 ) => {
+  const actualTheme = useActualTheme();
+  const dashboardTooltipTheme = actualTheme === 'dark' ? 'dark' : 'light';
+
   // ========== 图表规格状态 ==========
   const [spec_pie, setSpecPie] = useState({
     type: 'pie',
@@ -97,7 +192,7 @@ export const useDashboardCharts = (
     label: {
       visible: true,
     },
-    tooltip: {
+    tooltip: withDashboardTooltipTheme({
       mark: {
         content: [
           {
@@ -106,7 +201,7 @@ export const useDashboardCharts = (
           },
         ],
       },
-    },
+    }, dashboardTooltipTheme),
     color: {
       specified: modelColorMap,
     },
@@ -142,7 +237,7 @@ export const useDashboardCharts = (
         },
       },
     },
-    tooltip: {
+    tooltip: withDashboardTooltipTheme({
       mark: {
         content: [
           {
@@ -181,7 +276,7 @@ export const useDashboardCharts = (
           return array;
         },
       },
-    },
+    }, dashboardTooltipTheme),
     color: {
       specified: modelColorMap,
     },
@@ -208,7 +303,7 @@ export const useDashboardCharts = (
       text: t('调用趋势'),
       subtext: '',
     },
-    tooltip: {
+    tooltip: withDashboardTooltipTheme({
       mark: {
         content: [
           {
@@ -240,7 +335,7 @@ export const useDashboardCharts = (
           return array;
         },
       },
-    },
+    }, dashboardTooltipTheme),
     color: {
       specified: modelColorMap,
     },
@@ -275,7 +370,7 @@ export const useDashboardCharts = (
         },
       },
     },
-    tooltip: {
+    tooltip: withDashboardTooltipTheme({
       mark: {
         content: [
           {
@@ -284,7 +379,7 @@ export const useDashboardCharts = (
           },
         ],
       },
-    },
+    }, dashboardTooltipTheme),
     color: {
       specified: modelColorMap,
     },
@@ -322,14 +417,14 @@ export const useDashboardCharts = (
       type: 'linear',
       visible: false,
     }],
-    tooltip: {
+    tooltip: withDashboardTooltipTheme({
       mark: {
         content: [{
           key: (datum) => datum['User'],
           value: (datum) => renderQuota(datum['rawQuota'] || 0, 4),
         }],
       },
-    },
+    }, dashboardTooltipTheme),
     color: { type: 'ordinal', range: USER_COLORS },
   });
 
@@ -357,7 +452,7 @@ export const useDashboardCharts = (
     area: { style: { fillOpacity: 0.15 } },
     line: { style: { lineWidth: 2 } },
     point: { visible: false },
-    tooltip: {
+    tooltip: withDashboardTooltipTheme({
       mark: {
         content: [{
           key: (datum) => datum['User'],
@@ -385,7 +480,7 @@ export const useDashboardCharts = (
           return array;
         },
       },
-    },
+    }, dashboardTooltipTheme),
     color: { type: 'ordinal', range: USER_COLORS },
   });
 
@@ -619,6 +714,24 @@ export const useDashboardCharts = (
       isWatchingThemeSwitch: true,
     });
   }, []);
+
+  useEffect(() => {
+    const applyTooltipTheme = (setter) => {
+      setter((prev) => ({
+        ...prev,
+        tooltip: withDashboardTooltipTheme(prev.tooltip, dashboardTooltipTheme),
+      }));
+    };
+
+    [
+      setSpecPie,
+      setSpecLine,
+      setSpecModelLine,
+      setSpecRankBar,
+      setSpecUserRank,
+      setSpecUserTrend,
+    ].forEach(applyTooltipTheme);
+  }, [dashboardTooltipTheme]);
 
   return {
     spec_pie,

@@ -256,6 +256,7 @@ export default function SettingGlobalModel(props) {
               <Row style={{ marginTop: 10 }}>
                 <Col span={24}>
                   <Banner
+                    className='chat-to-responses-beta-banner'
                     type='warning'
                     description={t(
                       '提示：该功能为测试版，未来配置结构与功能行为可能发生变更，请勿在生产环境使用。',
