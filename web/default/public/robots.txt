@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /mj/
+Disallow: /pg/
+Disallow: /setup/
+Disallow: /sign-in
+Disallow: /sign-up
+Disallow: /reset
+Disallow: /forgot-password
+Disallow: /otp
+Disallow: /oauth
+Disallow: /dashboard
+Disallow: /playground
+Disallow: /keys
+Disallow: /models
+Disallow: /channels
+Disallow: /users
+Disallow: /wallet
+Disallow: /usage-logs
+Disallow: /subscriptions
+Disallow: /redemption-codes
+Disallow: /system-settings
+
+Sitemap: https://api.make1688.com/sitemap.xml

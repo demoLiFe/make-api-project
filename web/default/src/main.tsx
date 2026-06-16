@@ -96,11 +96,15 @@ const rootElement = document.getElementById('root')!
   try {
     if (typeof window === 'undefined' || typeof document === 'undefined') return
     const apply = (name: string) => {
-      document.title = name
+      if (document.documentElement.dataset.seoManaged !== 'true') {
+        document.title = name
+      }
       const metaTitle = document.querySelector(
         'meta[name="title"]'
       ) as HTMLMetaElement | null
-      if (metaTitle) metaTitle.setAttribute('content', name)
+      if (metaTitle && document.documentElement.dataset.seoManaged !== 'true') {
+        metaTitle.setAttribute('content', name)
+      }
     }
     // Cache-first
     try {

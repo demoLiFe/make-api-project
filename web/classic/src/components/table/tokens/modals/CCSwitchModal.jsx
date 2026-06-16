@@ -135,7 +135,11 @@ function buildCCSwitchURL(app, name, models, apiKey) {
     );
   }
   params.set('homepage', serverAddress);
-  params.set('enabled', 'true');
+  params.set('enabled', 'false');
+  params.set(
+    'notes',
+    'Imported from Make API. Import only; enable manually in CC Switch after checking local app settings.',
+  );
   return `ccswitch://v1/import?${params.toString()}`;
 }
 

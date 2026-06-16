@@ -1,8 +1,10 @@
 import { useNavigate, useSearch } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
+import { Seo } from '@/components/seo'
 import { Skeleton } from '@/components/ui/skeleton'
 import { PublicLayout } from '@/components/layout'
 import { PageTransition } from '@/components/page-transition'
+import { SEO_ROUTES } from '@/lib/seo'
 import {
   MarketShareSection,
   ModelsSection,
@@ -37,6 +39,7 @@ export function Rankings() {
 
   return (
     <PublicLayout showMainContainer={false}>
+      <Seo {...SEO_ROUTES.rankings} />
       <div className='relative'>
         <div
           aria-hidden

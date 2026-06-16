@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query'
 import { Construction } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { Seo } from '@/components/seo'
 import { PublicLayout } from '@/components/layout'
 import { Markdown } from '@/components/ui/markdown'
 import { Skeleton } from '@/components/ui/skeleton'
+import { SEO_ROUTES } from '@/lib/seo'
 import { getAboutContent } from './api'
 
 function isValidUrl(value: string) {
@@ -62,6 +64,7 @@ export function About() {
   if (isLoading) {
     return (
       <PublicLayout>
+        <Seo {...SEO_ROUTES.about} />
         <div className='mx-auto flex max-w-4xl flex-col gap-4 py-12'>
           <Skeleton className='h-8 w-[45%]' />
           <Skeleton className='h-4 w-full' />
@@ -75,6 +78,7 @@ export function About() {
   if (!hasContent) {
     return (
       <PublicLayout>
+        <Seo {...SEO_ROUTES.about} />
         <EmptyAboutState />
       </PublicLayout>
     )
@@ -83,6 +87,7 @@ export function About() {
   if (isUrl) {
     return (
       <PublicLayout showMainContainer={false}>
+        <Seo {...SEO_ROUTES.about} />
         <iframe
           src={rawContent}
           className='h-[calc(100vh-3.5rem)] w-full border-0'
@@ -94,6 +99,7 @@ export function About() {
 
   return (
     <PublicLayout>
+      <Seo {...SEO_ROUTES.about} />
       <div className='mx-auto max-w-6xl px-4 py-8'>
         {isHtml ? (
           <div

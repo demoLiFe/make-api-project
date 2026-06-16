@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { useAuthStore } from '@/stores/auth-store'
+import { Seo } from '@/components/seo'
 import { Markdown } from '@/components/ui/markdown'
 import { PublicLayout } from '@/components/layout'
 import { Footer } from '@/components/layout/components/footer'
+import { SEO_ROUTES } from '@/lib/seo'
 import { CTA, Features, Hero, HowItWorks, Stats } from './components'
 import { useHomePageContent } from './hooks'
 
@@ -15,6 +17,7 @@ export function Home() {
   if (!isLoaded) {
     return (
       <PublicLayout showMainContainer={false}>
+        <Seo {...SEO_ROUTES.home} />
         <main className='flex min-h-screen items-center justify-center'>
           <div className='text-muted-foreground'>{t('Loading...')}</div>
         </main>
@@ -25,6 +28,7 @@ export function Home() {
   if (content) {
     return (
       <PublicLayout showMainContainer={false}>
+        <Seo {...SEO_ROUTES.home} />
         <main className='overflow-x-hidden'>
           {isUrl ? (
             <iframe
@@ -44,6 +48,7 @@ export function Home() {
 
   return (
     <PublicLayout showMainContainer={false}>
+      <Seo {...SEO_ROUTES.home} />
       <Hero isAuthenticated={isAuthenticated} />
       <Stats />
       <Features />

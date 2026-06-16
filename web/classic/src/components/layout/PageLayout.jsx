@@ -105,7 +105,7 @@ const PageLayout = () => {
     loadUser();
     loadStatus().catch(console.error);
     let systemName = getSystemName();
-    if (systemName) {
+    if (systemName && document.documentElement.dataset.seoManaged !== 'true') {
       document.title = systemName;
     }
     let logo = getLogo();
