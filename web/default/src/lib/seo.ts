@@ -29,47 +29,46 @@ export interface SeoConfig {
 
 export const SEO_ROUTES: Record<SeoRouteKey, SeoConfig> = {
   home: {
-    title: 'Make API - AI API Gateway and Model Routing Console',
+    title: 'Make API - 统一大模型接口网关与 AI API 聚合平台',
     description:
-      'Make API provides an OpenAI-compatible AI API gateway for model routing, pricing visibility, usage analytics, and private deployment management.',
+      'Make API 提供稳定的大模型接口网关服务，支持 OpenAI、Claude、Gemini 等模型接口统一接入，适合 AI 应用开发、企业集成和私有化部署。',
     path: '/',
     keywords:
-      'AI API gateway, OpenAI compatible API, model routing, API relay, LLM gateway',
+      '大模型接口网关,AI API,OpenAI API,Claude API,Gemini API,API中转,模型路由,AI接口聚合,私有化部署',
   },
   pricing: {
-    title: 'AI Model Pricing - Make API',
+    title: 'AI 模型价格 - Make API',
     description:
-      'Compare enabled AI models, providers, endpoint capabilities, and token pricing in one searchable model directory.',
+      '查看 Make API 支持的 AI 模型、服务商、接口能力和 Token 计费信息，快速比较 OpenAI、Claude、Gemini 等模型价格。',
     path: '/pricing',
     keywords:
-      'AI model pricing, LLM pricing, token pricing, OpenAI compatible models, model directory',
+      'AI模型价格,大模型价格,Token计费,OpenAI价格,Claude价格,Gemini价格,模型广场',
   },
   rankings: {
-    title: 'AI Model Rankings - Make API',
+    title: 'AI 模型排行榜 - Make API',
     description:
-      'Track AI model usage trends, provider market share, and model momentum across your Make API deployment.',
+      '查看 Make API 平台内的 AI 模型调用趋势、服务商占比和模型热度排行，了解大模型使用表现。',
     path: '/rankings',
     keywords:
-      'AI model rankings, LLM leaderboard, model usage trends, provider market share',
+      'AI模型排行榜,大模型排行,LLM排行榜,模型调用趋势,模型热度,服务商占比',
   },
   about: {
-    title: 'About Make API',
+    title: '关于 Make API',
     description:
-      'Learn about Make API, a private AI API gateway and orchestration console for unified model access.',
+      '了解 Make API 的产品定位、核心能力和私有化部署场景，统一管理多家大模型接口与 API 调用。',
     path: '/about',
-    keywords:
-      'about Make API, AI gateway platform, private AI API console, model orchestration',
+    keywords: '关于Make API,AI API网关,大模型接口平台,私有化AI平台,模型编排',
   },
   privacyPolicy: {
-    title: 'Privacy Policy - Make API',
+    title: '隐私政策 - Make API',
     description:
-      'Review the Make API privacy policy for data handling, account information, and platform usage practices.',
+      '查看 Make API 隐私政策，了解账号信息、平台使用数据和相关信息的处理方式。',
     path: '/privacy-policy',
   },
   userAgreement: {
-    title: 'User Agreement - Make API',
+    title: '用户协议 - Make API',
     description:
-      'Read the Make API user agreement covering platform access, account responsibilities, and acceptable use.',
+      '阅读 Make API 用户协议，了解平台访问、账号责任、API 使用规范和服务条款。',
     path: '/user-agreement',
   },
 }
