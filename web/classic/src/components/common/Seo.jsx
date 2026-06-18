@@ -10,11 +10,11 @@ const DEFAULT_IMAGE = '/make-api-mark.svg';
 
 const SEO_ROUTES = {
   '/': {
-    title: 'Make API - 统一大模型接口网关与 AI API 聚合平台',
+    title: 'Make API - AI 大模型聚合平台，便宜可靠安全的 API 网关',
     description:
-      'Make API 提供稳定的大模型接口网关服务，支持 OpenAI、Claude、Gemini 等模型接口统一接入，适合 AI 应用开发、企业集成和私有化部署。',
+      'Make API 是便宜、可靠、安全的 AI 大模型聚合平台，提供 OpenAI、Claude、Gemini、DeepSeek、Qwen 等大模型 API 统一接入，完美兼容 Codex、OpenCode、Claude Code 等 AI 编程工具。',
     keywords:
-      '大模型接口网关,AI API,OpenAI API,Claude API,Gemini API,API中转,模型路由,AI接口聚合,私有化部署',
+      'Make API,make api,AI,大模型,AI大模型,大模型聚合平台,AI聚合平台,API聚合,AI API,OpenAI API,Claude API,Gemini API,DeepSeek API,Qwen API,Codex,OpenCode,Claude Code,AI编程工具,便宜,可靠,安全,模型路由,接口聚合',
   },
   '/pricing': {
     title: 'AI 模型价格 - Make API',

@@ -182,11 +182,29 @@ const Home = () => {
                       <span className='shine-text'>{t('大模型接口网关')}</span>
                     </>
                   </h1>
-                  <p className='text-base md:text-lg lg:text-xl text-semi-color-text-1 mt-4 md:mt-6 max-w-xl'>
+                  <div className='home-seo-summary mt-4 md:mt-6'>
+                    <p>
+                      {t(
+                        'Make API 是面向开发者和团队的 AI 大模型聚合平台，统一接入 OpenAI、Claude、Gemini、DeepSeek、Qwen 等大模型 API，完美兼容 Codex、OpenCode、Claude Code 等 AI 编程工具。',
+                      )}
+                    </p>
+                    <div className='home-seo-tags' aria-label={t('平台特点')}>
+                      <span>{t('便宜')}</span>
+                      <span>{t('可靠')}</span>
+                      <span>{t('安全')}</span>
+                      <span>{t('模型路由')}</span>
+                      <span>{t('API 聚合')}</span>
+                      <span>{t('Codex 兼容')}</span>
+                    </div>
+                  </div>
+                  <p className='text-base md:text-lg lg:text-xl text-semi-color-text-1 mt-4 md:mt-5 max-w-xl'>
                     {t('更好的价格，更好的稳定性，只需要将模型基址替换为：')}
                   </p>
                   {/* BASE URL 与端点选择 */}
-                  <div className='home-endpoint-shell flex flex-col md:flex-row items-center justify-center gap-4 w-full mt-4 md:mt-6 max-w-md'>
+                  <div
+                    className='home-endpoint-shell flex flex-col md:flex-row items-center justify-center gap-4 w-full mt-3 md:mt-4 max-w-md'
+                    data-nosnippet
+                  >
                     <Input
                       readonly
                       value={serverAddress}

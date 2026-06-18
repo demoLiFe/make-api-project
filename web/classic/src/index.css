@@ -3447,6 +3447,54 @@ html:not(.dark) .blur-ball-teal {
   text-shadow: 0 8px 20px rgba(0, 92, 255, 0.14);
 }
 
+.home-seo-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: min(100%, 720px);
+  margin: -4px auto 24px;
+  color: rgba(41, 63, 89, 0.78);
+  line-height: 1.72;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.home-seo-summary p {
+  max-width: 680px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.home-seo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 8px;
+}
+
+.home-seo-tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 12px;
+  border: 1px solid rgba(66, 139, 224, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.46);
+  color: rgba(16, 76, 150, 0.78);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 10px 28px rgba(60, 132, 212, 0.08);
+  backdrop-filter: blur(10px);
+}
+
 .home-hero-orbit {
   position: absolute;
   z-index: 1;
@@ -3685,6 +3733,17 @@ html:not(.dark) .blur-ball-teal {
 .dark .home-provider-title {
   color: rgba(211, 226, 242, 0.82) !important;
   text-shadow: none;
+}
+
+.dark .home-seo-summary {
+  color: rgba(214, 232, 248, 0.72);
+}
+
+.dark .home-seo-tags span {
+  border-color: rgba(125, 211, 252, 0.22);
+  background: rgba(15, 41, 68, 0.58);
+  color: rgba(205, 232, 255, 0.86);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 12px 28px rgba(0, 8, 18, 0.16);
 }
 
 .dark .home-provider-band {
@@ -4223,6 +4282,27 @@ html:not(.dark) .blur-ball-teal {
 
   .home-hero-main {
     margin-bottom: 1.25rem !important;
+  }
+
+  .home-seo-summary {
+    width: min(92vw, 520px);
+    margin: -2px auto 18px;
+    gap: 8px;
+  }
+
+  .home-seo-summary p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .home-seo-tags {
+    gap: 6px;
+  }
+
+  .home-seo-tags span {
+    height: 26px;
+    padding: 0 10px;
+    font-size: 12px;
   }
 
   .home-endpoint-shell {
