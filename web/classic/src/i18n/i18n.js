@@ -21,6 +21,13 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { supportedLanguages } from './language';
+import en from './locales/en.json';
+import zhCN from './locales/zh-CN.json';
+import zhTW from './locales/zh-TW.json';
+import fr from './locales/fr.json';
+import ru from './locales/ru.json';
+import ja from './locales/ja.json';
+import vi from './locales/vi.json';
 
 i18n
   .use(LanguageDetector)
@@ -29,13 +36,13 @@ i18n
     load: 'currentOnly',
     supportedLngs: supportedLanguages,
     resources: {
-      en: { translation: {} },
-      'zh-CN': { translation: {} },
-      'zh-TW': { translation: {} },
-      fr: { translation: {} },
-      ru: { translation: {} },
-      ja: { translation: {} },
-      vi: { translation: {} },
+      en,
+      'zh-CN': zhCN,
+      'zh-TW': zhTW,
+      fr,
+      ru,
+      ja,
+      vi,
     },
     fallbackLng: 'zh-CN',
     nsSeparator: false,
