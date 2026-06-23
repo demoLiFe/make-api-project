@@ -256,7 +256,7 @@ export default function SettingGlobalModel(props) {
               <Row style={{ marginTop: 10 }}>
                 <Col span={24}>
                   <Banner
-                    className='chat-to-responses-beta-banner'
+                    className='model-setting-notice-banner'
                     type='warning'
                     description={t(
                       '提示：该功能为测试版，未来配置结构与功能行为可能发生变更，请勿在生产环境使用。',
@@ -366,6 +366,7 @@ export default function SettingGlobalModel(props) {
               <Row style={{ marginTop: 10 }}>
                 <Col span={24}>
                   <Banner
+                    className='model-setting-notice-banner'
                     type='warning'
                     description={t(
                       '警告：启用保活后，如果已经写入保活数据后渠道出错，系统无法重试，如果必须开启，推荐设置尽可能大的Ping间隔',

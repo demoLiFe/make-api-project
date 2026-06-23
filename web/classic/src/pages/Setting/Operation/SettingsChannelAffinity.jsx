@@ -1333,6 +1333,7 @@ export default function SettingsChannelAffinity(props) {
           </div>
 
           <Table
+            className='channel-affinity-key-source-table'
             columns={[
               {
                 title: t('类型'),

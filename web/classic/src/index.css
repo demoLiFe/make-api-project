@@ -5492,7 +5492,118 @@ html.dark .with-pastel-balls::before {
   gap: 0.25rem;
 }
 
+.channel-affinity-key-source-table.semi-table,
+.channel-affinity-key-source-table .semi-table-container,
+.channel-affinity-key-source-table .semi-table-header,
+.channel-affinity-key-source-table .semi-table-body,
+.channel-affinity-key-source-table .semi-table-tbody {
+  overflow: hidden;
+  border-radius: 8px !important;
+  background: rgba(244, 249, 253, 0.96) !important;
+}
+
+.channel-affinity-key-source-table.semi-table {
+  border: 1px solid rgba(142, 190, 231, 0.46);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.94),
+    0 12px 26px rgba(61, 117, 176, 0.1);
+}
+
+.channel-affinity-key-source-table .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  height: 38px;
+  border-color: rgba(142, 190, 231, 0.38) !important;
+  background: linear-gradient(180deg, rgba(232, 244, 253, 0.98), rgba(214, 232, 248, 0.98)) !important;
+  color: rgba(32, 72, 108, 0.94) !important;
+  font-weight: 700;
+}
+
+.channel-affinity-key-source-table .semi-table-row-cell {
+  height: 48px;
+  border-color: rgba(142, 190, 231, 0.28) !important;
+  background: rgba(247, 251, 255, 0.98) !important;
+  color: rgba(40, 64, 86, 0.94) !important;
+}
+
+.channel-affinity-key-source-table .semi-table-tbody > .semi-table-row:hover > .semi-table-row-cell {
+  background: rgba(233, 245, 255, 0.98) !important;
+}
+
+.channel-affinity-key-source-table .semi-input-wrapper,
+.channel-affinity-key-source-table .semi-select-selection {
+  border-color: rgba(91, 158, 214, 0.42) !important;
+  background: rgba(235, 246, 255, 0.94) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.channel-affinity-key-source-table .semi-input,
+.channel-affinity-key-source-table .semi-select-selection-text,
+.channel-affinity-key-source-table .semi-select-selection-placeholder {
+  color: rgba(35, 72, 106, 0.96) !important;
+  font-weight: 600;
+}
+
+.channel-affinity-key-source-table .semi-select-arrow {
+  color: rgba(53, 105, 151, 0.78) !important;
+}
+
+.channel-affinity-key-source-table .semi-button-borderless.semi-button-danger {
+  color: #ff7a66 !important;
+}
+
+.channel-affinity-key-source-table .semi-button-borderless.semi-button-danger:hover {
+  background: rgba(255, 122, 102, 0.14) !important;
+}
+
+.dark .channel-affinity-key-source-table.semi-table,
+.dark .channel-affinity-key-source-table .semi-table-container,
+.dark .channel-affinity-key-source-table .semi-table-header,
+.dark .channel-affinity-key-source-table .semi-table-body,
+.dark .channel-affinity-key-source-table .semi-table-tbody {
+  background: rgba(18, 45, 70, 0.74) !important;
+}
+
+.dark .channel-affinity-key-source-table.semi-table {
+  border-color: rgba(126, 190, 244, 0.28);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 18px 36px rgba(0, 6, 18, 0.2);
+}
+
+.dark .channel-affinity-key-source-table .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  border-color: rgba(152, 211, 255, 0.18) !important;
+  background: rgba(20, 45, 70, 0.9) !important;
+  color: rgba(235, 247, 255, 0.92) !important;
+}
+
+.dark .channel-affinity-key-source-table .semi-table-row-cell {
+  border-color: rgba(152, 211, 255, 0.16) !important;
+  background: rgba(25, 60, 91, 0.72) !important;
+  color: rgba(232, 245, 255, 0.9) !important;
+}
+
+.dark .channel-affinity-key-source-table .semi-table-tbody > .semi-table-row:hover > .semi-table-row-cell {
+  background: rgba(37, 84, 124, 0.78) !important;
+}
+
+.dark .channel-affinity-key-source-table .semi-input-wrapper,
+.dark .channel-affinity-key-source-table .semi-select-selection {
+  border-color: rgba(81, 151, 211, 0.58) !important;
+  background: rgba(25, 69, 106, 0.82) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.dark .channel-affinity-key-source-table .semi-input,
+.dark .channel-affinity-key-source-table .semi-select-selection-text,
+.dark .channel-affinity-key-source-table .semi-select-selection-placeholder {
+  color: rgba(236, 248, 255, 0.96) !important;
+}
+
+.dark .channel-affinity-key-source-table .semi-select-arrow {
+  color: rgba(198, 226, 249, 0.82) !important;
+}
+
 /* ==================== 自定义圆角样式 ==================== */
+.model-setting-notice-banner.semi-banner,
 .chat-to-responses-beta-banner.semi-banner {
   position: relative;
   overflow: hidden;
@@ -5505,6 +5616,7 @@ html.dark .with-pastel-balls::before {
     0 10px 24px rgba(76, 126, 190, 0.1);
 }
 
+.model-setting-notice-banner.semi-banner::before,
 .chat-to-responses-beta-banner.semi-banner::before {
   content: '';
   position: absolute;
@@ -5515,30 +5627,37 @@ html.dark .with-pastel-balls::before {
     radial-gradient(circle at 2% 50%, rgba(245, 158, 11, 0.16), transparent 28%);
 }
 
+.model-setting-notice-banner .semi-banner-content,
 .chat-to-responses-beta-banner .semi-banner-content {
   position: relative;
   z-index: 1;
 }
 
+.model-setting-notice-banner .semi-banner-description,
+.model-setting-notice-banner .semi-typography,
 .chat-to-responses-beta-banner .semi-banner-description,
 .chat-to-responses-beta-banner .semi-typography {
   color: rgba(41, 67, 96, 0.94) !important;
   font-weight: 700;
 }
 
+.model-setting-notice-banner .semi-banner-icon svg,
 .chat-to-responses-beta-banner .semi-banner-icon svg {
   color: #f59e0b !important;
 }
 
+.model-setting-notice-banner .semi-banner-close,
 .chat-to-responses-beta-banner .semi-banner-close {
   color: rgba(74, 99, 128, 0.68) !important;
 }
 
+.model-setting-notice-banner .semi-banner-close:hover,
 .chat-to-responses-beta-banner .semi-banner-close:hover {
   color: rgba(20, 38, 61, 0.92) !important;
   background: rgba(56, 145, 224, 0.12) !important;
 }
 
+.dark .model-setting-notice-banner.semi-banner,
 .dark .chat-to-responses-beta-banner.semi-banner {
   border-color: rgba(245, 181, 88, 0.42) !important;
   background:
@@ -5548,6 +5667,7 @@ html.dark .with-pastel-balls::before {
     0 16px 36px rgba(0, 8, 18, 0.2);
 }
 
+.dark .model-setting-notice-banner.semi-banner::before,
 .dark .chat-to-responses-beta-banner.semi-banner::before {
   background:
     linear-gradient(160deg, transparent 0 22%, rgba(125, 211, 252, 0.12) 22.08%, transparent 22.24%),
@@ -5555,20 +5675,25 @@ html.dark .with-pastel-balls::before {
     radial-gradient(circle at 88% 46%, rgba(56, 189, 248, 0.1), transparent 32%);
 }
 
+.dark .model-setting-notice-banner .semi-banner-description,
+.dark .model-setting-notice-banner .semi-typography,
 .dark .chat-to-responses-beta-banner .semi-banner-description,
 .dark .chat-to-responses-beta-banner .semi-typography {
   color: rgba(235, 247, 255, 0.96) !important;
 }
 
+.dark .model-setting-notice-banner .semi-banner-icon svg,
 .dark .chat-to-responses-beta-banner .semi-banner-icon svg {
   color: #ffb454 !important;
   filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.28));
 }
 
+.dark .model-setting-notice-banner .semi-banner-close,
 .dark .chat-to-responses-beta-banner .semi-banner-close {
   color: rgba(207, 225, 242, 0.76) !important;
 }
 
+.dark .model-setting-notice-banner .semi-banner-close:hover,
 .dark .chat-to-responses-beta-banner .semi-banner-close:hover {
   color: rgba(250, 253, 255, 0.96) !important;
   background: rgba(72, 145, 218, 0.22) !important;
