@@ -197,8 +197,11 @@ const Home = () => {
                       <span>{t('Codex 兼容')}</span>
                     </div>
                   </div>
-                  <p className='text-base md:text-lg lg:text-xl text-semi-color-text-1 mt-4 md:mt-5 max-w-xl'>
-                    {t('更好的价格，更好的稳定性，只需要将模型基址替换为：')}
+                  <p
+                    className='text-base md:text-lg lg:text-xl text-semi-color-text-1 mt-4 md:mt-5 max-w-xl'
+                    data-nosnippet
+                  >
+                    {t('接入便宜、可靠、安全的 AI 大模型 API 网关：')}
                   </p>
                   {/* BASE URL 与端点选择 */}
                   <div
