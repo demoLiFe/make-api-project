@@ -23,7 +23,7 @@ const docNavItems = [
 ];
 
 const docsContent = `
-# Codex / OpenCode 配置使用文档
+# Codex / OpenCode 快速上手
 
 ## 一、创建令牌
 
@@ -371,7 +371,7 @@ const DocsPage = () => {
             <div>
               <div className='docs-tech-kicker'>Make API Client Guide</div>
               <Title heading={2} className='docs-tech-title mb-0'>
-                Codex / OpenCode 配置使用文档
+                Codex / OpenCode 快速上手
               </Title>
             </div>
           </div>

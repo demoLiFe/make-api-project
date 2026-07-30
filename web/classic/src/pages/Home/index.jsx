@@ -273,7 +273,7 @@ const Home = () => {
                         className='home-secondary-action flex items-center !rounded-3xl px-6 py-2'
                         icon={<IconFile />}
                       >
-                        {t('文档')}
+                        {t('快速上手')}
                       </Button>
                     </Link>
                   )}

@@ -162,8 +162,8 @@ export default function SettingsHeaderNavModules(props) {
     },
     {
       key: 'docs',
-      title: t('文档'),
-      description: t('系统文档和帮助信息'),
+      title: t('快速上手'),
+      description: t('接入配置和客户端使用指南'),
     },
   ];
 

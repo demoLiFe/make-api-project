@@ -46,7 +46,7 @@ const PricingPage = () => {
       <div className='pricing-tech-rays' />
       <Layout className='pricing-layout pricing-tech-layout'>
         {!isMobile && (
-          <Sider className='pricing-scroll-hide pricing-sidebar pricing-tech-sidebar-panel'>
+          <Sider className='pricing-sidebar pricing-tech-sidebar-panel'>
             <PricingSidebar {...allProps} />
           </Sider>
         )}

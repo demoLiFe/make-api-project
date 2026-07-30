@@ -24,11 +24,16 @@ const SEO_ROUTES = {
       'AI模型价格,大模型价格,Token计费,OpenAI价格,Claude价格,Gemini价格,模型广场',
   },
   '/docs': {
-    title: 'API 接入文档 - Make API',
+    title: '快速上手 - Make API',
     description:
-      '阅读 Make API 接入文档，了解 OpenAI、Claude、Gemini 等兼容接口的调用方式、鉴权配置和客户端集成。',
+      '快速了解 Make API 的 API 接入方式、鉴权配置和 Codex、OpenCode 等客户端集成流程。',
     keywords:
-      'Make API文档,AI API文档,OpenAI兼容接口,Claude API文档,Gemini API文档,大模型接口文档',
+      'Make API快速上手,AI API接入,OpenAI兼容接口,Codex配置,OpenCode配置,大模型接口指南',
+  },
+  '/status': {
+    title: '模型监测 - Make API',
+    description: '查看 Make API 模型服务的实时可用率、响应延迟和生成性能。',
+    keywords: 'Make API,模型监测,服务状态,模型可用率,API延迟',
   },
   '/privacy-policy': {
     title: '隐私政策 - Make API',
@@ -44,6 +49,7 @@ const SEO_ROUTES = {
 
 function getRouteSeo(pathname) {
   if (pathname.startsWith('/pricing')) return SEO_ROUTES['/pricing'];
+  if (pathname.startsWith('/status')) return SEO_ROUTES['/status'];
   if (pathname.startsWith('/docs')) return SEO_ROUTES['/docs'];
   return SEO_ROUTES[pathname] || null;
 }

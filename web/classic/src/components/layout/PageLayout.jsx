@@ -60,6 +60,7 @@ const PageLayout = () => {
     '/console/task',
     '/console/models',
     '/pricing',
+    '/status',
   ];
 
   const shouldInnerPadding =
@@ -162,6 +163,7 @@ const PageLayout = () => {
           width: '100%',
           top: 0,
           zIndex: 100,
+          background: 'transparent',
         }}
       >
         <HeaderBar

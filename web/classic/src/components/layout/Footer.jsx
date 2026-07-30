@@ -92,7 +92,7 @@ const FooterBar = () => {
 
               <div className='text-left'>
                 <p className='!text-semi-color-text-0 font-semibold mb-5'>
-                  {t('文档')}
+                  {t('快速上手')}
                 </p>
                 <div className='flex flex-col gap-4'>
                   <a

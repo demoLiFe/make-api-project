@@ -36,6 +36,7 @@ const Navigation = ({
     if (pathname === '/') return 'home';
     if (pathname.startsWith('/console')) return 'console';
     if (pathname.startsWith('/pricing')) return 'pricing';
+    if (pathname.startsWith('/status')) return 'status';
     if (pathname.startsWith('/docs')) return 'docs';
     return '';
   }, [location?.pathname]);

@@ -54,6 +54,7 @@ import Seo from './components/common/Seo';
 const Home = lazy(() => import('./pages/Home'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const DocsPage = lazy(() => import('./pages/Docs'));
+const StatusPage = lazy(() => import('./pages/Status'));
 const UserAgreement = lazy(() => import('./pages/UserAgreement'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 
@@ -341,6 +342,14 @@ function App() {
           element={
             <Suspense fallback={<Loading></Loading>} key={location.pathname}>
               <DocsPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path='/status'
+          element={
+            <Suspense fallback={<Loading></Loading>} key={location.pathname}>
+              <StatusPage />
             </Suspense>
           }
         />

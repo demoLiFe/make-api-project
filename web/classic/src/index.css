@@ -4718,6 +4718,7 @@ html.dark .with-pastel-balls::before {
 .pricing-view-container {
   flex: 1;
   overflow: auto;
+  min-height: 0;
   padding: 0 10px 10px;
 }
 
@@ -4726,6 +4727,41 @@ html.dark .with-pastel-balls::before {
   overflow: auto;
   min-height: 0;
   padding: 0 10px 10px;
+}
+
+.pricing-sidebar,
+.pricing-view-container,
+.pricing-view-container-mobile {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(72, 126, 196, 0.32) transparent;
+  scrollbar-gutter: stable;
+}
+
+.pricing-sidebar::-webkit-scrollbar,
+.pricing-view-container::-webkit-scrollbar,
+.pricing-view-container-mobile::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.pricing-sidebar::-webkit-scrollbar-thumb,
+.pricing-view-container::-webkit-scrollbar-thumb,
+.pricing-view-container-mobile::-webkit-scrollbar-thumb {
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 999px;
+  background: rgba(72, 126, 196, 0.3);
+}
+
+.pricing-sidebar::-webkit-scrollbar-thumb:hover,
+.pricing-view-container::-webkit-scrollbar-thumb:hover,
+.pricing-view-container-mobile::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 103, 255, 0.42);
+}
+
+.pricing-sidebar::-webkit-scrollbar-track,
+.pricing-view-container::-webkit-scrollbar-track,
+.pricing-view-container-mobile::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .pricing-tech-page {
@@ -4817,6 +4853,9 @@ html.dark .with-pastel-balls::before {
 
 .pricing-content-inner {
   height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .pricing-sidebar-inner {
@@ -5739,3 +5778,592 @@ html.dark .with-pastel-balls::before {
 }
 
 .ec-dbcd0a3c01b55203 { forced-color-adjust: auto; }
+
+/* ==================== 模型监测页面 ==================== */
+.model-status-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 92px 40px 48px;
+  overflow: hidden;
+}
+
+.model-status-page-inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.model-status-overview {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 4px 0 26px;
+  border-bottom: 1px solid rgba(82, 96, 117, 0.16);
+}
+
+.model-status-overview-main {
+  min-width: 0;
+}
+
+.model-status-title-row,
+.model-status-overall,
+.model-status-meta span,
+.model-status-section-title {
+  display: flex;
+  align-items: center;
+}
+
+.model-status-title-row {
+  gap: 10px;
+  color: #172033;
+}
+
+.model-status-title-row svg {
+  color: #087ea4;
+}
+
+.model-status-title-row h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.model-status-overall {
+  width: fit-content;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 15px;
+}
+
+.model-status-overall.is-operational {
+  color: #098557;
+}
+
+.model-status-overall.is-degraded {
+  color: #a96800;
+}
+
+.model-status-overall.is-incident {
+  color: #cf3c3c;
+}
+
+.model-status-overall.is-unknown {
+  color: #667085;
+}
+
+.model-status-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 18px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.model-status-meta span {
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.model-status-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 22px 0 18px;
+}
+
+.model-status-periods {
+  display: inline-grid;
+  grid-template-columns: repeat(4, minmax(72px, 1fr));
+  padding: 3px;
+  border: 1px solid rgba(151, 195, 232, 0.52);
+  border-radius: 8px;
+  background: rgba(226, 239, 251, 0.82);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(12px);
+}
+
+.model-status-periods button {
+  min-height: 34px;
+  padding: 5px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #5f6b7a;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.model-status-periods button:hover {
+  color: #172033;
+}
+
+.model-status-periods button.is-active {
+  background: #ffffff;
+  color: #087ea4;
+  box-shadow: 0 1px 3px rgba(24, 35, 52, 0.12);
+}
+
+.model-status-refresh.semi-button {
+  width: 36px;
+  height: 36px;
+  color: #526071;
+}
+
+.model-status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.model-status-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(179, 213, 241, 0.72);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.86),
+    0 12px 30px rgba(76, 126, 190, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.model-status-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.model-status-identity {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 10px;
+}
+
+.model-status-provider-mark {
+  display: grid;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(8, 126, 164, 0.2);
+  border-radius: 8px;
+  background: #eaf7fa;
+  color: #087ea4;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.model-status-name-wrap {
+  min-width: 0;
+}
+
+.model-status-name-wrap h2 {
+  overflow: hidden;
+  margin: 0;
+  color: #172033;
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.model-status-name-wrap span {
+  color: #7b8493;
+  font-size: 12px;
+}
+
+.model-status-badge {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 7px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.model-status-badge.is-operational {
+  background: #e8f7f1;
+  color: #087b51;
+}
+
+.model-status-badge.is-degraded {
+  background: #fff4dc;
+  color: #9b6100;
+}
+
+.model-status-badge.is-incident {
+  background: #ffebeb;
+  color: #c63636;
+}
+
+.model-status-badge.is-unknown {
+  background: #edf0f4;
+  color: #657083;
+}
+
+.model-status-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 20px 0 16px;
+}
+
+.model-status-metrics div {
+  min-width: 0;
+}
+
+.model-status-metrics span,
+.model-status-metrics strong {
+  display: block;
+}
+
+.model-status-metrics span {
+  margin-bottom: 4px;
+  color: #7b8493;
+  font-size: 11px;
+}
+
+.model-status-metrics strong {
+  overflow: hidden;
+  color: #263143;
+  font-size: 15px;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.model-status-bars {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 34px;
+  gap: 2px;
+}
+
+.model-status-bar {
+  flex: 1 1 0;
+  min-width: 2px;
+  border-radius: 2px;
+  background: #dfe4ea;
+}
+
+.model-status-bar.is-operational {
+  background: #20ad78;
+}
+
+.model-status-bar.is-degraded {
+  background: #e3a126;
+}
+
+.model-status-bar.is-incident {
+  background: #e05252;
+}
+
+.model-status-range {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 7px;
+  color: #8a93a1;
+  font-size: 10px;
+}
+
+.model-status-message {
+  display: flex;
+  min-height: 560px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px dashed rgba(133, 181, 222, 0.56);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.68);
+  color: #6d7787;
+}
+
+.model-status-message.is-error svg {
+  color: #cf3c3c;
+}
+
+.model-status-skeleton {
+  display: flex;
+  min-height: 197px;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.status-skeleton-line {
+  display: block;
+  height: 14px;
+  border-radius: 4px;
+  background: #e9edf2;
+  animation: model-status-pulse 1.4s ease-in-out infinite;
+}
+
+.status-skeleton-line.is-title {
+  width: 56%;
+}
+
+.status-skeleton-line.is-metric {
+  width: 82%;
+}
+
+.status-skeleton-line.is-bars {
+  width: 100%;
+  height: 34px;
+  margin-top: auto;
+}
+
+.infrastructure-status-section {
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(82, 96, 117, 0.16);
+}
+
+.model-status-section-title {
+  gap: 8px;
+  margin-bottom: 16px;
+  color: #263143;
+}
+
+.model-status-section-title h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.infrastructure-status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.infrastructure-status-group {
+  padding: 16px;
+  border: 1px solid rgba(179, 213, 241, 0.72);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 10px 26px rgba(76, 126, 190, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.infrastructure-status-group h3 {
+  margin: 0 0 10px;
+  color: #263143;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.infrastructure-status-row {
+  display: grid;
+  grid-template-columns: 8px minmax(0, 1fr) auto;
+  align-items: center;
+  min-height: 34px;
+  gap: 9px;
+  border-top: 1px solid rgba(82, 96, 117, 0.1);
+  color: #657083;
+  font-size: 12px;
+}
+
+.infrastructure-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e05252;
+}
+
+.infrastructure-status-dot.is-up {
+  background: #20ad78;
+}
+
+.infrastructure-status-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.infrastructure-status-row strong {
+  color: #39465a;
+}
+
+.model-status-page {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(72, 126, 196, 0.32) transparent;
+}
+
+.model-status-page::-webkit-scrollbar {
+  width: 6px;
+}
+
+.model-status-page::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(72, 126, 196, 0.3);
+}
+
+@keyframes model-status-pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.dark .model-status-overview,
+.dark .infrastructure-status-section {
+  border-color: rgba(195, 207, 222, 0.14);
+}
+
+.dark .model-status-title-row,
+.dark .model-status-name-wrap h2,
+.dark .model-status-section-title,
+.dark .infrastructure-status-group h3 {
+  color: #edf2f7;
+}
+
+.dark .model-status-periods {
+  border-color: rgba(152, 211, 255, 0.24);
+  background: rgba(16, 38, 60, 0.82);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 42px rgba(0, 8, 18, 0.2);
+}
+
+.dark .model-status-periods button {
+  color: rgba(218, 232, 246, 0.78);
+}
+
+.dark .model-status-periods button:hover {
+  color: rgba(245, 250, 255, 0.94);
+  background: rgba(72, 145, 218, 0.14);
+}
+
+.dark .model-status-periods button.is-active {
+  background: linear-gradient(180deg, rgba(42, 88, 130, 0.95), rgba(27, 62, 96, 0.94));
+  color: #67d3ec;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 18px rgba(0, 119, 255, 0.16);
+}
+
+.dark .model-status-card,
+.dark .model-status-message,
+.dark .infrastructure-status-group {
+  border-color: rgba(152, 211, 255, 0.22);
+  background: linear-gradient(180deg, rgba(16, 38, 60, 0.94), rgba(13, 31, 50, 0.9));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 24px 70px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.dark .model-status-message {
+  border-color: rgba(152, 211, 255, 0.24);
+  color: rgba(190, 211, 230, 0.78);
+}
+
+.dark .model-status-provider-mark {
+  border-color: rgba(79, 190, 216, 0.22);
+  background: rgba(26, 72, 105, 0.42);
+  color: #67d3ec;
+}
+
+.dark .model-status-meta,
+.dark .model-status-overall.is-unknown,
+.dark .model-status-metrics span,
+.dark .model-status-name-wrap span,
+.dark .model-status-range,
+.dark .infrastructure-status-row {
+  color: rgba(190, 211, 230, 0.72);
+}
+
+.dark .model-status-metrics strong,
+.dark .infrastructure-status-row strong {
+  color: #dce4ee;
+}
+
+.dark .model-status-refresh.semi-button {
+  color: rgba(218, 232, 246, 0.78);
+}
+
+.dark .model-status-bar.is-empty,
+.dark .status-skeleton-line {
+  background: #303a47;
+}
+
+.dark .infrastructure-status-row {
+  border-color: rgba(195, 207, 222, 0.1);
+}
+
+@media (max-width: 1023px) {
+  .model-status-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .model-status-page {
+    min-height: 100dvh;
+    padding: 86px 10px 34px;
+  }
+
+  .model-status-overview {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .model-status-title-row h1 {
+    font-size: 22px;
+  }
+
+  .model-status-meta {
+    justify-content: flex-start;
+  }
+
+  .model-status-toolbar {
+    align-items: stretch;
+  }
+
+  .model-status-periods {
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .model-status-periods button {
+    min-width: 0;
+    padding-inline: 4px;
+    font-size: 12px;
+  }
+
+  .model-status-grid,
+  .infrastructure-status-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .model-status-card {
+    padding: 14px;
+  }
+
+  .model-status-card-head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .model-status-badge {
+    width: fit-content;
+  }
+}

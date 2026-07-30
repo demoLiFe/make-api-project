@@ -43,6 +43,7 @@ const HeaderBar = ({ onMobileMenuToggle, drawerOpen }) => {
     docsLink,
     isDemoSiteMode,
     isConsoleRoute,
+    location,
     theme,
     headerNavModules,
     pricingRequireAuth,

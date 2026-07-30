@@ -28,7 +28,12 @@ export const useNavigation = (t, docsLink, headerNavModules) => {
         to: '/pricing',
       },
       {
-        text: t('文档'),
+        text: t('模型监测'),
+        itemKey: 'status',
+        to: '/status',
+      },
+      {
+        text: t('快速上手'),
         itemKey: 'docs',
         to: '/docs',
       },
@@ -42,6 +47,9 @@ export const useNavigation = (t, docsLink, headerNavModules) => {
         return typeof modules.pricing === 'object'
           ? modules.pricing.enabled
           : modules.pricing;
+      }
+      if (link.itemKey === 'status') {
+        return true;
       }
       return modules[link.itemKey] === true;
     });
